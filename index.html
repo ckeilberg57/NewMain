@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .iframe-container {
+            flex: 1;
+            border: 1px solid #ccc;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>Scrolling Sidebar</h2>
+        <p>This is some sidebar content.</p>
+        <p>More content...</p>
+        <p>Even more content...</p>
+        <!-- Add more content as needed -->
+    </div>
+    <div id="main">
+        <div class="iframe-container">
+            <iframe src="https://www.example.com" frameborder="0"></iframe>
+        </div>
+        <div class="iframe-container">
+            <iframe src="https://www.example2.com" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
