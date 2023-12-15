@@ -14,7 +14,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      flex-direction: row; /* Change flex direction to horizontal */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
       min-height: 100vh; /* Use min-height to make sure the content takes at least the full height of the viewport */
     }
 
@@ -22,6 +23,8 @@
     #pageHeading {
       font-size: 36px;
       margin-bottom: 20px;
+      width: 100%; /* Set the width to 100% to occupy the full width */
+      text-align: center; /* Center the text */
     }
 
     /* Style for the three columns */
@@ -87,22 +90,36 @@
   <!-- Large text at the top -->
   <div id="pageHeading">Welcome to the Interactive Demo</div>
 
-  <!-- Column 1 -->
+  <!-- First set of three columns -->
   <div class="column">
     <img src="image1.jpg" alt="Image 1" onclick="openVideo('video1.mp4')">
     <p>Text below image 1</p>
   </div>
 
-  <!-- Column 2 -->
   <div class="column">
     <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
     <p>Text below image 2</p>
   </div>
 
-  <!-- Column 3 -->
   <div class="column">
     <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
     <p>Text below image 3</p>
+  </div>
+
+  <!-- Second set of three columns -->
+  <div class="column">
+    <img src="image4.jpg" alt="Image 4" onclick="openVideo('video4.mp4')">
+    <p>Text below image 4</p>
+  </div>
+
+  <div class="column">
+    <img src="image5.jpg" alt="Image 5" onclick="openVideo('video5.mp4')">
+    <p>Text below image 5</p>
+  </div>
+
+  <div class="column">
+    <img src="image6.jpg" alt="Image 6" onclick="openVideo('video6.mp4')">
+    <p>Text below image 6</p>
   </div>
 
   <!-- Iframe container -->
