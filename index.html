@@ -14,7 +14,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       min-height: 100vh; /* Use min-height to make sure the content takes at least the full height of the viewport */
+    }
+
+    /* Style for the large text at the top */
+    #pageTitle {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
 
     /* Style for the three columns */
@@ -23,6 +30,7 @@
       padding: 15px;
       box-sizing: border-box;
       border: 1px solid white; /* Add a 1px white border */
+      margin-bottom: 20px; /* Add margin between columns */
     }
 
     /* Style for the images */
@@ -75,6 +83,9 @@
   </style>
 </head>
 <body>
+
+  <!-- Large text at the top -->
+  <div id="pageTitle">Welcome to the Interactive Demo</div>
 
   <!-- Column 1 -->
   <div class="column">
