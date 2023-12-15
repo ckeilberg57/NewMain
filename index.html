@@ -68,6 +68,14 @@
       cursor: pointer;
       font-size: 16px; /* Adjust the font size as needed */
     }
+
+    /* Style for the box around buttons */
+    .button-box {
+      display: inline-block;
+      background-color: #0EBEC7;
+      padding: 10px;
+      border-radius: 5px; /* Adjust the border radius as needed for a smoother appearance */
+    }
   </style>
 </head>
 <body>
@@ -94,8 +102,10 @@
   <div id="videoFrameContainer">
     <span id="closeButton" onclick="closeVideo">&times;</span>
     <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-    <button onclick="watchVideo()">Watch Video</button>
-    <button onclick="launchDemo()">Launch Interactive Demo</button>
+    <div class="button-box">
+      <button onclick="watchVideo()">Watch Video</button>
+      <button onclick="launchDemo()">Launch Interactive Demo</button>
+    </div>
   </div>
 
   <script>
