@@ -15,7 +15,6 @@
       align-items: center;
       justify-content: center;
       flex-direction: row; /* Change flex direction to horizontal */
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
       min-height: 100vh; /* Use min-height to make sure the content takes at least the full height of the viewport */
     }
 
@@ -27,10 +26,23 @@
       text-align: center; /* Center the text */
     }
 
+    /* Style for the container of two side-by-side white-lined boxes */
+    #container {
+      display: flex;
+      gap: 20px; /* Adjust the gap between the two boxes */
+    }
+
+    /* Style for each white-lined box */
+    .box {
+      width: 50%; /* Each box takes half of the container's width */
+      box-sizing: border-box;
+      border: 1px solid white; /* Add a 1px white border */
+      padding: 15px;
+    }
+
     /* Style for the three columns */
     .column {
-      width: 33.33%;
-      padding: 15px;
+      width: 100%;
       box-sizing: border-box;
       border: 1px solid white; /* Add a 1px white border */
       margin-bottom: 20px; /* Add margin between columns */
@@ -90,36 +102,43 @@
   <!-- Large text at the top -->
   <div id="pageHeading">Welcome to the Interactive Demo</div>
 
-  <!-- First set of three columns -->
-  <div class="column">
-    <img src="image1.jpg" alt="Image 1" onclick="openVideo('video1.mp4')">
-    <p>Text below image 1</p>
-  </div>
+  <!-- Container for two side-by-side white-lined boxes -->
+  <div id="container">
+    <!-- First set of three columns -->
+    <div class="box">
+      <div class="column">
+        <img src="image1.jpg" alt="Image 1" onclick="openVideo('video1.mp4')">
+        <p>Text below image 1</p>
+      </div>
 
-  <div class="column">
-    <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
-    <p>Text below image 2</p>
-  </div>
+      <div class="column">
+        <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
+        <p>Text below image 2</p>
+      </div>
 
-  <div class="column">
-    <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
-    <p>Text below image 3</p>
-  </div>
+      <div class="column">
+        <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
+        <p>Text below image 3</p>
+      </div>
+    </div>
 
-  <!-- Second set of three columns -->
-  <div class="column">
-    <img src="image4.jpg" alt="Image 4" onclick="openVideo('video4.mp4')">
-    <p>Text below image 4</p>
-  </div>
+    <!-- Second set of three columns -->
+    <div class="box">
+      <div class="column">
+        <img src="image4.jpg" alt="Image 4" onclick="openVideo('video4.mp4')">
+        <p>Text below image 4</p>
+      </div>
 
-  <div class="column">
-    <img src="image5.jpg" alt="Image 5" onclick="openVideo('video5.mp4')">
-    <p>Text below image 5</p>
-  </div>
+      <div class="column">
+        <img src="image5.jpg" alt="Image 5" onclick="openVideo('video5.mp4')">
+        <p>Text below image 5</p>
+      </div>
 
-  <div class="column">
-    <img src="image6.jpg" alt="Image 6" onclick="openVideo('video6.mp4')">
-    <p>Text below image 6</p>
+      <div class="column">
+        <img src="image6.jpg" alt="Image 6" onclick="openVideo('video6.mp4')">
+        <p>Text below image 6</p>
+      </div>
+    </div>
   </div>
 
   <!-- Iframe container -->
