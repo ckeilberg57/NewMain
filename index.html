@@ -69,8 +69,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%; 
-      height: 90%; 
+      width: 80%; 
+      height: 80%; 
       background-color: #fff;
       z-index: 1000;
       padding: 30px; /* Increase padding for a larger box */
@@ -157,7 +157,7 @@
 
 <!-- Iframe container -->
 <div id="videoFrameContainer">
-  <span id="closeButton" onclick="closeVideo">&times;</span>
+  <span id="closeButton" onclick="closeVideo()">×</span>
   <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
   <button onclick="watchVideo()">Watch Video</button>
   <button onclick="launchDemo()">Launch Interactive Demo</button>
@@ -189,6 +189,7 @@
     alert('Launching interactive demo...');
   }
 </script>
+
 
 </body>
 </html>
