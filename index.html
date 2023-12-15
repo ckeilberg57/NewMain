@@ -44,6 +44,15 @@
       border-radius: 5px;
     }
 
+    /* Style for the main content container */
+    #mainContent {
+      margin-left: 300px; /* Adjust margin to accommodate the sidebar */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* Style for the large text at the top */
     #pageHeading {
       font-size: 36px;
@@ -60,7 +69,6 @@
 
     /* Style for the container of two side-by-side white-lined boxes */
     #container {
-      margin-left: 300px; /* Adjust margin to accommodate the sidebar */
       display: flex;
       gap: 20px; /* Adjust the gap between the two boxes */
       justify-content: center; /* Center the boxes horizontally */
@@ -153,96 +161,39 @@
 
   </div>
 
-  <!-- Large text at the top -->
-  <div id="pageHeading">
-    Welcome to the Interactive Demo
-  </div>
-
-  <!-- Main Page Image -->
-  <div id="mainPageImage">
-    <img id="headerImage" src="your-image-url.jpg" alt="Header Image">
-  </div>
-
-  <!-- Container for two side-by-side white-lined boxes -->
-  <div id="container">
-    <!-- First set of three columns -->
-    <div class="box">
-      <div class="column">
-        <img src="InProgress.png" alt="Teams Like Layout" onclick="openVideo('Teams-like_AI-technology.mp4')">
-        <p>Teams Like Layout</p>
-      </div>
-
-      <div class="column">
-        <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
-        <p>Text below image 2</p>
-      </div>
-
-      <div class="column">
-        <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
-        <p>Text below image 3</p>
-      </div>
+  <!-- Main Content Container -->
+  <div id="mainContent">
+    <!-- Large text at the top -->
+    <div id="pageHeading">
+      Welcome to the Interactive Demo
     </div>
 
-    <!-- Second set of three columns -->
-    <div class="box">
-      <div class="column">
-        <img src="image4.jpg" alt="Image 4" onclick="openVideo('video4.mp4')">
-        <p>Text below image 4</p>
-      </div>
-
-      <div class="column">
-        <img src="image5.jpg" alt="Image 5" onclick="openVideo('video5.mp4')">
-        <p>Text below image 5</p>
-      </div>
-
-      <div class="column">
-        <img src="image6.jpg" alt="Image 6" onclick="openVideo('video6.mp4')">
-        <p>Text below image 6</p>
-      </div>
+    <!-- Main Page Image -->
+    <div id="mainPageImage">
+      <img id="headerImage" src="your-image-url.jpg" alt="Header Image">
     </div>
-  </div>
 
-<!-- Iframe container -->
-<div id="videoFrameContainer">
-  <span id="closeButton" onclick="closeVideo()">×</span>
-  <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-  <button onclick="watchVideo()">Watch Video</button>
-  <button onclick="launchDemo()">Launch Interactive Demo</button>
-  <button onclick="closeVideo()">Close</button>
-</div>
+    <!-- Container for two side-by-side white-lined boxes -->
+    <div id="container">
+      <!-- First set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="InProgress.png" alt="Teams Like Layout" onclick="openVideo('Teams-like_AI-technology.mp4')">
+          <p>Teams Like Layout</p>
+        </div>
 
-<script>
-  function openVideo(videoSrc) {
-    var videoFrameContainer = document.getElementById('videoFrameContainer');
-    var videoFrame = document.getElementById('videoFrame');
-    videoFrame.src = videoSrc;
-    videoFrameContainer.style.display = 'block';
-  }
+        <div class="column">
+          <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
+          <p>Text below image 2</p>
+        </div>
 
-  function closeVideo() {
-    var videoFrameContainer = document.getElementById('videoFrameContainer');
-    videoFrameContainer.style.display = 'none';
-    // Clear the src attribute to stop the video
-    document.getElementById('videoFrame').src = '';
-  }
+        <div class="column">
+          <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
+          <p>Text below image 3</p>
+        </div>
+      </div>
 
-  function watchVideo() {
-    // Implement logic for watching the video
-    alert('Watching the video...');
-  }
-
-  function launchDemo() {
-    // Implement logic for launching the interactive demo
-    alert('Launching interactive demo...');
-  }
-
-  function openIframe(iframeSrc) {
-    var videoFrameContainer = document.getElementById('videoFrameContainer');
-    var videoFrame = document.getElementById('videoFrame');
-    videoFrame.src = iframeSrc;
-    videoFrameContainer.style.display = 'block';
-  }
-</script>
-
-</body>
-</html>
+      <!-- Second set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="image4.jpg
