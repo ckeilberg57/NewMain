@@ -25,7 +25,7 @@
       height: 100vh;
       width: 200px; /* Double the width of the sidebar */
       overflow-y: auto; /* Enable vertical scrolling */
-      background-color: rgba(10, 33, 54, 0.5); /* #0a2136 with 50% translucency */
+      background-color: white;
       padding: 20px;
       box-sizing: border-box;
       z-index: 1; /* Ensure the sidebar appears above other content */
@@ -45,6 +45,13 @@
       border-radius: 5px;
     }
 
+    /* Style for the sidebar item text */
+    .sidebar-item p {
+      color: #0a2136; /* Set the sidebar text color to #0a2136 */
+      margin: 0;
+      font-size: 14px; /* Adjust the font size as needed */
+    }
+    
     /* Style for the main content container */
     #mainContent {
       display: flex;
