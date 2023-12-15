@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Demo</title>
 <style>
   /* Set the background color to #0a2136 and text color to white */
   body {
@@ -67,3 +73,59 @@
     font-size: 16px; /* Adjust the font size as needed */
   }
 </style>
+
+</head>
+<body>
+
+  <!-- Column 1 -->
+  <div class="column">
+    <img src="image1.jpg" alt="Image 1" onclick="openVideo('video1.mp4')">
+    <p>Text below image 1</p>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
+    <p>Text below image 2</p>
+  </div>
+
+  <!-- Column 3 -->
+  <div class="column">
+    <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
+    <p>Text below image 3</p>
+  </div>
+
+  <!-- Iframe container -->
+  <div id="videoFrameContainer">
+    <span id="closeButton" onclick="closeVideo">&times;</span>
+    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <button onclick="watchVideo()">Watch Video</button>
+    <button onclick="launchDemo()">Launch Interactive Demo</button>
+  </div>
+
+  <script>
+    function openVideo(videoSrc) {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      var videoFrame = document.getElementById('videoFrame');
+      videoFrame.src = videoSrc;
+      videoFrameContainer.style.display = 'block';
+    }
+
+    function closeVideo() {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      videoFrameContainer.style.display = 'none';
+    }
+
+    function watchVideo() {
+      // Implement logic for watching the video
+      alert('Watching the video...');
+    }
+
+    function launchDemo() {
+      // Implement logic for launching the interactive demo
+      alert('Launching interactive demo...');
+    }
+  </script>
+
+</body>
+</html>
