@@ -4,76 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Demo</title>
-<style>
-  /* Set the background color to #0a2136 and text color to white */
-  body {
-    background-color: #0a2136;
-    color: white;
-    margin: 0;
-    font-size: 16px; /* Adjust the font size as needed */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  <style>
+    /* Set the background color to #0a2136 and text color to white */
+    body {
+      background-color: #0a2136;
+      color: white;
+      margin: 0;
+      font-size: 16px; /* Adjust the font size as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Use min-height to make sure the content takes at least the full height of the viewport */
+    }
 
-  /* Style for the three columns */
-  .column {
-    width: 33.33%;
-    padding: 15px;
-    box-sizing: border-box;
-  }
+    /* Style for the three columns */
+    .column {
+      width: 33.33%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
 
-  /* Style for the images */
-  .column img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
+    /* Style for the images */
+    .column img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
 
-  /* Style for the iframe container */
-  #videoFrameContainer {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%; /* Increase the width by 50% */
-    height: 75%; /* Increase the height by 50% */
-    background-color: #fff;
-    z-index: 1000;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+    /* Style for the iframe container */
+    #videoFrameContainer {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75%; /* Increase the width by 50% */
+      height: 75%; /* Increase the height by 50% */
+      background-color: #fff;
+      z-index: 1000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-  /* Style for the close button in the iframe container */
-  #closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #0a2136; /* Use the same color as the background for the close button */
-  }
+    /* Style for the close button in the iframe container */
+    #closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #0a2136; /* Use the same color as the background for the close button */
+    }
 
-  /* Style for the text below images */
-  .column p {
-    color: white;
-    font-size: 18px; /* Adjust the font size as needed */
-  }
+    /* Style for the text below images */
+    .column p {
+      color: white;
+      font-size: 18px; /* Adjust the font size as needed */
+    }
 
-  /* Style for buttons and iframe content */
-  button, iframe {
-    background-color: #0a2136;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 16px; /* Adjust the font size as needed */
-  }
-</style>
-
+    /* Style for buttons and iframe content */
+    button, iframe {
+      background-color: #0a2136;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px; /* Adjust the font size as needed */
+    }
+  </style>
 </head>
 <body>
 
