@@ -1,60 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New HC Page</title>
-    <script src="https://kit.fontawesome.com/13a0b401cc.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cklab demo site</title>
+  <style>
+    /* Style for the three columns */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
 
-        #sidebar {
-            width: 250px;
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            overflow-y: auto;
-        }
+    /* Style for the images */
+    .column img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
 
-        #main {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            gap: 20px;
-            overflow: hidden;
-        }
+    /* Style for the iframe container */
+    #videoFrameContainer {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: 60%;
+      background-color: #fff;
+      z-index: 1000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        .iframe-container {
-            flex: 1;
-            border: 1px solid #ccc;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    /* Style for the close button in the iframe container */
+    #closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div id="sidebar">
-        <h2>Clinician Launch Bar</h2>
-        <i class="fa-solid fa-bed-pulse fa-2xl" style="color: #c0d2f2;"></i>
-        <!-- Add more content as needed -->
-    </div>
-    <div id="main">
-        <div class="iframe-container">
-            <iframe src="https://www.example.com" frameborder="0"></iframe>
-        </div>
-        <div class="iframe-container">
-            <iframe src="https://www.example2.com" frameborder="0"></iframe>
-        </div>
-    </div>
+
+  <!-- Column 1 -->
+  <div class="column">
+    <img src="image1.jpg" alt="Image 1" onclick="openVideo('video1.mp4')">
+    <p>Text below image 1</p>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <img src="image2.jpg" alt="Image 2" onclick="openVideo('video2.mp4')">
+    <p>Text below image 2</p>
+  </div>
+
+  <!-- Column 3 -->
+  <div class="column">
+    <img src="image3.jpg" alt="Image 3" onclick="openVideo('video3.mp4')">
+    <p>Text below image 3</p>
+  </div>
+
+  <!-- Iframe container -->
+  <div id="videoFrameContainer">
+    <span id="closeButton" onclick="closeVideo()">&times;</span>
+    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <button onclick="watchVideo()">Watch Video</button>
+    <button onclick="launchDemo()">Launch Interactive Demo</button>
+  </div>
+
+  <script>
+    function openVideo(videoSrc) {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      var videoFrame = document.getElementById('videoFrame');
+      videoFrame.src = videoSrc;
+      videoFrameContainer.style.display = 'block';
+    }
+
+    function closeVideo() {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      videoFrameContainer.style.display = 'none';
+    }
+
+    function watchVideo() {
+      // Implement logic for watching the video
+      alert('Watching the video...');
+    }
+
+    function launchDemo() {
+      // Implement logic for launching the interactive demo
+      alert('Launching interactive demo...');
+    }
+  </script>
+
 </body>
 </html>
+
