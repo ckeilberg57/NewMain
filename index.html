@@ -20,6 +20,9 @@
 
     /* Style for the scrolling sidebar */
     #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 100vh;
       overflow-y: auto; /* Enable vertical scrolling */
       background-color: #1a1a1a; /* Sidebar background color */
@@ -57,6 +60,7 @@
 
     /* Style for the container of two side-by-side white-lined boxes */
     #container {
+      margin-left: 300px; /* Adjust margin to accommodate the sidebar */
       display: flex;
       gap: 20px; /* Adjust the gap between the two boxes */
       justify-content: center; /* Center the boxes horizontally */
@@ -198,47 +202,47 @@
     </div>
   </div>
 
-  <!-- Iframe container -->
-  <div id="videoFrameContainer">
-    <span id="closeButton" onclick="closeVideo()">×</span>
-    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-    <button onclick="watchVideo()">Watch Video</button>
-    <button onclick="launchDemo()">Launch Interactive Demo</button>
-    <button onclick="closeVideo()">Close</button>
-  </div>
+<!-- Iframe container -->
+<div id="videoFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
+  <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  <button onclick="watchVideo()">Watch Video</button>
+  <button onclick="launchDemo()">Launch Interactive Demo</button>
+  <button onclick="closeVideo()">Close</button>
+</div>
 
-  <script>
-    function openVideo(videoSrc) {
-      var videoFrameContainer = document.getElementById('videoFrameContainer');
-      var videoFrame = document.getElementById('videoFrame');
-      videoFrame.src = videoSrc;
-      videoFrameContainer.style.display = 'block';
-    }
+<script>
+  function openVideo(videoSrc) {
+    var videoFrameContainer = document.getElementById('videoFrameContainer');
+    var videoFrame = document.getElementById('videoFrame');
+    videoFrame.src = videoSrc;
+    videoFrameContainer.style.display = 'block';
+  }
 
-    function closeVideo() {
-      var videoFrameContainer = document.getElementById('videoFrameContainer');
-      videoFrameContainer.style.display = 'none';
-      // Clear the src attribute to stop the video
-      document.getElementById('videoFrame').src = '';
-    }
+  function closeVideo() {
+    var videoFrameContainer = document.getElementById('videoFrameContainer');
+    videoFrameContainer.style.display = 'none';
+    // Clear the src attribute to stop the video
+    document.getElementById('videoFrame').src = '';
+  }
 
-    function watchVideo() {
-      // Implement logic for watching the video
-      alert('Watching the video...');
-    }
+  function watchVideo() {
+    // Implement logic for watching the video
+    alert('Watching the video...');
+  }
 
-    function launchDemo() {
-      // Implement logic for launching the interactive demo
-      alert('Launching interactive demo...');
-    }
+  function launchDemo() {
+    // Implement logic for launching the interactive demo
+    alert('Launching interactive demo...');
+  }
 
-    function openIframe(iframeSrc) {
-      var videoFrameContainer = document.getElementById('videoFrameContainer');
-      var videoFrame = document.getElementById('videoFrame');
-      videoFrame.src = iframeSrc;
-      videoFrameContainer.style.display = 'block';
-    }
-  </script>
+  function openIframe(iframeSrc) {
+    var videoFrameContainer = document.getElementById('videoFrameContainer');
+    var videoFrame = document.getElementById('videoFrame');
+    videoFrame.src = iframeSrc;
+    videoFrameContainer.style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
