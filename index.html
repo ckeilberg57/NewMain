@@ -25,6 +25,13 @@
       text-align: center; /* Center the text */
     }
 
+    /* Style for the image below the large text */
+    #headerImage {
+      width: 50%; /* Set the image width */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 20px; /* Add margin below the image */
+    }
+
     /* Style for the container of two side-by-side white-lined boxes */
     #container {
       display: flex;
@@ -100,7 +107,10 @@
 <body>
 
   <!-- Large text at the top -->
-  <div id="pageHeading">Welcome to the Interactive Demo</div>
+  <div id="pageHeading">
+    Welcome to the Interactive Demo
+    <img id="headerImage" src="your-image-url.jpg" alt="Header Image">
+  </div>
 
   <!-- Container for two side-by-side white-lined boxes -->
   <div id="container">
