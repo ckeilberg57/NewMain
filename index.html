@@ -25,14 +25,22 @@
       height: 100vh;
       width: 200px; /* Double the width of the sidebar */
       border-right: 10px solid #0EBEC7; /* Add a 2px solid border on the right in #0EBEC7 color */
-      border-left: 10px solid #0EBEC7; /* Add a 2px solid border on the right in #0EBEC7 color */
-      border-top: 10px solid #0EBEC7; /* Add a 2px solid border on the right in #0EBEC7 color */
-      border-bottom: 10px solid #0EBEC7; /* Add a 2px solid border on the right in #0EBEC7 color */
+      border-left: 10px solid #0EBEC7; /* Add a 2px solid border on the left in #0EBEC7 color */
+      border-top: 10px solid #0EBEC7; /* Add a 2px solid border on the top in #0EBEC7 color */
+      border-bottom: 10px solid #0EBEC7; /* Add a 2px solid border on the bottom in #0EBEC7 color */
       overflow-y: auto; /* Enable vertical scrolling */
       background-color: white;
       padding: 20px;
       box-sizing: border-box;
       z-index: 1; /* Ensure the sidebar appears above other content */
+    }
+
+    #innerBorder {
+      border-right: 5px solid black; /* Add a 5px solid black border on the right inside #0EBEC7 border */
+      border-left: 5px solid black; /* Add a 5px solid black border on the left inside #0EBEC7 border */
+      border-top: 5px solid black; /* Add a 5px solid black border on the top inside #0EBEC7 border */
+      border-bottom: 5px solid black; /* Add a 5px solid black border on the bottom inside #0EBEC7 border */
+      height: 100%;
     }
 
     /* Style for each item in the sidebar */
