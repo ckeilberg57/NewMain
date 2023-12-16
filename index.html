@@ -22,7 +22,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 100vh;
+      height: 100%; /* Set height to 100% */
       width: 200px; /* Double the width of the sidebar */
       border-right: 10px solid #0EBEC7; /* Add a 2px solid border on the right in #0EBEC7 color */
       border-left: 10px solid #0EBEC7; /* Add a 2px solid border on the left in #0EBEC7 color */
@@ -41,6 +41,7 @@
       border-top: 5px solid black; /* Add a 5px solid black border on the top inside #0EBEC7 border */
       border-bottom: 5px solid black; /* Add a 5px solid black border on the bottom inside #0EBEC7 border */
       height: 100%;
+      box-sizing: border-box; /* Include padding and borders in the element's total height */
     }
 
     /* Style for each item in the sidebar */
