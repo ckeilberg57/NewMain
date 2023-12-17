@@ -196,8 +196,6 @@
         <div class="column">
           <img src="InProgress.png" alt="Teams Like Layout" onclick="openVideo('Teams-like_AI-technology.mp4')">
           <p>Teams Like Layout</p>
-          <button onclick="launchVideo('Teams-like_AI-technology.mp4')">Launch Video</button>
-          <button onclick="openLink('https://www.example.com/link1')">Open URL</button>
         </div>
 
         <div class="column">
@@ -265,17 +263,6 @@
       alert('Launching interactive demo...');
     }
 
-    function launchVideo(videoSrc) {
-      var videoFrameContainer = document.getElementById('videoFrameContainer');
-      var videoFrame = document.getElementById('videoFrame');
-      videoFrame.src = videoSrc;
-      videoFrameContainer.style.display = 'block';
-    }
-
-    function openLink(url) {
-      window.open(url, '_blank');
-    }
-    
     function openIframe(link) {
       var iframe = document.createElement('iframe');
       iframe.src = link;
