@@ -21,7 +21,7 @@
     border-top: 5px solid #0EBEC7; /* Add a 2px solid border on the top in #0EBEC7 color */
     border-bottom: 5px solid #0EBEC7; /* Add a 2px solid border on the bottom in #0EBEC7 color */
     overflow-y: auto; /* Enable vertical scrolling */
-    background-color: white;
+    background: linear-gradient(to right, white, #0a1236); /* Use linear gradient for the background */
     padding: 20px;
     box-sizing: border-box;
     z-index: 1; /* Ensure the sidebar appears above other content */
