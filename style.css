@@ -111,7 +111,7 @@
 
 /* Style for the images */
   .column img {
-    width: 50%;
+    width: 100%;
     height: auto;
     cursor: pointer;
   }
