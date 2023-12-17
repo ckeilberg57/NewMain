@@ -18,7 +18,7 @@
     height: 100%; /* Set height to 100% */
     width: 200px; /* Double the width of the sidebar */
     overflow-y: auto; /* Enable vertical scrolling */
-    background: linear-gradient(to right, white, #0a1236); /* Use linear gradient for the background */
+    background: linear-gradient(to right, white, #0a2136); /* Use linear gradient for the background */
     padding: 20px;
     box-sizing: border-box;
     z-index: 1; /* Ensure the sidebar appears above other content */
