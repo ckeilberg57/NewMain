@@ -17,9 +17,6 @@
     left: 0;
     height: 100%; /* Set height to 100% */
     width: 200px; /* Double the width of the sidebar */
-    border-left: 5px solid #0EBEC7; /* Add a 2px solid border on the left in #0EBEC7 color */
-    border-top: 5px solid #0EBEC7; /* Add a 2px solid border on the top in #0EBEC7 color */
-    border-bottom: 5px solid #0EBEC7; /* Add a 2px solid border on the bottom in #0EBEC7 color */
     overflow-y: auto; /* Enable vertical scrolling */
     background: linear-gradient(to right, white, #0a1236); /* Use linear gradient for the background */
     padding: 20px;
