@@ -39,7 +39,7 @@
 
 /* Change background color on hover */
   .sidebar-item:hover {
-    background-color: #FF7273; /* Light red background on hover */
+    background-color: #0A2136; /* Light red background on hover */
   }
  
   /* Style for the images in the sidebar */
@@ -52,7 +52,7 @@
 
 /* Style for the sidebar item text */
   .sidebar-item p {
-    color: #0a2136; /* Set the sidebar text color to #0a2136 */
+    color: #FF7273; /* Set the sidebar text color to #FF7273 */
     margin: 0;
     font-size: 20px; /* Adjust the font size as needed */
   }
