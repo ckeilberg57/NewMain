@@ -44,6 +44,7 @@
   .sidebar-item img {
     width: auto;
     height: auto;
+    margin: 0 auto; /* Center the image horizontally */
   }
 
 /* Style for the sidebar item text */
@@ -51,6 +52,7 @@
     color: #0A2136; /* Set the sidebar text color to #0a2136 */
     margin: 0;
     font-size: 20px; /* Adjust the font size as needed */
+    text-align: center; /* Center the text */
   }
  
 /* Style for the main content container */
