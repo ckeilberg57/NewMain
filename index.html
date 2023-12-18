@@ -162,6 +162,28 @@
 
       iframeContainer.style.display = 'block';
     }
+
+    function openIframe(link) {
+      var iframe = document.createElement('iframe');
+      iframe.src = link;
+      iframe.width = '100%';
+      iframe.height = '100%';
+      iframe.frameBorder = '0';
+      iframe.setAttribute('allowfullscreen', true);
+    
+      var iframeContainer = document.getElementById('videoFrameContainer');
+      // Clear previous content
+      while (iframeContainer.firstChild) {
+        iframeContainer.removeChild(iframeContainer.firstChild);
+      }
+      iframeContainer.appendChild(iframe);
+    
+      var closeButton = document.getElementById('closeButton');
+      closeButton.style.display = 'block';
+    
+      iframeContainer.style.display = 'block';
+    }
+
   </script>
 
 </body>
