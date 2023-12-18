@@ -42,14 +42,14 @@
  
   /* Style for the images in the sidebar */
   .sidebar-item img {
-    width: 75%;
+    width: 60%;
     height: auto;
     margin: 0 auto; /* Center the image horizontally */
   }
 
 /* Style for the sidebar item text */
   .sidebar-item p {
-    color: #0A2136; /* Set the sidebar text color to #0a2136 */
+    color: #FFFFFF; /* Set the sidebar text color to #FFFFFF */
     margin: 0;
     font-size: 20px; /* Adjust the font size as needed */
     text-align: center; /* Center the text */
