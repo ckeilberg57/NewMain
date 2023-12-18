@@ -42,7 +42,7 @@
  
   /* Style for the images in the sidebar */
   .sidebar-item img {
-    width: auto;
+    width: 75%;
     height: auto;
     margin: 0 auto; /* Center the image horizontally */
   }
