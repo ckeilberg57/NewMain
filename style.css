@@ -194,7 +194,7 @@
 
     .iframeColumn {
       box-sizing: border-box;
-      width: 16.66%;
+      width: 48%; /* Adjust the width to your preference */
       border: 2px solid #0ebec7;
       margin: 10px;
     }
@@ -203,4 +203,8 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    #iframeContainer .iframeColumn:nth-child(odd) {
+      clear: both;
     }
