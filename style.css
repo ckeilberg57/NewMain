@@ -173,3 +173,34 @@
   .white-button:hover {
     background-color: #FF7273; /* Light red background on hover */
   }
+
+    #iframeOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0a2136;
+      z-index: 999;
+    }
+
+    #iframeContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .iframeColumn {
+      box-sizing: border-box;
+      width: 16.66%;
+      border: 2px solid #0ebec7;
+      margin: 10px;
+    }
+
+    .iframeColumn iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
