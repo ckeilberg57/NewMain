@@ -86,7 +86,7 @@
           <img src="Teamslike.png" alt="Teams Like Layout" onclick="openVideo('Teams-like_AI-technology.mp4')">
           <p>Teams Like Layout</p>
           <button class="white-button" onclick="openVideo('Teams-like_AI-technology.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Launch Demo</button>
+          <button class="white-button" onclick="openLink('Infra-Poly_Consumption Models.pptx')">Launch PowerPoint</button>
         </div>
 
         <div class="column">
@@ -160,7 +160,13 @@
     }
 
     function openLink(url) {
-      window.open(url, '_blank');
+      // Check if the link ends with ".pptx" (PowerPoint file extension)
+      if (url.toLowerCase().endsWith('.pptx')) {
+        openPowerPoint(url);
+      } else {
+        // Open other links in a new tab
+        window.open(url, '_blank');
+      }
     }
 
     function openIframe(link) {
@@ -215,7 +221,24 @@
       iframeOverlay.style.display = 'none';
       closeButton.style.display = 'none';
   }
-    
+
+    function openPowerPoint(powerpointUrl) {
+      var iframe = document.createElement('iframe');
+      iframe.src = powerpointUrl;
+      iframe.width = '100%';
+      iframe.height = '100%';
+      iframe.frameBorder = '0';
+      iframe.allowfullscreen = true;
+  
+      var iframeContainer = document.getElementById('videoFrameContainer');
+      iframeContainer.innerHTML = ''; // Clear previous content
+      iframeContainer.appendChild(iframe);
+  
+      var closeButton = document.getElementById('closeButton');
+      closeButton.style.display = 'block';
+  
+      iframeContainer.style.display = 'block';
+  }
   </script>
 
 </body>
