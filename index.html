@@ -236,12 +236,39 @@
         var iframeColumn = document.createElement('div');
         iframeColumn.className = 'iframeColumn';
   
-        var iframe = document.createElement('iframe');
-        iframe.src = link;
-        iframeColumn.appendChild(iframe);
-  
-        iframeContainer.appendChild(iframeColumn);
+    // Add image to the first column
+    if (i === 0) {
+      var image = document.createElement('img');
+      image.src = 'Teamslike.png';
+      image.alt = 'Teams Like Layout';
+      iframeColumn.appendChild(image);
+
+      // Add two buttons to the first column
+      var button1 = document.createElement('button');
+      button1.textContent = 'Button 1';
+      button1.className = 'your-button-class'; // Replace 'your-button-class' with your button class
+      button1.onclick = function () {
+        // Add your button click logic here
+        alert('Button 1 clicked');
+      };
+      iframeColumn.appendChild(button1);
+
+      var button2 = document.createElement('button');
+      button2.textContent = 'Button 2';
+      button2.className = 'your-button-class'; // Replace 'your-button-class' with your button class
+      button2.onclick = function () {
+        // Add your button click logic here
+        alert('Button 2 clicked');
+      };
+      iframeColumn.appendChild(button2);
     }
+
+    var iframe = document.createElement('iframe');
+    iframe.src = link;
+    iframeColumn.appendChild(iframe);
+
+    iframeContainer.appendChild(iframeColumn);
+  }
 
     // Show the iframe overlay
       iframeOverlay.style.display = 'block';
