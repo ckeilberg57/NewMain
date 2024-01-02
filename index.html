@@ -86,7 +86,7 @@
           <img src="Teamslike.png" alt="Teams Like Layout" onclick="openVideo('Teams-like_AI-technology.mp4')">
           <p>Infrastructure Consumption Models - Poly Edition</p>
           <button class="white-button" onclick="openVideo('Teams-like_AI-technology.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.ppt')">Launch PowerPoint</button>
+          <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Launch PDF</button>
         </div>
 
         <div class="column">
@@ -160,9 +160,9 @@
     }
 
     function openLink(url) {
-      // Check if the link ends with ".pptx" (PowerPoint file extension)
-      if (url.toLowerCase().endsWith('.ppt')) {
-        convertPowerPointToPDF(url);
+      // Check if the link ends with ".pdf" (PDF file extension)
+      if (url.toLowerCase().endsWith('.pdf')) {
+        openPDF(url);
       } else {
         // Open other links in a new tab
         window.open(url, '_blank');
@@ -222,10 +222,7 @@
       closeButton.style.display = 'none';
   }
 
-    function convertPowerPointToPDF(powerpointUrl) {
-      // Replace the ".pptx" extension with ".pdf"
-      var pdfURL = powerpointUrl.replace(/\.ppt$/i, '.pdf');
-      
+    function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfURL;
       iframe.width = '100%';
