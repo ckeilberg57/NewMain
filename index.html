@@ -238,12 +238,11 @@
   
     // Add image to the first column
     if (i === 0) {
+      var imageContainer = document.createElement('div');
+      imageContainer.className = 'column';
       var image = document.createElement('img');
       image.src = 'Teamslike.png';
       image.alt = 'Teams Like Layout';
-      // Set the image size to 800px by 500px
-      image.width = 800;
-      image.height = 500;
       iframeColumn.appendChild(image);
 
       // Add two buttons to the first column
