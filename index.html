@@ -161,8 +161,8 @@
 
     function openLink(url) {
       // Check if the link ends with ".pptx" (PowerPoint file extension)
-      if (url.toLowerCase().endsWith('.pptx')) {
-        openPowerPoint(url);
+      if (url.toLowerCase().endsWith('.ppt')) {
+        convertPowerPointToPDF(url);
       } else {
         // Open other links in a new tab
         window.open(url, '_blank');
@@ -222,7 +222,10 @@
       closeButton.style.display = 'none';
   }
 
-    function openPowerPoint(powerpointUrl) {
+    function convertPowerPointToPDF(powerpointUrl) {
+      // Replace the ".pptx" extension with ".pdf"
+      var pdfURL = powerpointUrl.replace(/\.ppt$/i, '.pdf');
+      
       var iframe = document.createElement('iframe');
       iframe.src = powerpointUrl;
       iframe.width = '100%';
