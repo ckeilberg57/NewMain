@@ -222,6 +222,40 @@
       closeButton.style.display = 'none';
   }
 
+    // New HC Iframe Window
+    function openIframeWindowHC(link) {
+      var iframeOverlay = document.getElementById('iframeOverlay');
+      var iframeContainer = document.getElementById('iframeContainer');
+      var closeButton = document.getElementById('closeButton');
+
+    // Clear previous content
+      iframeContainer.innerHTML = '';
+
+    // Create 6 iframe columns
+      for (var i = 0; i < 6; i++) {
+        var iframeColumn = document.createElement('div');
+        iframeColumn.className = 'iframeColumn';
+  
+        var iframe = document.createElement('iframe');
+        iframe.src = link;
+        iframeColumn.appendChild(iframe);
+  
+        iframeContainer.appendChild(iframeColumn);
+    }
+
+    // Show the iframe overlay
+      iframeOverlay.style.display = 'block';
+      closeButton.style.display = 'block';
+  }
+
+    function closeIframeWindowHC() {
+      var iframeOverlay = document.getElementById('iframeOverlay');
+      var closeButton = document.getElementById('closeButton');
+
+    // Hide the iframe overlay
+      iframeOverlay.style.display = 'none';
+      closeButton.style.display = 'none';
+  }
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
