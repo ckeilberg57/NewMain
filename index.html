@@ -230,30 +230,15 @@
       iframe.height = '100%';
       iframe.frameBorder = '0';
       iframe.allowfullscreen = true;
-      iframe.style.zoom = '100%'; // Set zoom to 100%
   
       var iframeContainer = document.getElementById('videoFrameContainer');
       iframeContainer.innerHTML = ''; // Clear previous content
       iframeContainer.appendChild(iframe);
   
-      var closeButton = document.createElement('span');
-      closeButton.id = 'closeButton';
-      closeButton.textContent = '✕'; // Red "X"
-      closeButton.style.color = 'red';
-      closeButton.style.position = 'absolute';
-      closeButton.style.top = '10px';
-      closeButton.style.right = '10px';
-      closeButton.style.cursor = 'pointer';
-      closeButton.onclick = closeIframe;
-  
-      iframeContainer.appendChild(closeButton);
+      var closeButton = document.getElementById('closeButton');
+      closeButton.style.display = 'block';
   
       iframeContainer.style.display = 'block';
-    }
-  
-    function closeIframe() {
-      var iframeContainer = document.getElementById('videoFrameContainer');
-      iframeContainer.style.display = 'none';
     }
   </script>
 
