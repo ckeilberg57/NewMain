@@ -222,6 +222,7 @@
       closeButton.style.display = 'none';
   }
 
+
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
@@ -231,25 +232,29 @@
       iframe.allowfullscreen = true;
       iframe.style.zoom = '100%'; // Set zoom to 100%
   
-    var closeButton = document.createElement('span');
-    closeButton.id = 'closeButton';
-    closeButton.textContent = '✕'; // Red "X"
-    closeButton.style.color = 'red';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '10px';
-    closeButton.style.right = '10px';
-    closeButton.style.cursor = 'pointer';
-    closeButton.onclick = closeIframe;
-
-    iframeContainer.appendChild(closeButton);
-
-    iframeContainer.style.display = 'block';
-  }
-
-  function closeIframe() {
-    var iframeContainer = document.getElementById('videoFrameContainer');
-    iframeContainer.style.display = 'none';
-  }
+      var iframeContainer = document.getElementById('videoFrameContainer');
+      iframeContainer.innerHTML = ''; // Clear previous content
+      iframeContainer.appendChild(iframe);
+  
+      var closeButton = document.createElement('span');
+      closeButton.id = 'closeButton';
+      closeButton.textContent = '✕'; // Red "X"
+      closeButton.style.color = 'red';
+      closeButton.style.position = 'absolute';
+      closeButton.style.top = '10px';
+      closeButton.style.right = '10px';
+      closeButton.style.cursor = 'pointer';
+      closeButton.onclick = closeIframe;
+  
+      iframeContainer.appendChild(closeButton);
+  
+      iframeContainer.style.display = 'block';
+    }
+  
+    function closeIframe() {
+      var iframeContainer = document.getElementById('videoFrameContainer');
+      iframeContainer.style.display = 'none';
+    }
   </script>
 
 </body>
