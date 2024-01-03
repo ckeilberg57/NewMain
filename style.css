@@ -241,6 +241,11 @@
       padding: 20px;
     }
 
+    .customBoxContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .customBox {
       width: 48%;
       margin: 1%;
