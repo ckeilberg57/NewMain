@@ -245,9 +245,11 @@
         columnImage.height = 300; // Set the height
         columnImage.style.display = 'block';
         columnImage.style.margin = '0 auto'; // Center the image
-        columnImage.onclick = function () {
-          openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4'); // Replace with the actual video URL
-        };
+        columnImage.onclick = (function (index) {
+          return function () {
+            openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
+          };
+        })(i);
         iframeColumn.appendChild(columnImage);
     
         // Container for buttons
@@ -258,9 +260,11 @@
         var playVideoButton = document.createElement('button');
         playVideoButton.className = 'white-button';
         playVideoButton.textContent = 'Play Video';
-        playVideoButton.onclick = function () {
-          openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4'); // Replace with the actual video URL
-        };
+        playVideoButton.onclick = (function (index) {
+          return function () {
+            openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
+          };
+        })(i);
     
         buttonsContainer.appendChild(playVideoButton);
     
@@ -268,9 +272,11 @@
         var openPDFButton = document.createElement('button');
         openPDFButton.className = 'white-button';
         openPDFButton.textContent = 'Open PDF';
-        openPDFButton.onclick = function () {
-          openPDF(i === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf'); // Replace with the actual PDF URL
-        };
+        openPDFButton.onclick = (function (index) {
+          return function () {
+            openPDF(index === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
+          };
+        })(i);
     
         buttonsContainer.appendChild(openPDFButton);
         
