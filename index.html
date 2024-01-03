@@ -226,9 +226,44 @@
     var iframeContainer = document.getElementById('iframeContainer');
     var closeButton = document.getElementById('closeButton');
     
-    // Keep track of event handlers
-    var videoHandlers = [];
-    var pdfHandlers = [];
+    // Event handlers for video and PDF
+    function openVideoHandler(index) {
+      return function () {
+        openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
+      };
+    }
+    
+    function openPDFHandler(index) {
+      return function () {
+        openPDF(index === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
+      };
+    }
+    
+    function createButton(text, clickHandler) {
+      var button = document.createElement('button');
+      button.className = 'white-button';
+      button.textContent = text;
+      button.addEventListener('click', clickHandler);
+      return button;
+    }
+    
+    function removeAllEventListeners() {
+      iframeContainer.removeEventListener('click', handleButtonClick);
+    }
+    
+    function handleButtonClick(event) {
+      var target = event.target;
+      var dataset = target.dataset;
+      var index = dataset.index;
+    
+      if (index !== undefined) {
+        if (dataset.action === 'video') {
+          openVideoHandler(index)();
+        } else if (dataset.action === 'pdf') {
+          openPDFHandler(index)();
+        }
+      }
+    }
     
     function openIframeWindowIO(link) {
       // Clear previous content
@@ -248,12 +283,9 @@
           columnImage.height = 300; // Set the height
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
+          columnImage.dataset.index = i;
     
-          // Play Video Button
-          var playVideoHandler = createVideoHandler(i);
-          columnImage.addEventListener('click', playVideoHandler);
-          videoHandlers.push({ element: columnImage, handler: playVideoHandler });
-    
+          // Append image to iframeColumn
           iframeColumn.appendChild(columnImage);
     
           // Container for buttons
@@ -261,11 +293,15 @@
           buttonsContainer.style.textAlign = 'center'; // Center the buttons
     
           // Play Video Button
-          var playVideoButton = createButton('Play Video', createVideoHandler(i));
+          var playVideoButton = createButton('Play Video', openVideoHandler(i));
+          playVideoButton.dataset.index = i;
+          playVideoButton.dataset.action = 'video';
           buttonsContainer.appendChild(playVideoButton);
     
           // Open PDF Button
-          var openPDFButton = createButton('Open PDF', createPDFHandler(i));
+          var openPDFButton = createButton('Open PDF', openPDFHandler(i));
+          openPDFButton.dataset.index = i;
+          openPDFButton.dataset.action = 'pdf';
           buttonsContainer.appendChild(openPDFButton);
     
           // Append buttonsContainer to iframeColumn    
@@ -279,42 +315,13 @@
       // Show the iframe overlay
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
+    
+      // Add event listener for button clicks
+      iframeContainer.addEventListener('click', handleButtonClick);
     }
     
-    function createVideoHandler(index) {
-      return function () {
-        openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
-      };
-    }
-    
-    function createPDFHandler(index) {
-      return function () {
-        openPDF(index === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
-      };
-    }
-    
-    function createButton(text, clickHandler) {
-      var button = document.createElement('button');
-      button.className = 'white-button';
-      button.textContent = text;
-      button.addEventListener('click', clickHandler);
-      return button;
-    }
-    
-    // Function to remove all event listeners
-    function removeAllEventListeners() {
-      videoHandlers.forEach(function (item) {
-        item.element.removeEventListener('click', item.handler);
-      });
-    
-      pdfHandlers.forEach(function (item) {
-        item.element.removeEventListener('click', item.handler);
-      });
-    
-      // Clear the arrays
-      videoHandlers = [];
-      pdfHandlers = [];
-    }
+    // Call this function to remove all event listeners when needed
+    // removeAllEventListeners();
 
 
     function openPDF(pdfUrl) {
