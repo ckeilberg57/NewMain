@@ -226,45 +226,6 @@
     var iframeContainer = document.getElementById('iframeContainer');
     var closeButton = document.getElementById('closeButton');
     
-    // Event handlers for video and PDF
-    function openVideoHandler(index) {
-      return function () {
-        openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
-      };
-    }
-    
-    function openPDFHandler(index) {
-      return function () {
-        openPDF(index === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
-      };
-    }
-    
-    function createButton(text, clickHandler) {
-      var button = document.createElement('button');
-      button.className = 'white-button';
-      button.textContent = text;
-      button.addEventListener('click', clickHandler);
-      return button;
-    }
-    
-    function removeAllEventListeners() {
-      iframeContainer.removeEventListener('click', handleButtonClick);
-    }
-    
-    function handleButtonClick(event) {
-      var target = event.target;
-      var dataset = target.dataset;
-      var index = dataset.index;
-    
-      if (index !== undefined) {
-        if (dataset.action === 'video') {
-          openVideoHandler(index)();
-        } else if (dataset.action === 'pdf') {
-          openPDFHandler(index)();
-        }
-      }
-    }
-    
     function openIframeWindowIO(link) {
       // Clear previous content
       iframeContainer.innerHTML = '';
@@ -283,28 +244,19 @@
           columnImage.height = 300; // Set the height
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
-          columnImage.dataset.index = i;
     
-          // Append image to iframeColumn
-          iframeColumn.appendChild(columnImage);
+          // Play Video Button
+          var playVideoButton = createButton('Play Video', 'video', i);
+          var openPDFButton = createButton('Open PDF', 'pdf', i);
     
           // Container for buttons
           var buttonsContainer = document.createElement('div');
           buttonsContainer.style.textAlign = 'center'; // Center the buttons
-    
-          // Play Video Button
-          var playVideoButton = createButton('Play Video', openVideoHandler(i));
-          playVideoButton.dataset.index = i;
-          playVideoButton.dataset.action = 'video';
           buttonsContainer.appendChild(playVideoButton);
-    
-          // Open PDF Button
-          var openPDFButton = createButton('Open PDF', openPDFHandler(i));
-          openPDFButton.dataset.index = i;
-          openPDFButton.dataset.action = 'pdf';
           buttonsContainer.appendChild(openPDFButton);
     
-          // Append buttonsContainer to iframeColumn    
+          // Append image and buttonsContainer to iframeColumn
+          iframeColumn.appendChild(columnImage);
           iframeColumn.appendChild(buttonsContainer);
         }
     
@@ -318,11 +270,33 @@
     
       // Add event listener for button clicks
       iframeContainer.addEventListener('click', handleButtonClick);
-    }
     
-    // Call this function to remove all event listeners when needed
-    // removeAllEventListeners();
-
+      function handleButtonClick(event) {
+        var target = event.target;
+    
+        // Check if the clicked element is a button with the 'action' attribute
+        if (target.tagName === 'BUTTON' && target.hasAttribute('data-action')) {
+          var action = target.getAttribute('data-action');
+          var index = target.getAttribute('data-index');
+    
+          // Perform the corresponding action based on the 'data-action' attribute
+          if (action === 'video') {
+            openVideo(index === '0' ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
+          } else if (action === 'pdf') {
+            openPDF(index === '0' ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
+          }
+        }
+      }
+    
+      function createButton(text, action, index) {
+        var button = document.createElement('button');
+        button.className = 'white-button';
+        button.textContent = text;
+        button.setAttribute('data-action', action);
+        button.setAttribute('data-index', index.toString());
+        return button;
+      }
+    }
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
