@@ -246,8 +246,14 @@
           columnImage.style.margin = '0 auto'; // Center the image
     
           // Play Video Button
-          var playVideoButton = createButton('Play Video', openVideo, i);
-          var openPDFButton = createButton('Open PDF', openPDF, i);
+          var playVideoButton = createButton('Play Video', function() {
+            openVideo(i);
+          });
+          
+          // Open PDF Button
+          var openPDFButton = createButton('Open PDF', function() {
+            openPDF(i);
+          });
     
           // Container for buttons
           var buttonsContainer = document.createElement('div');
@@ -278,13 +284,11 @@
         // Your existing code to open the PDF
       }
     
-      function createButton(text, handler, index) {
+      function createButton(text, clickHandler) {
         var button = document.createElement('button');
         button.className = 'white-button';
         button.textContent = text;
-        button.addEventListener('click', function () {
-          handler(index);
-        });
+        button.addEventListener('click', clickHandler);
         return button;
       }
     }
