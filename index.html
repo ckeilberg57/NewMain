@@ -225,25 +225,60 @@
       var iframeContainer = document.getElementById('iframeContainer');
       iframeContainer.innerHTML = ''; // Clear previous content
   
+      // Set the background color of the iframe
+      iframeContainer.style.backgroundColor = '#0a2136';
+  
       // Create left column
       var leftColumn = document.createElement('div');
       leftColumn.className = 'column';
-      leftColumn.innerHTML = `
-        <img src="leftColumnImage1.png" alt="Left Column Image 1" onclick="openVideo('video7.mp4')">
-        <p>Left Column Action 1</p>
-        <button class="white-button" onclick="openVideo('video7.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openLink('https://www.example.com/link2')">Open PDF</button>
+  
+      // Create box 1 in the left column
+      var box1 = document.createElement('div');
+      box1.className = 'box';
+      box1.innerHTML = `
+        <img src="box1Image1.png" alt="Box 1 Image 1" onclick="openVideo('video9.mp4')">
+        <p>Box 1 Action 1</p>
+        <button class="white-button" onclick="openVideo('video9.mp4')">Play Video</button>
+        <button class="white-button" onclick="openPDF('https://www.example.com/pdf1.pdf')">Open PDF</button>
       `;
+      leftColumn.appendChild(box1);
+  
+      // Create box 2 in the left column
+      var box2 = document.createElement('div');
+      box2.className = 'box';
+      box2.innerHTML = `
+        <img src="box1Image2.png" alt="Box 1 Image 2" onclick="openVideo('video10.mp4')">
+        <p>Box 1 Action 2</p>
+        <button class="white-button" onclick="openVideo('video10.mp4')">Play Video</button>
+        <button class="white-button" onclick="openPDF('https://www.example.com/pdf2.pdf')">Open PDF</button>
+      `;
+      leftColumn.appendChild(box2);
   
       // Create right column
       var rightColumn = document.createElement('div');
       rightColumn.className = 'column';
-      rightColumn.innerHTML = `
-        <img src="leftColumnImage2.png" alt="Left Column Image 2" onclick="openVideo('video8.mp4')">
-        <p>Left Column Action 2</p>
-        <button class="white-button" onclick="openVideo('video8.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openLink('https://www.example.com/link3')">Open PDF</button>
+  
+      // Create box 3 in the right column
+      var box3 = document.createElement('div');
+      box3.className = 'box';
+      box3.innerHTML = `
+        <img src="box2Image1.png" alt="Box 2 Image 1" onclick="openVideo('video11.mp4')">
+        <p>Box 2 Action 1</p>
+        <button class="white-button" onclick="openVideo('video11.mp4')">Play Video</button>
+        <button class="white-button" onclick="openPDF('https://www.example.com/pdf3.pdf')">Open PDF</button>
       `;
+      rightColumn.appendChild(box3);
+  
+      // Create box 4 in the right column
+      var box4 = document.createElement('div');
+      box4.className = 'box';
+      box4.innerHTML = `
+        <img src="box2Image2.png" alt="Box 2 Image 2" onclick="openVideo('video12.mp4')">
+        <p>Box 2 Action 2</p>
+        <button class="white-button" onclick="openVideo('video12.mp4')">Play Video</button>
+        <button class="white-button" onclick="openPDF('https://www.example.com/pdf4.pdf')">Open PDF</button>
+      `;
+      rightColumn.appendChild(box4);
   
       // Set borders on each side of columns
       leftColumn.style.borderRight = '1px solid #ccc';
@@ -256,17 +291,6 @@
       // Display the iframe overlay
       document.getElementById('iframeOverlay').style.display = 'block';
     }
-  
-    // Add your existing openIframeWindow() function here
-  
-    function closeIframeWindow() {
-      // Hide the iframe overlay
-      document.getElementById('iframeOverlay').style.display = 'none';
-    }
-
-</script>
-
-
 </script>
 
 </body>
