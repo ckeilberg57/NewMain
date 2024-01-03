@@ -235,6 +235,8 @@
         var iframeColumn = document.createElement('div');
         iframeColumn.className = 'iframeColumn';
     
+        var buttonsContainer; // Declare buttonsContainer outside the loop
+    
         // Image and buttons in the first and second columns
         if (i === 0 || i === 1) {
           // Image
@@ -251,7 +253,7 @@
           iframeColumn.appendChild(columnImage);
     
           // Container for buttons
-          var buttonsContainer = document.createElement('div');
+          buttonsContainer = document.createElement('div');
           buttonsContainer.style.textAlign = 'center'; // Center the buttons
     
           // Play Video Button
@@ -263,29 +265,29 @@
           };
     
           buttonsContainer.appendChild(playVideoButton);
-
-      // Open PDF Button
-      var openPDFButton = document.createElement('button');
-      openPDFButton.className = 'white-button';
-      openPDFButton.textContent = 'Open PDF';
-      openPDFButton.onclick = function () {
-        openPDF(i === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf'); // Replace with the actual PDF URL
-      };
-
-      buttonsContainer.appendChild(openPDFButton);
-
-      // Move this line outside the if block
+    
+          // Open PDF Button
+          var openPDFButton = document.createElement('button');
+          openPDFButton.className = 'white-button';
+          openPDFButton.textContent = 'Open PDF';
+          openPDFButton.onclick = function () {
+            openPDF(i === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf'); // Replace with the actual PDF URL
+          };
+    
+          buttonsContainer.appendChild(openPDFButton);
+        }
+    
+        if (buttonsContainer) {
+          iframeColumn.appendChild(buttonsContainer);
+        }
+    
+        iframeContainer.appendChild(iframeColumn);
+      }
+    
+      // Show the iframe overlay
+      iframeOverlay.style.display = 'block';
+      closeButton.style.display = 'block';
     }
-
-    iframeColumn.appendChild(buttonsContainer); // Move this line outside the if block
-    iframeContainer.appendChild(iframeColumn);
-  }
-
-  // Show the iframe overlay
-  iframeOverlay.style.display = 'block';
-  closeButton.style.display = 'block';
-}
-
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
