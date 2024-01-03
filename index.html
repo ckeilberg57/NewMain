@@ -281,9 +281,11 @@
         var videoSources = ['Teams-like_AI-technology.mp4', 'videos/Teams-like_raised-hand.mp4'];
         var pdfSources = ['PPs/TeamsLikeLayout.pdf', 'PPs/TeamsLikeLayout.pdf'];
     
-        openVideo(link + videoSources[index]);
-        openPDF(link + pdfSources[index]);
-    
+        if (index === 0) {
+          openVideo(link + videoSources[index]);
+        } else {
+          openPDF(link + pdfSources[index]);
+        }
         // You can add additional logic here if needed
       };
     }
