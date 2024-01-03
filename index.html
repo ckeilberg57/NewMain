@@ -214,19 +214,24 @@
       // Clear previous content
       iframeContent.innerHTML = '';
   
-      // Create two columns
-      var column1 = document.createElement('div');
-      column1.className = 'customBox';
-      var column2 = document.createElement('div');
-      column2.className = 'customBox';
+      // Create container for two boxes
+      var boxContainer = document.createElement('div');
+      boxContainer.className = 'customBoxContainer';
   
-      // Create boxes with customizable images and buttons
-      createCustomBox(column1, 'images/customImage1.jpg', 'Button 1A', 'Button 1B');
-      createCustomBox(column2, 'images/customImage2.jpg', 'Button 2A', 'Button 2B');
+      // Create left box
+      var leftBox = document.createElement('div');
+      leftBox.className = 'customBox';
+      createCustomBox(leftBox, 'images/customImage1.jpg', 'Button 1A', 'Button 1B');
+      boxContainer.appendChild(leftBox);
   
-      // Append columns to the iframe content
-      iframeContent.appendChild(column1);
-      iframeContent.appendChild(column2);
+      // Create right box
+      var rightBox = document.createElement('div');
+      rightBox.className = 'customBox';
+      createCustomBox(rightBox, 'images/customImage2.jpg', 'Button 2A', 'Button 2B');
+      boxContainer.appendChild(rightBox);
+  
+      // Append box container to the iframe content
+      iframeContent.appendChild(boxContainer);
   
       // Display the iframe container
       iframeContainer.style.display = 'block';
