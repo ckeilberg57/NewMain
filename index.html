@@ -246,8 +246,8 @@
           columnImage.style.margin = '0 auto'; // Center the image
     
           // Play Video Button
-          var playVideoButton = createButton('Play Video', 'video', i);
-          var openPDFButton = createButton('Open PDF', 'pdf', i);
+          var playVideoButton = createButton('Play Video', openVideo, i);
+          var openPDFButton = createButton('Open PDF', openPDF, i);
     
           // Container for buttons
           var buttonsContainer = document.createElement('div');
@@ -268,47 +268,24 @@
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
     
-      // Add event listener for button clicks
-      iframeContainer.addEventListener('click', handleButtonClick);
-    
-      function handleButtonClick(event) {
-        var target = event.target;
-    
-        // Check if the clicked element is a button with the 'action' attribute
-        if (target.tagName === 'BUTTON' && target.hasAttribute('data-action')) {
-          var action = target.getAttribute('data-action');
-          var index = target.getAttribute('data-index');
-    
-          // Perform the corresponding action based on the 'data-action' attribute
-          if (action === 'video') {
-            openVideo(index === '0' ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
-          } else if (action === 'pdf') {
-            openPDF(index === '0' ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
-          }
-        }
+      function openVideo(index) {
+        console.log('Opening video for index: ' + index);
+        // Your existing code to open the video
       }
     
-      function createButton(text, action, index) {
+      function openPDF(index) {
+        console.log('Opening PDF for index: ' + index);
+        // Your existing code to open the PDF
+      }
+    
+      function createButton(text, handler, index) {
         var button = document.createElement('button');
         button.className = 'white-button';
         button.textContent = text;
-        button.setAttribute('data-action', action);
-        button.setAttribute('data-index', index.toString());
+        button.addEventListener('click', function () {
+          handler(index);
+        });
         return button;
-      }
-    
-      function openVideo(videoSource) {
-        if (videoSource) {
-          // Your existing code to open the video
-          console.log('Opening video: ' + videoSource);
-        } else {
-          console.error('Video source is null or undefined');
-        }
-      }
-    
-      function openPDF(pdfSource) {
-        // Your existing code to open the PDF
-        console.log('Opening PDF: ' + pdfSource);
       }
     }
 
