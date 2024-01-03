@@ -253,7 +253,7 @@
         iframeColumn.appendChild(columnImage);
     
         // Container for buttons
-        buttonsContainer = document.createElement('div');
+        var buttonsContainer = document.createElement('div');
         buttonsContainer.style.textAlign = 'center'; // Center the buttons
     
         // Play Video Button
@@ -290,14 +290,6 @@
     // Show the iframe overlay
     iframeOverlay.style.display = 'block';
     closeButton.style.display = 'block';
-
-    function createButton(text, clickHandler) {
-      var button = document.createElement('button');
-      button.className = 'white-button';
-      button.textContent = text;
-      button.onclick = clickHandler;
-      return button;
-    }
   }
 
     function openPDF(pdfUrl) {
