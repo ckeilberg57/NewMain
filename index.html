@@ -288,10 +288,11 @@
     function closeIframeWindow() {
       var iframeContainer = document.getElementById('customIframeContainer');
       var iframeContent = document.getElementById('customIframeContent');
-      var mainIframe = document.getElementById('mainContent');
-  
+      
       // Restore the original iframe content
-      mainIframe.innerHTML = originalIframeContent;
+      if (originalIframeContent) {
+        document.body.innerHTML = originalIframeContent;
+      }
   
       // Hide the custom iframe container
       iframeContainer.style.display = 'none';
