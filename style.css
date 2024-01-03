@@ -246,6 +246,10 @@
       margin: 1%;
       display: inline-block;
       text-align: center;
+      background-color: #0a2136; /* Background color for each box */
+      border: 2px solid #0ebec7; /* Border color */
+      border-radius: 5px; /* Border radius */
+      padding: 10px; /* Padding inside each box */
     }
 
     .customBox img {
