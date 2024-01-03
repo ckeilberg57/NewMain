@@ -234,9 +234,6 @@
       for (var i = 0; i < 6; i++) {
         var iframeColumn = document.createElement('div');
         iframeColumn.className = 'iframeColumn';
-
-        // Image and buttons in the first and second columns
-        if (i === 0 || i === 1) {
     
         var columnImage = document.createElement('img');
         columnImage.src = i === 0 ? 'Teamslike.png' : 'images/TeamsRaisedHand.png';
@@ -282,9 +279,8 @@
         
         // Append buttonsContainer to iframeColumn    
         iframeColumn.appendChild(buttonsContainer);
-      }
       
-      iframeContainer.appendChild(iframeColumn);
+        iframeContainer.appendChild(iframeColumn);
     }
     
     // Show the iframe overlay
