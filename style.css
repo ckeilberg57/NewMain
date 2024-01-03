@@ -235,6 +235,8 @@
       transform: translate(-50%, -50%);
       width: 80%;
       height: 80%;
+      max-width: 120%; /* Increase the size by 20% */
+      max-height: 120%; /* Increase the size by 20% */
       background: #0a2136;
       border-radius: 10px;
       overflow: hidden;
