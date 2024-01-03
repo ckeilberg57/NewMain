@@ -65,6 +65,11 @@
   <div id="iframeContainer"></div>
   <span id="closeButton" onclick="closeIframeWindow()">×</span>
 </div>
+
+<div id="customIframeContainer">
+  <div id="customIframeContent"></div>
+  <span id="closeButton" onclick="closeIframeWindow()">×</span>
+</div>
   
   <!-- Main Content Container -->
   <div id="mainContent">
@@ -202,6 +207,60 @@
       iframeContainer.style.display = 'none';
     }
 
+    function openIframeWindowIO() {
+      var iframeContainer = document.getElementById('customIframeContainer');
+      var iframeContent = document.getElementById('customIframeContent');
+  
+      // Clear previous content
+      iframeContent.innerHTML = '';
+  
+      // Create two columns
+      var column1 = document.createElement('div');
+      column1.className = 'customBox';
+      var column2 = document.createElement('div');
+      column2.className = 'customBox';
+  
+      // Create boxes with customizable images and buttons
+      createCustomBox(column1, 'images/customImage1.jpg', 'Button 1A', 'Button 1B');
+      createCustomBox(column2, 'images/customImage2.jpg', 'Button 2A', 'Button 2B');
+  
+      // Append columns to the iframe content
+      iframeContent.appendChild(column1);
+      iframeContent.appendChild(column2);
+  
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
+    }
+  
+    function createCustomBox(container, imageUrl, button1Text, button2Text) {
+      var image = document.createElement('img');
+      image.src = imageUrl;
+  
+      var paragraph = document.createElement('p');
+      paragraph.textContent = 'Custom Image Description';
+  
+      var button1 = document.createElement('button');
+      button1.textContent = button1Text;
+      button1.onclick = function() {
+        alert('Button 1 Clicked');
+      };
+  
+      var button2 = document.createElement('button');
+      button2.textContent = button2Text;
+      button2.onclick = function() {
+        alert('Button 2 Clicked');
+      };
+  
+      // Append elements to the container
+      container.appendChild(image);
+      container.appendChild(paragraph);
+      container.appendChild(button1);
+      container.appendChild(button2);
+    }
+  
+    function closeIframeWindow() {
+      document.getElementById('customIframeContainer').style.display = 'none';
+    }
   </script>
 
 </body>
