@@ -222,26 +222,25 @@
       closeButton.style.display = 'none';
   }
 
-    // Updated openIframeWindow function
-    function openIframeWindowIO(link) {
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      var iframeContainer = document.getElementById('iframeContainer');
-      var closeButton = document.getElementById('closeButton');
-  
-      // Clear previous content
-      iframeContainer.innerHTML = '';
-  
+  function openIframeWindowIO(link) {
+    var iframeOverlay = document.getElementById('iframeOverlay');
+    var iframeContainer = document.getElementById('iframeContainer');
+    var closeButton = document.getElementById('closeButton');
+
+    // Clear previous content
+    iframeContainer.innerHTML = '';
+
     // Create 6 iframe columns
     for (var i = 0; i < 6; i++) {
       var iframeColumn = document.createElement('div');
       iframeColumn.className = 'iframeColumn';
-    
+
       // Image and buttons in the first and second columns
       if (i === 0 || i === 1) {
         // Image
         var columnImage = document.createElement('img');
         columnImage.src = i === 0 ? 'Teamslike.png' : 'TeamsLike.png'; // Replace with the actual image URL
-        columnImage.alt = i === 0 ? 'Teams Like Layout' : 'Teams Like Raised Hand;
+        columnImage.alt = i === 0 ? 'Teams Like Layout' : 'Teams Like Raised Hand';
         columnImage.width = 600; // Set the width
         columnImage.height = 300; // Set the height
         columnImage.style.display = 'block';
@@ -250,11 +249,11 @@
           openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'Teams-like_raised-hand.mp4'); // Replace with the actual video URL
         };
         iframeColumn.appendChild(columnImage);
-    
+
         // Container for buttons
         var buttonsContainer = document.createElement('div');
         buttonsContainer.style.textAlign = 'center'; // Center the buttons
-    
+
         // Play Video Button
         var playVideoButton = document.createElement('button');
         playVideoButton.className = 'white-button';
@@ -264,19 +263,15 @@
         };
         buttonsContainer.appendChild(playVideoButton);
       }
-    
-      iframeColumn.appendChild(buttonsContainer);
-      document.body.appendChild(iframeColumn);
-    }
 
-      // Append the column to the iframe container
+      iframeColumn.appendChild(buttonsContainer);
       iframeContainer.appendChild(iframeColumn);
     }
 
-      // Show the iframe overlay
-      iframeOverlay.style.display = 'block';
-      closeButton.style.display = 'block';
-    }
+    // Show the iframe overlay
+    iframeOverlay.style.display = 'block';
+    closeButton.style.display = 'block';
+  }
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
