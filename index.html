@@ -242,15 +242,19 @@
           var columnImage = document.createElement('img');
           columnImage.src = 'Teamslike.png'; // Replace with the actual image URL
           columnImage.alt = 'Teams Like Layoug';
-          columnImage.width = 400; // Set the width
-          columnImage.height = 200; // Set the height
+          columnImage.width = 600; // Set the width
+          columnImage.height = 400; // Set the height
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
           columnImage.onclick = function () {
             openVideo('Teams-like_AI-technology.mp4'); // Replace with the actual video URL
           };
           iframeColumn.appendChild(columnImage);
-  
+
+          // Container for buttons
+          var buttonsContainer = document.createElement('div');
+          buttonsContainer.style.textAlign = 'center'; // Center the buttons
+          
           // Play Video Button
           var playVideoButton = document.createElement('button');
           playVideoButton.className = 'white-button';
@@ -277,6 +281,7 @@
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
     }
+    
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
