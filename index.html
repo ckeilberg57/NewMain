@@ -232,7 +232,16 @@
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
-  
+
+      // Add event listeners to the buttons
+      leftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('video1.mp4');
+      });
+
+      leftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('https://www.example.com/link1');
+      });
+      
       // Display the iframe container
       iframeContainer.style.display = 'block';
     }
@@ -246,14 +255,16 @@
   
       var button1 = document.createElement('button');
       button1.textContent = button1Text;
+      button1.className = 'customButton1'; // Add a class for identification
       button1.onclick = function() {
-        alert('Button 1 Clicked');
+        // Button 1 click handled in the event listener
       };
   
       var button2 = document.createElement('button');
       button2.textContent = button2Text;
+      button2.className = 'customButton2'; // Add a class for identification
       button2.onclick = function() {
-        alert('Button 2 Clicked');
+        // Button 2 click handled in the event listener
       };
   
       // Append elements to the container
