@@ -238,10 +238,12 @@
   
         // Image
         var columnImage = document.createElement('img');
-        columnImage.src = 'Teamslike.png'; // Replace with the actual image URL
+        columnImage.src = 'Teamslike.png';
         columnImage.alt = 'Teams Like Layout';
+        columnImage.width = 200;
+        columnImage.height = 100; 
         columnImage.onclick = function () {
-          openVideo('Teams-like_AI-technology.mp4'); // Replace with the actual video URL
+          openVideo('Teams-like_AI-technology.mp4');
         };
         iframeColumn.appendChild(columnImage);
   
@@ -250,7 +252,7 @@
         playVideoButton.className = 'white-button';
         playVideoButton.textContent = 'Play Video';
         playVideoButton.onclick = function () {
-          openVideo('Teams-like_AI-technology.mp4'); // Replace with the actual video URL
+          openVideo('Teams-like_AI-technology.mp4');
         };
         iframeColumn.appendChild(playVideoButton);
   
@@ -259,7 +261,7 @@
         openPDFButton.className = 'white-button';
         openPDFButton.textContent = 'Open PDF';
         openPDFButton.onclick = function () {
-          openPDF('PPs/Infra-Poly_ConsumptionModels.pdf'); // Replace with the actual PDF URL
+          openPDF('PPs/Infra-Poly_ConsumptionModels.pdf');
         };
         iframeColumn.appendChild(openPDFButton);
   
