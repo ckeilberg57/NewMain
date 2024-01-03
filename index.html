@@ -231,39 +231,42 @@
       // Clear previous content
       iframeContainer.innerHTML = '';
   
-      // Create 6 iframe columns with image and buttons
+      // Create 6 iframe columns
       for (var i = 0; i < 6; i++) {
         var iframeColumn = document.createElement('div');
         iframeColumn.className = 'iframeColumn';
   
-        // Image
-        var columnImage = document.createElement('img');
-        columnImage.src = 'Teamslike.png';
-        columnImage.alt = 'Teams Like Layout';
-        columnImage.width = 200;
-        columnImage.height = 100; 
-        columnImage.onclick = function () {
-          openVideo('Teams-like_AI-technology.mp4');
-        };
-        iframeColumn.appendChild(columnImage);
+        // Image and buttons only in the first column
+        if (i === 0) {
+          // Image
+          var columnImage = document.createElement('img');
+          columnImage.src = 'Teamslike.png'; // Replace with the actual image URL
+          columnImage.alt = 'Teams Like Layout';
+          columnImage.width = 400; // Set the width
+          columnImage.height = 400; // Set the height
+          columnImage.onclick = function () {
+            openVideo('Teams-like_AI-technology.mp4'); // Replace with the actual video URL
+          };
+          iframeColumn.appendChild(columnImage);
   
-        // Play Video Button
-        var playVideoButton = document.createElement('button');
-        playVideoButton.className = 'white-button';
-        playVideoButton.textContent = 'Play Video';
-        playVideoButton.onclick = function () {
-          openVideo('Teams-like_AI-technology.mp4');
-        };
-        iframeColumn.appendChild(playVideoButton);
+          // Play Video Button
+          var playVideoButton = document.createElement('button');
+          playVideoButton.className = 'white-button';
+          playVideoButton.textContent = 'Play Video';
+          playVideoButton.onclick = function () {
+            openVideo('Teams-like_AI-technology.mp4'); // Replace with the actual video URL
+          };
+          iframeColumn.appendChild(playVideoButton);
   
-        // Open PDF Button
-        var openPDFButton = document.createElement('button');
-        openPDFButton.className = 'white-button';
-        openPDFButton.textContent = 'Open PDF';
-        openPDFButton.onclick = function () {
-          openPDF('PPs/Infra-Poly_ConsumptionModels.pdf');
-        };
-        iframeColumn.appendChild(openPDFButton);
+          // Open PDF Button
+          var openPDFButton = document.createElement('button');
+          openPDFButton.className = 'white-button';
+          openPDFButton.textContent = 'Open PDF';
+          openPDFButton.onclick = function () {
+            openPDF('your_pdf_url_here'); // Replace with the actual PDF URL
+          };
+          iframeColumn.appendChild(openPDFButton);
+        }
   
         iframeContainer.appendChild(iframeColumn);
       }
@@ -272,7 +275,6 @@
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
     }
-
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
