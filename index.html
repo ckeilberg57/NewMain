@@ -222,11 +222,11 @@
       closeButton.style.display = 'none';
   }
 
-    function openIframeWindowIO(link) {
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      var iframeContainer = document.getElementById('iframeContainer');
-      var closeButton = document.getElementById('closeButton');
+    var iframeOverlay = document.getElementById('iframeOverlay');
+    var iframeContainer = document.getElementById('iframeContainer');
+    var closeButton = document.getElementById('closeButton');
     
+    function openIframeWindowIO(link) {
       // Clear previous content
       iframeContainer.innerHTML = '';
     
@@ -237,7 +237,6 @@
     
         // Image and buttons in the first and second columns
         if (i === 0 || i === 1) {
-    
           var columnImage = document.createElement('img');
           columnImage.src = i === 0 ? 'Teamslike.png' : 'images/TeamsRaisedHand.png';
           columnImage.alt = i === 0 ? 'Teams Like Layout' : 'Teams Like Raised Hand';
@@ -292,7 +291,6 @@
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
     }
-
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
