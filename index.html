@@ -145,6 +145,7 @@
   </div>
 
   <script>
+    var originalIframeContent;
     function openVideo(videoSrc) {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       var videoFrame = document.getElementById('videoFrame');
@@ -206,8 +207,6 @@
       var iframeContainer = document.getElementById('videoFrameContainer');
       iframeContainer.style.display = 'none';
     }
-
-    var originalIframeContent;
     
     function openIframeWindowIO() {
       var iframeContainer = document.getElementById('customIframeContainer');
