@@ -169,59 +169,6 @@
       }
     }
 
-    function openIframe(link) {
-      var iframe = document.createElement('iframe');
-      iframe.src = link;
-      iframe.width = '100%';
-      iframe.height = '100%';
-      iframe.frameBorder = '0';
-      iframe.allowfullscreen = true;
-
-      var iframeContainer = document.getElementById('videoFrameContainer');
-      iframeContainer.innerHTML = ''; // Clear previous content
-      iframeContainer.appendChild(iframe);
-
-      var closeButton = document.getElementById('closeButton');
-      closeButton.style.display = 'block';
-
-      iframeContainer.style.display = 'block';
-    }
-
-    // New
-    function openIframeWindow(link) {
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      var iframeContainer = document.getElementById('iframeContainer');
-      var closeButton = document.getElementById('closeButton');
-
-    // Clear previous content
-      iframeContainer.innerHTML = '';
-
-    // Create 6 iframe columns
-      for (var i = 0; i < 6; i++) {
-        var iframeColumn = document.createElement('div');
-        iframeColumn.className = 'iframeColumn';
-  
-        var iframe = document.createElement('iframe');
-        iframe.src = link;
-        iframeColumn.appendChild(iframe);
-  
-        iframeContainer.appendChild(iframeColumn);
-    }
-
-    // Show the iframe overlay
-      iframeOverlay.style.display = 'block';
-      closeButton.style.display = 'block';
-  }
-
-    function closeIframeWindow() {
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      var closeButton = document.getElementById('closeButton');
-
-    // Hide the iframe overlay
-      iframeOverlay.style.display = 'none';
-      closeButton.style.display = 'none';
-  }
-    
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
