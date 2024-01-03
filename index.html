@@ -243,7 +243,7 @@
           columnImage.src = 'Teamslike.png'; // Replace with the actual image URL
           columnImage.alt = 'Teams Like Layoug';
           columnImage.width = 600; // Set the width
-          columnImage.height = 400; // Set the height
+          columnImage.height = 300; // Set the height
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
           columnImage.onclick = function () {
@@ -253,7 +253,9 @@
 
           // Container for buttons
           var buttonsContainer = document.createElement('div');
-          buttonsContainer.style.textAlign = 'center'; // Center the buttons
+          buttonsContainer.style.display = 'flex';
+          buttonsContainer.style.justifyContent = 'center'; // Center the buttons horizontally
+          buttonsContainer.style.alignItems = 'center'; // Center the buttons vertically
           
           // Play Video Button
           var playVideoButton = document.createElement('button');
