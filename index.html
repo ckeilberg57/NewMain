@@ -276,21 +276,28 @@
       closeButton.style.display = 'block';
     }
   
-    function createButtonClickHandler(index, link) {
+    function createButtonClickHandler(columnIndex, boxIndex, link) {
       return function () {
-        var videoSources = ['Teams-like_AI-technology.mp4', 'videos/Teams-like_raised-hand.mp4'];
-        var pdfSources = ['PPs/TeamsLikeLayout.pdf', 'PPs/TeamsLikeLayout.pdf'];
+        var videoSources = [
+          ['Teams-like_AI-technology.mp4', 'Teams-like-raised-hand.mp4'],
+          // Add more video sources as needed
+        ];
     
-        if (index < videoSources.length) {
-          openVideo(link + videoSources[index]);
-        } else if (index < videoSources.length + pdfSources.length) {
-          openPDF(link + pdfSources[index - videoSources.length]);
+        var pdfSources = [
+          ['PPs/TeamsLikeLayout.pdf', 'PPs/TeamsLikeLayout.pdf'],
+          // Add more PDF sources as needed
+        ];
+    
+        if (columnIndex < videoSources.length && boxIndex < videoSources[columnIndex].length) {
+          openVideo(link + videoSources[columnIndex][boxIndex]);
+        } else if (columnIndex < pdfSources.length && boxIndex < pdfSources[columnIndex].length) {
+          openPDF(link + pdfSources[columnIndex][boxIndex]);
         }
     
         // You can add additional logic here if needed
       };
     }
-    
+        
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
