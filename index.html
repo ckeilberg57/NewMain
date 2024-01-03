@@ -202,35 +202,6 @@
       iframeContainer.style.display = 'none';
     }
 
-    function openIframeWindowIO() {
-      var iframeContainer = document.getElementById('iframeContainer');
-      var iframe = document.createElement('iframe');
-      iframe.src = 'your_new_iframe_content.html'; // Replace with the actual content or URL
-      iframe.width = '100%';
-      iframe.height = '100%';
-      iframe.frameBorder = '0';
-      iframe.allowfullscreen = true;
-  
-      iframeContainer.innerHTML = ''; // Clear previous content
-      iframeContainer.appendChild(iframe);
-  
-      var closeButton = document.getElementById('closeButton');
-      closeButton.style.display = 'block';
-  
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      iframeOverlay.style.display = 'block';
-    }
-  
-    function closeIframe() {
-      var iframeContainer = document.getElementById('iframeContainer');
-      iframeContainer.innerHTML = ''; // Clear iframe content
-  
-      var closeButton = document.getElementById('closeButton');
-      closeButton.style.display = 'none';
-  
-      var iframeOverlay = document.getElementById('iframeOverlay');
-      iframeOverlay.style.display = 'none';
-    }
   </script>
 
 </body>
