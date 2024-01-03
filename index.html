@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>GEM Demos</title>
+  <style>
+    /* Add your additional CSS styles here */
+    #iframeOverlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    #iframeContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+    }
+
+    .iframeColumn {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,7 +40,7 @@
     <br>
     <p>InterOP</p>
   </div>
-  
+
   <!-- Sidebar Item 2 -->
   <div class="sidebar-item" onclick="openIframeWindow()">
     <img src="sidebarHC.png" alt="Healthcare">
@@ -42,7 +65,7 @@
     <p></p>
   </div>
 
-    <!-- Sidebar Item 5 -->
+  <!-- Sidebar Item 5 -->
   <div class="sidebar-item" onclick="openIframeWindow()">
     <img src="sidebarSecure.png" alt="Secure">
     <p>Secure</p>
@@ -50,14 +73,14 @@
     <p></p>
   </div>
 
-      <!-- Sidebar Item 6 -->
+  <!-- Sidebar Item 6 -->
   <div class="sidebar-item" onclick="openIframeWindow()">
     <img src="sidebarJudicial.png" alt="Judicial">
     <p></p>
     <br>
     <p>Judicial</p>
   </div>
-  
+
 </div>
 
 <!-- New Iframe Overlay Container -->
@@ -65,82 +88,83 @@
   <div id="iframeContainer"></div>
   <span id="closeButton" onclick="closeIframeWindow()">×</span>
 </div>
-  
-  <!-- Main Content Container -->
-  <div id="mainContent">
-    <!-- Large text at the top -->
-    <div id="pageHeading">
-      Welcome - DEMO site
-    </div>
 
-    <!-- Main Page Image -->
-    <div id="mainPageImage">
-      <img id="headerImage" src="GEM.png" alt="Header Image">
-    </div>
+<!-- Main Content Container -->
+<div id="mainContent">
+  <!-- Large text at the top -->
+  <div id="pageHeading">
+    Welcome - DEMO site
+  </div>
 
-    <!-- Container for two side-by-side white-lined boxes -->
-    <div id="container">
-      <!-- First set of three columns -->
-      <div class="box">
-        <div class="column">
-          <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
-          <p>Infrastructure Consumption Models - Poly Edition</p>
-          <button class="white-button" onclick="openVideo('video1.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open PDF</button>
-        </div>
+  <!-- Main Page Image -->
+  <div id="mainPageImage">
+    <img id="headerImage" src="GEM.png" alt="Header Image">
+  </div>
 
-        <div class="column">
-          <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
-          <p>Infrastructure Consumption Models - Cisco Edition</p>
-          <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
-        </div>
-
-        <div class="column">
-          <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
-          <p>Enhanced Room Management</p>
-          <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
-        </div>
+  <!-- Container for two side-by-side white-lined boxes -->
+  <div id="container">
+    <!-- First set of three columns -->
+    <div class="box">
+      <div class="column">
+        <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
+        <p>Infrastructure Consumption Models - Poly Edition</p>
+        <button class="white-button" onclick="openVideo('video1.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open PDF</button>
       </div>
 
-      <!-- Second set of three columns -->
-      <div class="box">
-        <div class="column">
-          <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
-          <p>Pexip Teams Connector for CVI</p>
-          <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
-        </div>
+      <div class="column">
+        <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
+        <p>Infrastructure Consumption Models - Cisco Edition</p>
+        <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
+      </div>
 
-        <div class="column">
-          <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
-          <p>Pexip Service CVI for Teams</p>
-          <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
-        </div>
-
-        <div class="column">
-          <img src="images/ServiceToGoogle.png" alt="Service Google" onclick="openVideo('video6.mp4')">
-          <p>Pexip Service InterOP for Google Meet</p>
-          <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
-        </div>
+      <div class="column">
+        <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
+        <p>Enhanced Room Management</p>
+        <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
       </div>
     </div>
 
-    <!-- Iframe container -->
-    <div id="videoFrameContainer">
-      <span id="closeButton" onclick="closeVideo()">×</span>
-      <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-      <button onclick="watchVideo()">Watch Video</button>
-      <button onclick="launchDemo()">Launch Interactive Demo</button>
-      <button onclick="closeVideo()">Close</button>
+    <!-- Second set of three columns -->
+    <div class="box">
+      <div class="column">
+        <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
+        <p>Pexip Teams Connector for CVI</p>
+        <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
+      </div>
+
+      <div class="column">
+        <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
+        <p>Pexip Service CVI for Teams</p>
+        <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
+      </div>
+
+      <div class="column">
+        <img src="images/ServiceToGoogle.png" alt="Service Google" onclick="openVideo('video6.mp4')">
+        <p>Pexip Service InterOP for Google Meet</p>
+        <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
+        <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open PDF</button>
+      </div>
     </div>
   </div>
 
-  <script>
-    function openVideo(videoSrc) {
+  <!-- Iframe container -->
+  <div id="videoFrameContainer">
+    <span id="closeButton" onclick="closeVideo()">×</span>
+    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    <button onclick="watchVideo()">Watch Video</button>
+    <button onclick="launchDemo()">Launch Interactive Demo</button>
+    <button onclick="closeVideo()">Close</button>
+  </div>
+</div>
+
+<script>
+
+      function openVideo(videoSrc) {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       var videoFrame = document.getElementById('videoFrame');
       videoFrame.src = videoSrc;
@@ -325,7 +349,8 @@
       var iframeContainer = document.getElementById('videoFrameContainer');
       iframeContainer.style.display = 'none';
     }
-  </script>
+  
+</script>
 
 </body>
 </html>
