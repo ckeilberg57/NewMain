@@ -264,6 +264,19 @@
           };
           buttonsContainer.appendChild(playVideoButton);
 
+          // Append buttons container to the column
+          iframeColumn.appendChild(buttonsContainer);
+        }
+
+        // Append the column to the iframe container
+        iframeContainer.appendChild(iframeColumn);
+      }
+
+      // Show the iframe overlay
+      iframeOverlay.style.display = 'block';
+      closeButton.style.display = 'block';
+    }
+
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
       iframe.src = pdfUrl;
