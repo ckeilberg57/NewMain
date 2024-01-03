@@ -222,19 +222,19 @@
       closeButton.style.display = 'none';
   }
 
-     function openIframeWindowIO(link) {
+    function openIframeWindowIO(link) {
       var iframeOverlay = document.getElementById('iframeOverlay');
       var iframeContainer = document.getElementById('iframeContainer');
       var closeButton = document.getElementById('closeButton');
-    
+  
       // Clear previous content
       iframeContainer.innerHTML = '';
-    
+  
       // Create 6 iframe columns
       for (var i = 0; i < 6; i++) {
         var iframeColumn = document.createElement('div');
         iframeColumn.className = 'iframeColumn';
-    
+  
         var columnImage = document.createElement('img');
         columnImage.src = i === 0 ? 'Teamslike.png' : 'images/TeamsRaisedHand.png';
         columnImage.alt = i === 0 ? 'Teams Like Layout' : 'Teams Like Raised Hand';
@@ -248,11 +248,11 @@
           };
         })(i);
         iframeColumn.appendChild(columnImage);
-    
+  
         // Container for buttons
         var buttonsContainer = document.createElement('div');
         buttonsContainer.style.textAlign = 'center'; // Center the buttons
-    
+  
         // Play Video Button
         var playVideoButton = document.createElement('button');
         playVideoButton.className = 'white-button';
@@ -262,9 +262,9 @@
             openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
           };
         })(i);
-    
+  
         buttonsContainer.appendChild(playVideoButton);
-    
+  
         // Open PDF Button
         var openPDFButton = document.createElement('button');
         openPDFButton.className = 'white-button';
@@ -274,19 +274,19 @@
             openPDF(index === 0 ? 'PPs/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
           };
         })(i);
-    
+  
         buttonsContainer.appendChild(openPDFButton);
-        
-        // Append buttonsContainer to iframeColumn    
+  
+        // Append buttonsContainer to iframeColumn
         iframeColumn.appendChild(buttonsContainer);
-      
+  
         iframeContainer.appendChild(iframeColumn);
+      }
+  
+      // Show the iframe overlay
+      iframeOverlay.style.display = 'block';
+      closeButton.style.display = 'block';
     }
-    
-    // Show the iframe overlay
-    iframeOverlay.style.display = 'block';
-    closeButton.style.display = 'block';
-  }
     
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
