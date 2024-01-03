@@ -261,6 +261,15 @@
         playVideoButton.onclick = function () {
           openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4'); // Replace with the actual video URL
         };
+
+        // Open PDF Button
+        var openPDFButton = document.createElement('button');
+        openPDFButton.className = 'white-button';
+        openPDFButton.textContent = 'Open PDF';
+        openPDFButton.onclick = function () {
+          openPDF(i === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf'); // Replace with the actual PDF URL
+        };
+        
         buttonsContainer.appendChild(playVideoButton);
       }
 
