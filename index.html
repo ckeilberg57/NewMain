@@ -247,7 +247,7 @@
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
           columnImage.onclick = function () {
-            openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'Teams-like_raised-hand.mp4'); // Replace with the actual video URL
+            openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4'); // Replace with the actual video URL
           };
           iframeColumn.appendChild(columnImage);
   
@@ -263,6 +263,11 @@
             openVideo(i === 0 ? 'Teams-like_AI-technology.mp4' : 'Teams-like_raised-hand.mp4'); // Replace with the actual video URL
           };
           buttonsContainer.appendChild(playVideoButton);
+        }
+
+        iframeColumn.appendChild(buttonsContainer);
+        document.body.appendChild(iframeColumn);
+    }
     
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
