@@ -296,7 +296,22 @@
         button.setAttribute('data-index', index.toString());
         return button;
       }
+    
+      function openVideo(videoSource) {
+        if (videoSource) {
+          // Your existing code to open the video
+          console.log('Opening video: ' + videoSource);
+        } else {
+          console.error('Video source is null or undefined');
+        }
+      }
+    
+      function openPDF(pdfSource) {
+        // Your existing code to open the PDF
+        console.log('Opening PDF: ' + pdfSource);
+      }
     }
+
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
