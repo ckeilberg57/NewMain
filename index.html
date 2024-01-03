@@ -273,19 +273,18 @@
         };
     
         buttonsContainer.appendChild(openPDFButton);
-        }
         
         // Append buttonsContainer to iframeColumn    
         iframeColumn.appendChild(buttonsContainer);
-        }
-      
-        iframeContainer.appendChild(iframeColumn);
-        }
-    
-        // Show the iframe overlay
-        iframeOverlay.style.display = 'block';
-        closeButton.style.display = 'block';
       }
+      
+      iframeContainer.appendChild(iframeColumn);
+    }
+    
+    // Show the iframe overlay
+    iframeOverlay.style.display = 'block';
+    closeButton.style.display = 'block';
+  }
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
