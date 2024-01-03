@@ -242,11 +242,7 @@
         columnImage.height = 300; // Set the height
         columnImage.style.display = 'block';
         columnImage.style.margin = '0 auto'; // Center the image
-        columnImage.onclick = (function (index) {
-          return function () {
-            openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
-          };
-        })(i);
+        columnImage.onclick = createButtonClickHandler(i);
         iframeColumn.appendChild(columnImage);
   
         // Container for buttons
@@ -257,11 +253,7 @@
         var playVideoButton = document.createElement('button');
         playVideoButton.className = 'white-button';
         playVideoButton.textContent = 'Play Video';
-        playVideoButton.onclick = (function (index) {
-          return function () {
-            openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
-          };
-        })(i);
+        playVideoButton.onclick = createButtonClickHandler(i);
   
         buttonsContainer.appendChild(playVideoButton);
   
@@ -269,11 +261,7 @@
         var openPDFButton = document.createElement('button');
         openPDFButton.className = 'white-button';
         openPDFButton.textContent = 'Open PDF';
-        openPDFButton.onclick = (function (index) {
-          return function () {
-            openPDF(index === 0 ? 'PPs/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
-          };
-        })(i);
+        openPDFButton.onclick = createButtonClickHandler(i);
   
         buttonsContainer.appendChild(openPDFButton);
   
@@ -286,6 +274,13 @@
       // Show the iframe overlay
       iframeOverlay.style.display = 'block';
       closeButton.style.display = 'block';
+    }
+  
+    function createButtonClickHandler(index) {
+      return function () {
+        openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
+        // You can add additional logic here if needed
+      };
     }
     
     function openPDF(pdfUrl) {
