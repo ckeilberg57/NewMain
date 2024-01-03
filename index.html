@@ -246,12 +246,14 @@
           columnImage.style.margin = '0 auto'; // Center the image
     
           // Play Video Button
-          var playVideoButton = createButton('Play Video', function() {
+          var playVideoButton = createButton('Play Video');
+          playVideoButton.addEventListener('click', function () {
             openVideo(i);
           });
-          
+    
           // Open PDF Button
-          var openPDFButton = createButton('Open PDF', function() {
+          var openPDFButton = createButton('Open PDF');
+          openPDFButton.addEventListener('click', function () {
             openPDF(i);
           });
     
@@ -284,15 +286,13 @@
         // Your existing code to open the PDF
       }
     
-      function createButton(text, clickHandler) {
+      function createButton(text) {
         var button = document.createElement('button');
         button.className = 'white-button';
         button.textContent = text;
-        button.addEventListener('click', clickHandler);
         return button;
       }
     }
-
 
     function openPDF(pdfUrl) {
       var iframe = document.createElement('iframe');
