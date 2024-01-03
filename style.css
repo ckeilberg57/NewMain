@@ -208,3 +208,53 @@
     #iframeContainer .iframeColumn:nth-child(odd) {
       clear: both;
     }
+
+    /* Add your custom CSS styles here */
+    #customIframeContainer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    #customIframeContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .customBox {
+      width: 48%;
+      margin: 1%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .customBox img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .customBox p {
+      margin: 10px 0;
+    }
+
+    .customBox button {
+      padding: 10px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
