@@ -221,13 +221,13 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'Teamslike.png', 'Button 1A', 'Button 1B');
+      createCustomBox(leftBox, 'Teamslike.png', 'Button 1A', 'Button 1B', 'Teams Like Layout');
       boxContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Button 2A', 'Button 2B');
+      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Button 2A', 'Button 2B', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
@@ -242,7 +242,7 @@
       image.src = imageUrl;
   
       var paragraph = document.createElement('p');
-      paragraph.textContent = 'Custom Image Description';
+      paragraph.textContent = description;
   
       var button1 = document.createElement('button');
       button1.textContent = button1Text;
