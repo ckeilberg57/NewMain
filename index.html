@@ -226,6 +226,10 @@
     var iframeContainer = document.getElementById('iframeContainer');
     var closeButton = document.getElementById('closeButton');
     
+    // Keep track of event handlers
+    var videoHandlers = [];
+    var pdfHandlers = [];
+    
     function openIframeWindowIO(link) {
       // Clear previous content
       iframeContainer.innerHTML = '';
@@ -244,7 +248,12 @@
           columnImage.height = 300; // Set the height
           columnImage.style.display = 'block';
           columnImage.style.margin = '0 auto'; // Center the image
-          columnImage.onclick = createOpenVideoHandler(i);
+    
+          // Play Video Button
+          var playVideoHandler = createVideoHandler(i);
+          columnImage.addEventListener('click', playVideoHandler);
+          videoHandlers.push({ element: columnImage, handler: playVideoHandler });
+    
           iframeColumn.appendChild(columnImage);
     
           // Container for buttons
@@ -252,11 +261,11 @@
           buttonsContainer.style.textAlign = 'center'; // Center the buttons
     
           // Play Video Button
-          var playVideoButton = createButton('Play Video', createOpenVideoHandler(i));
+          var playVideoButton = createButton('Play Video', createVideoHandler(i));
           buttonsContainer.appendChild(playVideoButton);
     
           // Open PDF Button
-          var openPDFButton = createButton('Open PDF', createOpenPDFHandler(i));
+          var openPDFButton = createButton('Open PDF', createPDFHandler(i));
           buttonsContainer.appendChild(openPDFButton);
     
           // Append buttonsContainer to iframeColumn    
@@ -272,13 +281,13 @@
       closeButton.style.display = 'block';
     }
     
-    function createOpenVideoHandler(index) {
+    function createVideoHandler(index) {
       return function () {
         openVideo(index === 0 ? 'Teams-like_AI-technology.mp4' : 'videos/Teams-like_raised-hand.mp4');
       };
     }
     
-    function createOpenPDFHandler(index) {
+    function createPDFHandler(index) {
       return function () {
         openPDF(index === 0 ? 'PPS/TeamsLikeLayout.pdf' : 'PPs/TeamsLikeLayout.pdf');
       };
@@ -288,8 +297,23 @@
       var button = document.createElement('button');
       button.className = 'white-button';
       button.textContent = text;
-      button.onclick = clickHandler;
+      button.addEventListener('click', clickHandler);
       return button;
+    }
+    
+    // Function to remove all event listeners
+    function removeAllEventListeners() {
+      videoHandlers.forEach(function (item) {
+        item.element.removeEventListener('click', item.handler);
+      });
+    
+      pdfHandlers.forEach(function (item) {
+        item.element.removeEventListener('click', item.handler);
+      });
+    
+      // Clear the arrays
+      videoHandlers = [];
+      pdfHandlers = [];
     }
 
 
