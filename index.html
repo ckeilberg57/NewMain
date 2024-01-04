@@ -267,9 +267,22 @@
       iframeContent.innerHTML = `<iframe id="videoFrame" width="100%" height="100%" src="${videoSrc}" frameborder="0" allowfullscreen></iframe>`;
     }
   
-    function openPDF(pdfUrl) {
+    // function openPDF(pdfUrl) {
+      //var iframeContent = document.getElementById('customIframeContent');
+      //iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfUrl}" frameborder="0" allowfullscreen></iframe>`;
+    //}
+
+
+      function openPDF(pdfFile) {
+      // Check if the PDF file is in the "PPs" folder
+      if (pdfFile.toLowerCase().startsWith('pps/')) {
+        // If it is, prepend the correct path
+        pdfFile = 'PPs/' + pdfFile.substring(4);
+      }
+  
+      // Update the iframeContent to display the PDF
       var iframeContent = document.getElementById('customIframeContent');
-      iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfUrl}" frameborder="0" allowfullscreen></iframe>`;
+      iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
     }
     
     function closeIframeWindow() {
