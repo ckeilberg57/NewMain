@@ -274,12 +274,6 @@
 
 
       function openPDF(pdfFile) {
-      // Check if the PDF file is in the "PPs" folder
-      if (pdfFile.toLowerCase().startsWith('pps/')) {
-        // If it is, prepend the correct path
-        pdfFile = 'PPs/' + pdfFile.substring(4);
-      }
-  
       // Update the iframeContent to display the PDF
       var iframeContent = document.getElementById('customIframeContent');
       iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
