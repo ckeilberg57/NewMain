@@ -91,21 +91,21 @@
           <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
           <p>Infrastructure Consumption Models - Poly Edition</p>
           <button class="white-button" onclick="openVideo('video1.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
           <p>Infrastructure Consumption Models - Cisco Edition</p>
           <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
           <p>Enhanced Room Management</p>
           <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
       </div>
 
@@ -115,21 +115,21 @@
           <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
           <p>Pexip Teams Connector for CVI</p>
           <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
           <p>Pexip Service CVI for Teams</p>
           <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/ServiceToGoogle.png" alt="Service Google" onclick="openVideo('video6.mp4')">
           <p>Pexip Service InterOP for Google Meet</p>
           <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
-          <button class="white-button" onclick="openLink('https://www.example.com/link1')">Open Preso</button>
+          <button class="white-button" onclick="openMainPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
       </div>
     </div>
@@ -164,18 +164,6 @@
       // Implement logic for watching the video
       alert('Watching the video...');
     }
-
-    function openLink(url) {
-      // Check if the link ends with ".pdf" (PDF file extension)
-      if (url.toLowerCase().endsWith('.pdf')) {
-        openPDF(url);
-      } else {
-        // Open other links in a new tab
-        window.open(url, '_blank');
-      }
-    }
-
-
   
     function closeIframe() {
       var iframeContainer = document.getElementById('videoFrameContainer');
