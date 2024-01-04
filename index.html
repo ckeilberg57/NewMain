@@ -90,7 +90,7 @@
         <div class="column">
           <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
           <p>Infrastructure Consumption Models - Poly Edition</p>
-          <button class="white-button" onclick="openVideo('Teams-like_AI-technology.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openVideo('videos/Teams-like_AI-technology.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
@@ -188,7 +188,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'Teamslike.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
+      createCustomBox(leftBox, 'images/Teamslike.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
       boxContainer.appendChild(leftBox);
   
       // Create right box
@@ -202,7 +202,7 @@
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('Teams-like_AI-technology.mp4');
+        openVideo('videos/Teams-like_AI-technology.mp4');
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
