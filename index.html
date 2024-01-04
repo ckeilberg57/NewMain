@@ -42,7 +42,7 @@
     <p></p>
   </div>
 
-  <!-- Sidebar Item 5 -->
+    <!-- Sidebar Item 5 -->
   <div class="sidebar-item" onclick="openIframeWindow()">
     <img src="sidebarSecure.png" alt="Secure">
     <p>Secure</p>
@@ -50,13 +50,14 @@
     <p></p>
   </div>
 
-  <!-- Sidebar Item 6 -->
+      <!-- Sidebar Item 6 -->
   <div class="sidebar-item" onclick="openIframeWindow()">
     <img src="sidebarJudicial.png" alt="Judicial">
     <p></p>
     <br>
     <p>Judicial</p>
   </div>
+  
 </div>
 
 <!-- New Iframe Overlay Container -->
@@ -70,127 +71,210 @@
   <span id="closeButton" onclick="closeIframeWindow()">×</span>
 </div>
   
-<!-- Main Content Container -->
-<div id="mainContent">
-  <!-- Large text at the top -->
-  <div id="pageHeading">
-    Welcome - DEMO site
-  </div>
+  <!-- Main Content Container -->
+  <div id="mainContent">
+    <!-- Large text at the top -->
+    <div id="pageHeading">
+      Welcome - DEMO site
+    </div>
 
-  <!-- Main Page Image -->
-  <div id="mainPageImage">
-    <img id="headerImage" src="GEM.png" alt="Header Image">
-  </div>
+    <!-- Main Page Image -->
+    <div id="mainPageImage">
+      <img id="headerImage" src="GEM.png" alt="Header Image">
+    </div>
 
-  <!-- Container for two side-by-side white-lined boxes -->
-  <div id="container">
-    <!-- First set of three columns -->
-    <div class="box">
-      <div class="column">
-        <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
-        <p>Infrastructure Consumption Models - Poly Edition</p>
-        <button class="white-button" onclick="openVideo('video1.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+    <!-- Container for two side-by-side white-lined boxes -->
+    <div id="container">
+      <!-- First set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
+          <p>Infrastructure Consumption Models - Poly Edition</p>
+          <button class="white-button" onclick="openVideo('video1.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
+          <p>Infrastructure Consumption Models - Cisco Edition</p>
+          <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
+          <p>Enhanced Room Management</p>
+          <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
       </div>
 
-      <div class="column">
-        <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
-        <p>Infrastructure Consumption Models - Cisco Edition</p>
-        <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
-      </div>
+      <!-- Second set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
+          <p>Pexip Teams Connector for CVI</p>
+          <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
 
-      <div class="column">
-        <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
-        <p>Enhanced Room Management</p>
-        <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        <div class="column">
+          <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
+          <p>Pexip Service CVI for Teams</p>
+          <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/ServiceToGoogle.png" alt="Service Google" onclick="openVideo('video6.mp4')">
+          <p>Pexip Service InterOP for Google Meet</p>
+          <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
       </div>
     </div>
 
-    <!-- Second set of three columns -->
-    <div class="box">
-      <div class="column">
-        <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
-        <p>Pexip Teams Connector for CVI</p>
-        <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
-      </div>
-
-      <div class="column">
-        <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
-        <p>Pexip Service CVI for Teams</p>
-        <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
-      </div>
-
-      <div class="column">
-        <img src="images/ServiceToGoogle.png" alt="Service Google" onclick="openVideo('video6.mp4')">
-        <p>Pexip Service InterOP for Google Meet</p>
-        <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
-        <button class="white-button" onclick="openPDF('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
-      </div>
+    <!-- Iframe container -->
+    <div id="videoFrameContainer">
+      <span id="closeButton" onclick="closeVideo()">×</span>
+      <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+      <button onclick="watchVideo()">Watch Video</button>
+      <button onclick="launchDemo()">Launch Interactive Demo</button>
+      <button onclick="closeVideo()">Close</button>
     </div>
   </div>
 
-  <!-- Iframe container -->
-  <div id="videoFrameContainer">
-    <span id="closeButton" onclick="closeVideo()">×</span>
-    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-    <button onclick="watchVideo()">Watch Video</button>
-    <button onclick="launchDemo()">Launch Interactive Demo</button>
-    <button onclick="closeVideo()">Close</button>
-  </div>
-</div>
+  <script>
+   
+    function openVideo(videoSrc) {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      var videoFrame = document.getElementById('videoFrame');
+      videoFrame.src = videoSrc;
+      videoFrameContainer.style.display = 'block';
+    }
 
-<script>
-  function openVideo(videoSrc) {
-    var videoFrameContainer = document.getElementById('videoFrameContainer');
-    var videoFrame = document.getElementById('videoFrame');
-    videoFrame.src = videoSrc;
-    videoFrameContainer.style.display = 'block';
-  }
+    function closeVideo() {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      videoFrameContainer.style.display = 'none';
+      // Clear the src attribute to stop the video
+      document.getElementById('videoFrame').src = '';
+    }
 
-  function closeVideo() {
-    var videoFrameContainer = document.getElementById('videoFrameContainer');
-    videoFrameContainer.style.display = 'none';
-    // Clear the src attribute to stop the video
-    document.getElementById('videoFrame').src = '';
-  }
+    function watchVideo() {
+      // Implement logic for watching the video
+      alert('Watching the video...');
+    }
+  
+    function closeIframe() {
+      var iframeContainer = document.getElementById('videoFrameContainer');
+      iframeContainer.style.display = 'none';
+    }
 
-  function watchVideo() {
-    // Implement logic for watching the video
-    alert('Watching the video...');
-  }
+    var originalIframeContent;
+    
+    function openIframeWindowIO() {
+      // Store the content generated by openIframeWindowIO
+      originalIframeContent = document.getElementById('mainContent').innerHTML;
+      var iframeContainer = document.getElementById('customIframeContainer');
+      var iframeContent = document.getElementById('customIframeContent');
+  
+      // Clear previous content
+      iframeContent.innerHTML = '';
+  
+      // Create container for two boxes
+      var boxContainer = document.createElement('div');
+      boxContainer.className = 'customBoxContainer';
+  
+      // Create left box
+      var leftBox = document.createElement('div');
+      leftBox.className = 'customBox';
+      createCustomBox(leftBox, 'Teamslike.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
+      boxContainer.appendChild(leftBox);
+  
+      // Create right box
+      var rightBox = document.createElement('div');
+      rightBox.className = 'customBox';
+      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
+      boxContainer.appendChild(rightBox);
+  
+      // Append box container to the iframe content
+      iframeContent.appendChild(boxContainer);
 
-  function closeIframeWindow() {
-    var iframeContainer = document.getElementById('customIframeContainer');
-    var iframeContent = document.getElementById('customIframeContent');
+      // Add event listeners to the buttons
+      leftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('Teams-like_AI-technology.mp4');
+      });
 
-    // Restore the initial state of openIframeWindowIO
-    iframeContent.innerHTML = originalIframeContent;
+      leftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
 
-    // Clear the content inside customIframeContent
-    iframeContent.innerHTML = '';
+      // Add event listeners to the buttons
+      rightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_raised-hand.mp4');
+      });
 
-    // Hide the custom iframe container
-    iframeContainer.style.display = 'none';
-  }
+      rightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+      
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
+    }
+  
+    function createCustomBox(container, imageUrl, button1Text, button2Text, description) {
+      var image = document.createElement('img');
+      image.src = imageUrl;
+  
+      var paragraph = document.createElement('p');
+      paragraph.textContent = description;
+  
+      var button1 = document.createElement('button');
+      button1.textContent = button1Text;
+      button1.className = 'customButton1'; // Add a class for identification
+      button1.onclick = function() {
+        // Button 1 click handled in the event listener
+      };
+  
+      var button2 = document.createElement('button');
+      button2.textContent = button2Text;
+      button2.className = 'customButton2'; // Add a class for identification
+      button2.onclick = function() {
+        // Button 2 click handled in the event listener
+      };
+  
+      // Append elements to the container
+      container.appendChild(image);
+      container.appendChild(paragraph);
+      container.appendChild(button1);
+      container.appendChild(button2);
+    }
 
-  function openCustomIframeVideo(videoSrc) {
-    var iframeContent = document.getElementById('customIframeContent');
-    iframeContent.innerHTML = `<iframe id="videoFrame" width="100%" height="100%" src="${videoSrc}" frameborder="0" allowfullscreen></iframe>`;
-  }
+      function openVideo(videoSrc) {
+      var iframeContent = document.getElementById('customIframeContent');
+      iframeContent.innerHTML = `<iframe id="videoFrame" width="100%" height="100%" src="${videoSrc}" frameborder="0" allowfullscreen></iframe>`;
+    }
 
-  function openPDF(pdfFile) {
-    // Update the iframeContent to display the PDF
-    var iframeContent = document.getElementById('customIframeContent');
-    iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
-  }
+      function openPDF(pdfFile) {
+      // Update the iframeContent to display the PDF
+      var iframeContent = document.getElementById('customIframeContent');
+      iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
+    }
 
-  // ... Other functions ...
-
-</script>
+    function closeIframeWindow() {
+      var iframeContainer = document.getElementById('customIframeContainer');
+      var iframeContent = document.getElementById('customIframeContent');
+  
+      // Restore the initial state of openIframeWindowIO
+      iframeContent.innerHTML = originalIframeContent;
+  
+      // Clear the content inside customIframeContent
+      iframeContent.innerHTML = '';
+  
+      // Hide the custom iframe container
+      iframeContainer.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
