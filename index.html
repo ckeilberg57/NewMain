@@ -274,6 +274,25 @@
       // Hide the custom iframe container
       iframeContainer.style.display = 'none';
     }
+
+    function openLink(link) {
+      var iframeContainer = document.getElementById('iframeContainer');
+      var iframe = document.createElement('iframe');
+      iframe.src = link;
+      iframe.width = "100%";
+      iframe.height = "100%";
+      iframe.frameBorder = "0";
+      iframe.allowFullscreen = true;
+    
+      // Clear previous content in the iframeContainer
+      iframeContainer.innerHTML = '';
+    
+      // Append the iframe to the container
+      iframeContainer.appendChild(iframe);
+    
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
+    }
   </script>
 
 </body>
