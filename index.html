@@ -71,10 +71,16 @@
   <span id="closeButton" onclick="closeIframeWindow()">×</span>
 </div>
 
-<!-- Iframe container -->
+<!-- Iframe Main Video container -->
 <div id="videoFrameContainer">
   <span id="closeButton" onclick="closeVideo()">×</span>
     <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+<!-- Iframe Main PDF container -->
+<div id="mainPDFFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
+    <iframe id="PDFFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
   </div>
   
   <!-- Main Content Container -->
@@ -150,10 +156,10 @@
     }
 
     function openLink(pdfFile) {
-      var videoFrameContainer = document.getElementById('videoFrameContainer');
-      var videoFrame = document.getElementById('videoFrame');
-      videoFrame.src = videoSrc;
-      videoFrameContainer.style.display = 'block';
+      var mainPDFFrameContainer = document.getElementById('mainPDFFrameContainer');
+      var PDFFrame = document.getElementById('PDFFrame');
+      PDFFrame.src = pdfFile;
+      mainPDFFrameContainer.style.display = 'block';
     }
 
     function closeVideo() {
