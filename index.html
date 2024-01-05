@@ -262,7 +262,7 @@
     }
 
     function openLink(link) {
-      var iframeContainer = document.getElementById('iframeContainer');
+      var iframeContainer = document.getElementById('customIframeContainer');
       var iframe = document.createElement('iframe');
       iframe.src = link;
       iframe.width = "100%";
@@ -276,8 +276,8 @@
       // Append the iframe to the container
       iframeContainer.appendChild(iframe);
     
-      // Display the iframeOverlay
-      document.getElementById('iframeOverlay').style.display = 'block';
+      // Display the customIframeContainer
+      iframeContainer.style.display = 'block';
     }
 
     function closeIframeWindow() {
