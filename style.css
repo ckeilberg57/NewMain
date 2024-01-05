@@ -279,7 +279,7 @@
       margin: 10px 0;
     }
 
-    /*.customBox button {
+    .customBox button {
       padding: 10px;
       margin: 5px;
       background-color: #4CAF50;
@@ -287,7 +287,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-    }*/
+    }
 
     .customBox button {
         background-color: white;
