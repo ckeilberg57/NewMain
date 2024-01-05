@@ -149,6 +149,13 @@
       videoFrameContainer.style.display = 'block';
     }
 
+    function openLink(pdfFile) {
+      var videoFrameContainer = document.getElementById('videoFrameContainer');
+      var videoFrame = document.getElementById('videoFrame');
+      videoFrame.src = videoSrc;
+      videoFrameContainer.style.display = 'block';
+    }
+
     function closeVideo() {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       videoFrameContainer.style.display = 'none';
