@@ -90,21 +90,21 @@
         <div class="column">
           <img src="images/PolyToPexipInfra2.png" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
           <p>Infrastructure Consumption Models - Poly Edition</p>
-          <button class="white-button" onclick="openVideo('videos/Teams-like_AI-technology.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('videos/Teams-like_AI-technology.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/CiscoToPexipInfra.png" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
           <p>Infrastructure Consumption Models - Cisco Edition</p>
-          <button class="white-button" onclick="openVideo('video2.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('video2.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/PexipERM.png" alt="ERM" onclick="openVideo('video3.mp4')">
           <p>Enhanced Room Management</p>
-          <button class="white-button" onclick="openVideo('video3.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('video3.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
       </div>
@@ -114,21 +114,21 @@
         <div class="column">
           <img src="images/PexipTC.png" alt="Teams Connector" onclick="openVideo('video4.mp4')">
           <p>Pexip Teams Connector for CVI</p>
-          <button class="white-button" onclick="openVideo('video4.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('video4.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/ServiceToTeams.png" alt="Service Teams" onclick="openVideo('video5.mp4')">
           <p>Pexip Service CVI for Teams</p>
-          <button class="white-button" onclick="openVideo('video5.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('video5.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
 
         <div class="column">
           <img src="images/ServiceToMultiple.png" alt="Service Multiple" onclick="openVideo('video6.mp4')">
           <p>Pexip Service InterOP for Meeting Platforms</p>
-          <button class="white-button" onclick="openVideo('video6.mp4')">Launch Video</button>
+          <button class="white-button" onclick="openMainVideo('video6.mp4')">Launch Video</button>
           <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
         </div>
       </div>
@@ -146,7 +146,7 @@
 
   <script>
    
-    function openVideo(videoSrc) {
+    function openMainVideo(videoSrc) {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       var videoFrame = document.getElementById('videoFrame');
       videoFrame.src = videoSrc;
