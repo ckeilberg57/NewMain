@@ -261,20 +261,6 @@
       iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
     }
 
-    function closeIframeWindow() {
-      var iframeContainer = document.getElementById('customIframeContainer');
-      var iframeContent = document.getElementById('customIframeContent');
-  
-      // Restore the initial state of openIframeWindowIO
-      iframeContent.innerHTML = originalIframeContent;
-  
-      // Clear the content inside customIframeContent
-      iframeContent.innerHTML = '';
-  
-      // Hide the custom iframe container
-      iframeContainer.style.display = 'none';
-    }
-
     function openLink(link) {
       var iframeContainer = document.getElementById('iframeContainer');
       var iframe = document.createElement('iframe');
@@ -293,6 +279,21 @@
       // Display the iframe container
       iframeContainer.style.display = 'block';
     }
+
+    function closeIframeWindow() {
+      var iframeContainer = document.getElementById('customIframeContainer');
+      var iframeContent = document.getElementById('customIframeContent');
+  
+      // Restore the initial state of openIframeWindowIO
+      iframeContent.innerHTML = originalIframeContent;
+  
+      // Clear the content inside customIframeContent
+      iframeContent.innerHTML = '';
+  
+      // Hide the custom iframe container
+      iframeContainer.style.display = 'none';
+    }
+
   </script>
 
 </body>
