@@ -116,7 +116,7 @@
     cursor: pointer;
   }
 
-/* Style for the iframe container */
+/* Style for the main video iframe container */
   #videoFrameContainer {
     display: none;
     position: fixed;
@@ -132,6 +132,34 @@
   }
 
   #customIframeContent {
+    position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 95%;
+     height: 95%;
+     background: #0a2136;
+     border-radius: 10px;
+     overflow: hidden;
+     padding: 20px;
+  }
+
+/* Style for the main PDF iframe container */
+  #mainPDFFrameContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 100%; 
+    background-color: #fff;
+    z-index: 1000;
+    padding: 30px; /* Increase padding for a larger box */
+    box-sizing: border-box;
+  }
+
+  #mainPDFIframeContent {
     position: absolute;
      top: 50%;
      left: 50%;
