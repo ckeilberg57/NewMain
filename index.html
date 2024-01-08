@@ -164,9 +164,12 @@
 
     function closeVideo() {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
+      var videoFrameContainer = document.getElementById('mainPDFFrameContainer');
       videoFrameContainer.style.display = 'none';
+      mainPDFFrameContainer.style.display = 'none';
       // Clear the src attribute to stop the video
       document.getElementById('videoFrame').src = '';
+      document.getElementById('PDFFrame').src = '';
     }
 
     function watchVideo() {
@@ -176,7 +179,6 @@
   
     function closeIframe() {
       var iframeContainer = document.getElementById('videoFrameContainer');
-      var iframeContainer = document.getElementById('mainPDFFrameContainer');
       iframeContainer.style.display = 'none';
     }
 
