@@ -369,3 +369,7 @@
       .customHCBox button:hover {
         background-color: #FF7273; /* Light red background on hover */
       }
+    /* Change background color on hover */
+      .customHCBox button:hover {
+        background-color: #FF7273; /* Light red background on hover */
+      }
