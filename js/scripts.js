@@ -176,10 +176,14 @@
     }
 
       function openPNG(pngFile) {
-      // Update the iframeContent to display the PDF
-      var iframeContent = document.getElementById('customIframeContent');
-      iframeContent.innerHTML = `<iframe id="pngFrame" width="100%" height="100%" style="width: 200%; height: 200%;" src="${pngFile}" frameborder="0" allowfullscreen></iframe>`;
-    }
+        // Update the iframeContent to display the PNG with a white box
+        var iframeContent = document.getElementById('customIframeContent');
+        iframeContent.innerHTML = `
+          <div style="border: 2px solid white; padding: 10px; display: inline-block;">
+            <img src="${pngFile}" alt="QR Code" style="width: 100%; height: auto;">
+          </div>
+        `;
+      }
 
     function closeIframeWindow() {
       var iframeContainer = document.getElementById('customIframeContainer');
