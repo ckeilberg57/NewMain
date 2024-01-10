@@ -123,6 +123,10 @@
         openPNG('images/qr-code.png');
       });
 
+      leftBox.querySelector('.customButton3').addEventListener('click', function() {
+        openPNG('images/qr-code.png');
+      });
+
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('videos/Teams-like_raised-hand.mp4');
