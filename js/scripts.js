@@ -178,7 +178,7 @@
       function openPNG(pngFile) {
       // Update the iframeContent to display the PDF
       var iframeContent = document.getElementById('customIframeContent');
-      iframeContent.innerHTML = `<iframe id="pngFrame" width="100%" height="100%" src="${pngFile}" frameborder="0" allowfullscreen></iframe>`;
+      iframeContent.innerHTML = `<iframe id="pngFrame" width="200%" height="200%" src="${pngFile}" frameborder="0" allowfullscreen></iframe>`;
     }
 
     function closeIframeWindow() {
