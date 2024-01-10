@@ -81,6 +81,34 @@
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
+
+   function createCustomBox(container, imageUrl, button1Text, button2Text, description) {
+      var image = document.createElement('img');
+      image.src = imageUrl;
+  
+      var paragraph = document.createElement('p');
+      paragraph.textContent = description;
+  
+      var button1 = document.createElement('button');
+      button1.textContent = button1Text;
+      button1.className = 'customButton1'; // Add a class for identification
+      button1.onclick = function() {
+        // Button 1 click handled in the event listener
+      };
+  
+      var button2 = document.createElement('button');
+      button2.textContent = button2Text;
+      button2.className = 'customButton2'; // Add a class for identification
+      button2.onclick = function() {
+        // Button 2 click handled in the event listener
+      };
+  
+      // Append elements to the container
+      container.appendChild(image);
+      container.appendChild(paragraph);
+      container.appendChild(button1);
+      container.appendChild(button2);
+    }
       
       // Display the iframe container
       iframeContainer.style.display = 'block';
