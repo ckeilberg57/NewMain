@@ -120,7 +120,7 @@
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPNG('images/qr-code.png');
       });
 
       // Add event listeners to the buttons
@@ -173,6 +173,12 @@
       // Update the iframeContent to display the PDF
       var iframeContent = document.getElementById('customIframeContent');
       iframeContent.innerHTML = `<iframe id="pdfFrame" width="100%" height="100%" src="${pdfFile}" frameborder="0" allowfullscreen></iframe>`;
+    }
+
+      function openPNG(pngFile) {
+      // Update the iframeContent to display the PDF
+      var iframeContent = document.getElementById('customIframeContent');
+      iframeContent.innerHTML = `<iframe id="pngFrame" width="100%" height="100%" src="${pngFile}" frameborder="0" allowfullscreen></iframe>`;
     }
 
     function closeIframeWindow() {
