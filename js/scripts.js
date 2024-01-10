@@ -116,7 +116,8 @@
       boxRightContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
-      iframeContent.appendChild(boxContainer);
+      iframeContent.appendChild(boxLeftContainer);
+      iframeContent.appendChild(boxRightContainer);
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
