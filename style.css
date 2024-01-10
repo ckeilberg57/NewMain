@@ -159,6 +159,21 @@
     box-sizing: border-box;
   }
 
+/* Style for the main image iframe container */
+  #mainImageFrameContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 100%; 
+    background-color: #fff;
+    z-index: 1000;
+    padding: 30px; /* Increase padding for a larger box */
+    box-sizing: border-box;
+  }
+
 /* Style for the close button in the iframe container */
   #closeButton {
     position: absolute;
