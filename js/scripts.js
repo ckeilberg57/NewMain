@@ -102,7 +102,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Launch Headset Window', 'RealWear HMT-1 on Pexip Infinity');
+      createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
   
       // Create right box
@@ -160,12 +160,20 @@
       button2.onclick = function() {
         // Button 2 click handled in the event listener
       };
+
+      var button3 = document.createElement('button');
+      button3.textContent = button3Text;
+      button3.className = 'customButton3'; // Add a class for identification
+      button3.onclick = function() {
+        // Button 3 click handled in the event listener
+      };
   
       // Append elements to the container
       container.appendChild(image);
       container.appendChild(paragraph);
       container.appendChild(button1);
       container.appendChild(button2);
+      container.appendChild(button3);
     }
 
       function openVideo(videoSrc) {
