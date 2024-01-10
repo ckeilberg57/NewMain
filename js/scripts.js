@@ -102,7 +102,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Launch Demo', 'Teams Like Layout');
+      createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'Launch Demo', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
   
       // Create right box
