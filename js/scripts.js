@@ -101,7 +101,7 @@
   
       // Create left box
       var leftBox = document.createElement('div');
-      leftBox.className = 'customLeftBox';
+      leftBox.className = 'customBox';
       createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
   
