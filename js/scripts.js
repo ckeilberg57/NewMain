@@ -96,28 +96,23 @@
       iframeContent.innerHTML = '';
   
       // Create container for two boxes
-      var boxLeftContainer = document.createElement('div');
-      boxLeftContainer.className = 'customLeftBoxContainer';
-
-      // Create container for two boxes
-      var boxRightContainer = document.createElement('div');
-      boxRightContainer.className = 'customRightBoxContainer';
+      var boxContainer = document.createElement('div');
+      boxContainer.className = 'customBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customLeftBox';
-      createCustomLeftBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
-      boxLeftContainer.appendChild(leftBox);
+      createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
+      boxContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
-      rightBox.className = 'customRightBox';
-      createCustomRightBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Launch Demo', 'Teams Like Layout Raised Hand');
-      boxRightContainer.appendChild(rightBox);
+      rightBox.className = 'customBox';
+      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Launch Demo', 'Teams Like Layout Raised Hand');
+      boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
-      iframeContent.appendChild(boxLeftContainer);
-      iframeContent.appendChild(boxRightContainer);
+      iframeContent.appendChild(boxContainer);
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
@@ -145,7 +140,7 @@
       iframeContainer.style.display = 'block';
     }
   
-    function createCustomLeftBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+    function createCustomBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
@@ -181,7 +176,7 @@
       container.appendChild(button3);
     }
 
-    function createCustomRightBox(container, imageUrl, button1Text, button2Text, description) {
+    function createCustomBox(container, imageUrl, button1Text, button2Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
