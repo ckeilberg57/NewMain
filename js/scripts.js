@@ -140,7 +140,7 @@
       iframeContainer.style.display = 'block';
     }
   
-    function createCustomBox(container, imageUrl, button1Text, button2Text, description) {
+    function createCustomBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
