@@ -101,14 +101,14 @@
   
       // Create left box
       var leftBox = document.createElement('div');
-      leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
+      leftBox.className = 'customLeftBox';
+      createCustomLeftBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
-      rightBox.className = 'customBox';
-      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Launch Demo', 'Teams Like Layout Raised Hand');
+      rightBox.className = 'customRightBox';
+      createCustomRightBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Launch Demo', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
@@ -140,7 +140,7 @@
       iframeContainer.style.display = 'block';
     }
   
-    function createCustomBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+    function createCustomLeftBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
@@ -174,6 +174,34 @@
       container.appendChild(button1);
       container.appendChild(button2);
       container.appendChild(button3);
+    }
+
+    function createCustomRightBox(container, imageUrl, button1Text, button2Text, description) {
+      var image = document.createElement('img');
+      image.src = imageUrl;
+  
+      var paragraph = document.createElement('p');
+      paragraph.textContent = description;
+  
+      var button1 = document.createElement('button');
+      button1.textContent = button1Text;
+      button1.className = 'customButton1'; // Add a class for identification
+      button1.onclick = function() {
+        // Button 1 click handled in the event listener
+      };
+  
+      var button2 = document.createElement('button');
+      button2.textContent = button2Text;
+      button2.className = 'customButton2'; // Add a class for identification
+      button2.onclick = function() {
+        // Button 2 click handled in the event listener
+      };
+  
+      // Append elements to the container
+      container.appendChild(image);
+      container.appendChild(paragraph);
+      container.appendChild(button1);
+      container.appendChild(button2);
     }
 
       function openVideo(videoSrc) {
