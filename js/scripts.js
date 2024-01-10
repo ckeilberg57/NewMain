@@ -96,20 +96,24 @@
       iframeContent.innerHTML = '';
   
       // Create container for two boxes
-      var boxContainer = document.createElement('div');
-      boxContainer.className = 'customBoxContainer';
+      var boxLeftContainer = document.createElement('div');
+      boxLeftContainer.className = 'customLeftBoxContainer';
+
+      // Create container for two boxes
+      var boxRightContainer = document.createElement('div');
+      boxRightContainer.className = 'customRightBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customLeftBox';
       createCustomLeftBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
-      boxContainer.appendChild(leftBox);
+      boxLeftContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customRightBox';
       createCustomRightBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Launch Demo', 'Teams Like Layout Raised Hand');
-      boxContainer.appendChild(rightBox);
+      boxRightContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
