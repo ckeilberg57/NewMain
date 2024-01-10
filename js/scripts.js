@@ -102,13 +102,13 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createHCCustomBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
+      createCustomHCBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createHCCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Teams Like Layout Raised Hand');
+      createCustomHCBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
@@ -140,7 +140,7 @@
       iframeContainer.style.display = 'block';
     }
   
-    function createHCCustomBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
