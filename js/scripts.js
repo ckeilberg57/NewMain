@@ -144,7 +144,7 @@
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_AI-technology.mp4');
+        openVideo('videos/rwVideo.mp4');
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
