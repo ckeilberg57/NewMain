@@ -152,7 +152,7 @@
       });
 
       leftBox.querySelector('.customButton3').addEventListener('click', function() {
-        openPNG('images/qr-code.png');
+        openPNG('images/rwHeadsetScreen.png');
       });
 
       // Add event listeners to the buttons
