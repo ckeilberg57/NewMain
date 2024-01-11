@@ -136,7 +136,7 @@
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomHCBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Teams Like Layout Raised Hand');
+      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Breakout Rooms');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
