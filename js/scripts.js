@@ -225,24 +225,17 @@
         `;
       }
 
-      function closeIframeWindow() {
-        var iframeContainer = document.getElementById('customIframeContainer');
-        var iframeContent = document.getElementById('customIframeContent');
-      
-        // Check if there's a previous state to restore
-        if (originalIframeContent) {
-          // Restore the initial state of openIframeWindowHC
-          iframeContent.innerHTML = originalIframeContent;
-      
-          // Clear the stored content
-          originalIframeContent = '';
-      
-          // Hide the custom iframe container
-          iframeContainer.style.display = 'none';
-        } else {
-          // If there's no previous state, clear the content and hide the container
-          iframeContent.innerHTML = '';
-          iframeContainer.style.display = 'none';
-        }
-      }
+       function closeIframeWindow() {
+         var iframeContainer = document.getElementById('customIframeContainer');
+         var iframeContent = document.getElementById('customIframeContent');
+     
+         // Restore the initial state of openIframeWindowIO
+         iframeContent.innerHTML = originalIframeContent;
+     
+         // Clear the content inside customIframeContent
+         iframeContent.innerHTML = '';
+     
+         // Hide the custom iframe container
+         iframeContainer.style.display = 'none';
+       }
 
