@@ -82,6 +82,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(secondboxContainer);
+
+      // Set overflow property for iframeContent to make it scrollable
+      iframeContent.style.overflow = 'auto';
        
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
