@@ -62,19 +62,19 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      createSecondBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
       secondboxContainer.appendChild(secondLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
-      rightBox.className = 'secondBox';
+      rightBox.className = 'customBox';
       createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
 
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
-      secondRightBox.className = 'customBox';
-      createCustomBox(secondRightBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      secondRightBox.className = 'secondBox';
+      createSecondBox(secondRightBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
