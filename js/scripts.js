@@ -61,13 +61,13 @@
 
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
-      secondLeftBox.className = 'customBox';
+      secondLeftBox.className = 'secondBox';
       createCustomBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
       secondboxContainer.appendChild(secondLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
-      rightBox.className = 'customBox';
+      rightBox.className = 'secondBox';
       createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
 
