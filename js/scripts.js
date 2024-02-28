@@ -99,6 +99,9 @@
       // Append box container to the iframe content
       iframeContent.appendChild(secondboxContainer);
 
+      // Append box container to the iframe content
+      iframeContent.appendChild(thirdboxContainer);
+
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
        
