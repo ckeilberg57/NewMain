@@ -38,6 +38,7 @@
 /* Change background color on hover */
   .sidebar-item:hover {
     background-color: #0EBEC7; /* Dark blue background on hover */
+    border-radius: 10px; /* Adjust the value to control the roundness */
   }
  
   /* Style for the images in the sidebar */
