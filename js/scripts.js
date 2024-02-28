@@ -45,9 +45,13 @@
       // Clear previous content
       iframeContent.innerHTML = '';
   
-      // Create container for two boxes
+      // Create container for 1st of two boxes
       var boxContainer = document.createElement('div');
       boxContainer.className = 'customBoxContainer';
+
+      // Create container for 2st of two boxes
+      var secondboxContainer = document.createElement('div');
+      secondboxContainer.className = 'secondBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -59,7 +63,7 @@
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'customBox';
       createCustomBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
-      boxContainer.appendChild(secondLeftBox);
+      secondboxContainer.appendChild(secondLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
@@ -71,7 +75,7 @@
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'customBox';
       createCustomBox(secondRightBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
-      boxContainer.appendChild(secondRightBox);
+      secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
