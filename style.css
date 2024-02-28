@@ -280,6 +280,11 @@
       justify-content: space-between;
     }
 
+    .thirdBoxContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .customBox {
       width: 48%;
       margin: 1%;
