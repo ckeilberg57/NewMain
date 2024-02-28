@@ -54,12 +54,24 @@
       leftBox.className = 'customBox';
       createCustomBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
       boxContainer.appendChild(leftBox);
+
+      // Create second left box underneath
+      var secondLeftBox = document.createElement('div');
+      secondLeftBox.className = 'customBox';
+      createCustomBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      boxContainer.appendChild(secondLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
       createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
+
+      // Create second right box underneath
+      var secondRightBox = document.createElement('div');
+      secondRightBox.className = 'customBox';
+      createCustomBox(secondRightBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      boxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
