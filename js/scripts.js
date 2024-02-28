@@ -49,7 +49,7 @@
       var boxContainer = document.createElement('div');
       boxContainer.className = 'customBoxContainer';
 
-      // Create container for 2st of two boxes
+      // Create container for 2nd of two boxes
       var secondboxContainer = document.createElement('div');
       secondboxContainer.className = 'secondBoxContainer';
   
@@ -62,7 +62,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomBox(secondLeftBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      createCustomBox(secondLeftBox, 'images/TeamsActiveSpeaker.png', 'Play Video', 'Open PDF', 'Teams Active Speaker');
       secondboxContainer.appendChild(secondLeftBox);
   
       // Create right box
@@ -74,7 +74,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomBox(secondRightBox, 'images/NewImageLeft.png', 'Play Video', 'Open PDF', 'New Left Box');
+      createCustomBox(secondRightBox, 'images/TeamsSpotlight.png', 'Play Video', 'Open PDF', 'Teams Spot Light');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -93,11 +93,29 @@
       });
 
       // Add event listeners to the buttons
+      secondLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('videos/Teams-like_raised-hand.mp4');
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      // Add event listeners to the buttons
+      secondRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_Spotlighting.mp4');
+      });
+
+      secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
 
