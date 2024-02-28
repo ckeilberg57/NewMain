@@ -64,6 +64,12 @@
       secondLeftBox.className = 'secondBox';
       createCustomBox(secondLeftBox, 'images/TeamsActiveSpeaker.png', 'Play Video', 'Open PDF', 'Teams Active Speaker');
       secondboxContainer.appendChild(secondLeftBox);
+
+      // Create third left box underneath
+      var thirdLeftBox = document.createElement('div');
+      thirdLeftBox.className = 'thirdBox';
+      createCustomBox(thirdLeftBox, 'images/MS_P2P.png', 'Play Video', 'Open PDF', 'Microsoft Direct 1:1 calling (MTR)');
+      thirdboxContainer.appendChild(thirdLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
@@ -76,6 +82,12 @@
       secondRightBox.className = 'secondBox';
       createCustomBox(secondRightBox, 'images/TeamsSpotlight.png', 'Play Video', 'Open PDF', 'Teams Spot Light');
       secondboxContainer.appendChild(secondRightBox);
+
+      // Create third right box underneath
+      var thirdRightBox = document.createElement('div');
+      thirdRightBox.className = 'thirdBox';
+      createCustomBox(thirdRightBox, 'images/MS_SGJ.png', 'Play Video', 'Open PDF', 'Microsoft SIP Guest Join');
+      thirdboxContainer.appendChild(thirdRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -105,6 +117,15 @@
       });
 
       // Add event listeners to the buttons
+      thirdLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Point2Point.mp4');
+      });
+
+      thirdLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('videos/Teams-like_raised-hand.mp4');
       });
@@ -119,6 +140,14 @@
       });
 
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      thirdRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/SIPGuestJoin.mp4');
+      });
+
+      thirdRightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
 
