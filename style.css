@@ -275,6 +275,11 @@
       justify-content: space-between;
     }
 
+    .secondBoxContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .customBox {
       width: 48%;
       margin: 1%;
