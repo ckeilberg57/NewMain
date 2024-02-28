@@ -80,6 +80,9 @@
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
 
+      // Append box container to the iframe content
+      iframeContent.appendChild(secondboxContainer);
+       
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('videos/Teams-like_AI-technology.mp4');
