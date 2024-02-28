@@ -283,6 +283,8 @@
     .thirdBoxContainer {
       display: flex;
       justify-content: space-between;
+      border: 1px solid red; /* Added border for visibility */
+      margin-top: 10px; /* Added margin for separation */
     }
 
     .customBox {
