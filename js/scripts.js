@@ -322,10 +322,6 @@
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
-
-    function createCustomHCBox4bt(container, imageUrl, button1Text, button2Text, button3Text, description) {
-      var image = document.createElement('img');
-      image.src = imageUrl;
   
       var paragraph = document.createElement('p');
       paragraph.textContent = description;
