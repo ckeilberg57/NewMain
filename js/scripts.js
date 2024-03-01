@@ -283,14 +283,14 @@
       secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
           openLinkInNewTab('https://ckeilberg57.github.io/ManuMap/');
       });
-      
-      // Display the iframe container
-      iframeContainer.style.display = 'block';
-    }
 
       function openLinkInNewTab(url) {
           window.open(url. '_blank');
       }
+      
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
+    }
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
