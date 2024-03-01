@@ -284,10 +284,10 @@
         // Open the first window
         const firstWindow = window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
       
-        // Wait for a short delay before opening the second window
-        setTimeout(function() {
+        // Wait for the first window to finish loading before opening the second one
+        firstWindow.addEventListener('load', function() {
           openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
-        }, 1000); // Adjust the delay as needed
+        });
       }
 
       function openLink(url) {
