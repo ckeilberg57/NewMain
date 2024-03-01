@@ -263,10 +263,10 @@
       });
 
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
-        openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023');
-        openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest" target="_blank');
+        openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
       });
       
+      // Wait for the first window to open before opening the second one
       function openLinkInNewWindow(link, position) {
         const screenWidth = screen.width;
         const windowWidth = 600; // Adjust the width as needed
@@ -282,9 +282,15 @@
           leftPosition = 0;
         }
       
-        window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
-      }
+        // Open the first window
+        const firstWindow = window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
       
+        // Wait for the first window to finish opening before opening the second one
+        firstWindow.addEventListener('load', function() {
+          openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+        });
+      }
+            
       function openLink(url) {
           window.location.href = url;
       }
