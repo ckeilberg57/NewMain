@@ -206,6 +206,9 @@
       // Create container for 2nd of two boxes
       var secondboxContainer = document.createElement('div');
       secondboxContainer.className = 'secondBoxContainer';
+
+      // Set overflow property for iframeContent to make it scrollable
+      iframeContent.style.overflow = 'auto';
   
       // Create left box
       var leftBox = document.createElement('div');
