@@ -321,7 +321,7 @@
 
       // Display the iframe container
       iframeContainer.style.display = 'block';
-    }
+    
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
@@ -369,7 +369,7 @@
       container.appendChild(button2);
       container.appendChild(button3);
       container.appendChild(button4);
-    
+    }
 
       function openVideo(videoSrc) {
       var iframeContent = document.getElementById('customIframeContent');
