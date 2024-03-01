@@ -216,7 +216,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'WebApp2 Plugins');
+      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
        
       // Create right box
