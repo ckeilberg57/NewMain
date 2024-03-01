@@ -262,6 +262,18 @@
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
 
+      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023');
+      });
+      
+      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        openLinkInNewWindow('"https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest" target="_blank');
+      });
+      
+      function openLinkInNewWindow(link) {
+        window.open(link, '_blank');
+      }
+       
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('videos/Teams-like_raised-hand.mp4');
