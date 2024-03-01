@@ -311,12 +311,12 @@
           openLinkInNewTab('https://ckeilberg57.github.io/ManuMap');
       });
 
-      secondRightBox.querySelector('.customButton4').addEventListener('click', function() {
-          openLink('https://ckeilberg57.github.io/mockcart');
+      secondLeftBox.querySelector('.customButton4').addEventListener('click', function() {
+        openLinkInNewWindow('https://ckeilberg57.github.io/mockcart');
       });
-      
-      function openLinkInNewTab(url) {
-          window.open(url, '_blank');
+
+      function openLinkInNewWindow(link) {
+        window.open(link, '_blank');
       }
 
       // Display the iframe container
