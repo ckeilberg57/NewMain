@@ -261,10 +261,6 @@
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
- 
-     // function openLink(url) {
-       //   window.location.href = url;
-      //}
        
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
@@ -283,14 +279,6 @@
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
-
-      secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
-          openLinkInNewTab('https://ckeilberg57.github.io/ManuMap');
-      });
-
-      function openLinkInNewWindow(link) {
-        window.open(link, '_blank');
-      }
 
       // Display the iframe container
       iframeContainer.style.display = 'block';
