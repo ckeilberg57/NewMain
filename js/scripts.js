@@ -261,34 +261,6 @@
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
-
-      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
-        openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
-      });
-      
-      function openLinkInNewWindow(link, position) {
-        const screenWidth = screen.width;
-        const windowWidth = 600; // Adjust the width as needed
-        const windowHeight = 400; // Adjust the height as needed
-      
-        let leftPosition;
-        if (position === 'left') {
-          leftPosition = 0;
-        } else if (position === 'right') {
-          leftPosition = screenWidth - windowWidth;
-        } else {
-          // Default to the left if position is not specified or invalid
-          leftPosition = 0;
-        }
-      
-        // Open the first window
-        const firstWindow = window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
-      
-        // Wait for the first window to finish loading before opening the second one
-        firstWindow.addEventListener('load', function() {
-          openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
-        });
-      }
  
      // function openLink(url) {
        //   window.location.href = url;
