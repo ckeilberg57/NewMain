@@ -289,7 +289,7 @@
     }
 
       function openLinkInNewTab(url) {
-          window.open.(url. '_blank');
+          window.open(url. '_blank');
       }
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
