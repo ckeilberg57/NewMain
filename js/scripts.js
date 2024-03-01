@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map', 'Launch Mock USB Cart');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -283,6 +283,14 @@
         }
       
         window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
+      }
+
+      secondRightBox.querySelector('.customButton4').addEventListener('click', function() {
+          openLink('https://ckeilberg57.github.io/mockcart');
+      });
+      
+      function openLink(url) {
+          window.location.href = url;
       }
        
       // Add event listeners to the buttons
@@ -342,6 +350,13 @@
       button3.onclick = function() {
         // Button 3 click handled in the event listener
       };
+
+      var button4 = document.createElement('button');
+      button4.textContent = button4Text;
+      button4.className = 'customButton4'; // Add a class for identification
+      button4.onclick = function() {
+        // Button 4 click handled in the event listener
+      };
   
       // Append elements to the container
       container.appendChild(image);
@@ -349,6 +364,7 @@
       container.appendChild(button1);
       container.appendChild(button2);
       container.appendChild(button3);
+      container.appendChild(button4);
     }
 
       function openVideo(videoSrc) {
