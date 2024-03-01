@@ -279,11 +279,19 @@
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
+
+      secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
+          openLink('https://ckeilberg57.github.io/ManuMap/');
+      });
       
       // Display the iframe container
       iframeContainer.style.display = 'block';
     }
-  
+
+      function openLink(url) {
+          window.location.href = url;
+      }
+
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
