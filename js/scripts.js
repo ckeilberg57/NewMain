@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Launch Mock USB Cart', 'Rounding Map');
+      createCustomHCBox4bt(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Launch Mock USB Cart', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -323,7 +323,11 @@
       iframeContainer.style.display = 'block';
     }
 
-    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, button4Text, description) {
+    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+      var image = document.createElement('img');
+      image.src = imageUrl;
+
+    function createCustomHCBox4bt(container, imageUrl, button1Text, button2Text, button3Text, button4Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
