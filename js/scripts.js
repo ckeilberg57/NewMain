@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map', 'Launch Mock USB Cart');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Launch Mock USB Cart', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -284,10 +284,6 @@
       
         window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
       }
-
-      secondRightBox.querySelector('.customButton4').addEventListener('click', function() {
-          openLink('https://ckeilberg57.github.io/mockcart');
-      });
       
       function openLink(url) {
           window.location.href = url;
@@ -313,6 +309,10 @@
 
       secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
           openLinkInNewTab('https://ckeilberg57.github.io/ManuMap');
+      });
+
+      secondRightBox.querySelector('.customButton4').addEventListener('click', function() {
+          openLink('https://ckeilberg57.github.io/mockcart');
       });
       
       function openLinkInNewTab(url) {
