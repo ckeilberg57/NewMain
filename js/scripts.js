@@ -317,7 +317,7 @@
 
       // Display the iframe container
       iframeContainer.style.display = 'block';
-    
+    }
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
