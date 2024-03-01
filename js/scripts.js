@@ -369,7 +369,7 @@
       container.appendChild(button2);
       container.appendChild(button3);
       container.appendChild(button4);
-    }
+    
 
       function openVideo(videoSrc) {
       var iframeContent = document.getElementById('customIframeContent');
@@ -405,4 +405,3 @@
          // Hide the custom iframe container
          iframeContainer.style.display = 'none';
        }
-    }
