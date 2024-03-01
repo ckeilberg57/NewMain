@@ -281,11 +281,11 @@
       });
 
       secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
-          openLinkInNewTab('https://ckeilberg57.github.io/ManuMap/');
+          openLink('https://ckeilberg57.github.io/ManuMap');
       });
-
-      function openLinkInNewTab(url) {
-          window.open(url. '_blank');
+      
+      function openLink(url) {
+          window.location.href = url;
       }
       
       // Display the iframe container
