@@ -268,7 +268,7 @@
       });
       
       function openLinkInNewWindow(link) {
-        window.open(link, '_blank');
+        window.open(link, '_blank', 'width=600,height=400');
       }
        
       // Add event listeners to the buttons
