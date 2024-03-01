@@ -216,7 +216,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo');
+      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
        
       // Create right box
@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -268,7 +268,7 @@
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/BreakoutRooms.pdf');
       });
 
       // Add event listeners to the buttons
