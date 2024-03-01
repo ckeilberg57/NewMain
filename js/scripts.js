@@ -224,6 +224,12 @@
       rightBox.className = 'customBox';
       createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Breakout Rooms');
       boxContainer.appendChild(rightBox);
+
+      // Create second right box underneath
+      var secondRightBox = document.createElement('div');
+      secondRightBox.className = 'secondBox';
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo');
+      secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -262,6 +268,15 @@
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      // Add event listeners to the buttons
+      secondRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
       
