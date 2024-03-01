@@ -405,4 +405,3 @@
          // Hide the custom iframe container
          iframeContainer.style.display = 'none';
        }
-
