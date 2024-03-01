@@ -202,13 +202,23 @@
       // Create container for two boxes
       var boxContainer = document.createElement('div');
       boxContainer.className = 'customBoxContainer';
+
+      // Create container for 2nd of two boxes
+      var secondboxContainer = document.createElement('div');
+      secondboxContainer.className = 'secondBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
       createCustomHCBox(leftBox, 'images/realwear.png', 'Play Video', 'QR Code', 'Headset Window Screenshots', 'RealWear HMT-1 on Pexip Infinity');
       boxContainer.appendChild(leftBox);
-  
+
+      // Create second left box underneath
+      var secondLeftBox = document.createElement('div');
+      secondLeftBox.className = 'secondBox';
+      createCustomBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'WebApp2 Plugins');
+      secondboxContainer.appendChild(secondLeftBox);
+       
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
@@ -217,6 +227,9 @@
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(secondboxContainer);
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
@@ -229,6 +242,15 @@
 
       leftBox.querySelector('.customButton3').addEventListener('click', function() {
         openPNG('images/rwHeadsetScreen.png');
+      });
+
+      // Add event listeners to the buttons
+      secondLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
       });
 
       // Add event listeners to the buttons
