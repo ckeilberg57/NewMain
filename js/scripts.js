@@ -267,8 +267,22 @@
         openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest" target="_blank');
       });
       
-      function openLinkInNewWindow(link) {
-        window.open(link, '_blank', 'width=600,height=400');
+      function openLinkInNewWindow(link, position) {
+        const screenWidth = screen.width;
+        const windowWidth = 600; // Adjust the width as needed
+        const windowHeight = 400; // Adjust the height as needed
+      
+        let leftPosition;
+        if (position === 'left') {
+          leftPosition = 0;
+        } else if (position === 'right') {
+          leftPosition = screenWidth - windowWidth;
+        } else {
+          // Default to the left if position is not specified or invalid
+          leftPosition = 0;
+        }
+      
+        window.open(link, '_blank', `width=${windowWidth},height=${windowHeight},left=${leftPosition}`);
       }
        
       // Add event listeners to the buttons
