@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox4bt(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Launch Mock USB Cart', 'Rounding Map');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
@@ -311,23 +311,19 @@
           openLinkInNewTab('https://ckeilberg57.github.io/ManuMap');
       });
 
-      secondLeftBox.querySelector('.customButton4').addEventListener('click', function() {
-        openLinkInNewWindow('https://ckeilberg57.github.io/mockcart');
-      });
-
       function openLinkInNewWindow(link) {
         window.open(link, '_blank');
       }
 
       // Display the iframe container
       iframeContainer.style.display = 'block';
-    
+    }
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
 
-    function createCustomHCBox4bt(container, imageUrl, button1Text, button2Text, button3Text, button4Text, description) {
+    function createCustomHCBox4bt(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
@@ -354,13 +350,6 @@
       button3.onclick = function() {
         // Button 3 click handled in the event listener
       };
-
-      var button4 = document.createElement('button');
-      button4.textContent = button4Text;
-      button4.className = 'customButton4'; // Add a class for identification
-      button4.onclick = function() {
-        // Button 4 click handled in the event listener
-      };
   
       // Append elements to the container
       container.appendChild(image);
@@ -368,7 +357,6 @@
       container.appendChild(button1);
       container.appendChild(button2);
       container.appendChild(button3);
-      container.appendChild(button4);
     }
 
       function openVideo(videoSrc) {
