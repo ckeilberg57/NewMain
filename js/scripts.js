@@ -323,7 +323,7 @@
       iframeContainer.style.display = 'block';
     }
 
-    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, button4Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
