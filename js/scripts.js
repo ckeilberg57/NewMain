@@ -289,10 +289,10 @@
           openLinkInNewWindow('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
         });
       }
-
-      function openLink(url) {
-          window.location.href = url;
-      }
+ 
+     // function openLink(url) {
+       //   window.location.href = url;
+      //}
        
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
