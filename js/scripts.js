@@ -222,7 +222,7 @@
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Breakout Rooms');
+      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo (3 Windows)', 'Breakout Rooms');
       boxContainer.appendChild(rightBox);
 
       // Create second right box underneath
@@ -267,7 +267,7 @@
         // Open the first HTML link on the left side
         openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
       
-        // Open the second HTML link on the right side
+        // Open the second HTML link on the left side
         openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
       });
        
@@ -278,6 +278,18 @@
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/BreakoutRooms.pdf');
+      });
+
+      // Add a new event listener for customButton3
+      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'left');
+      
+        // Open the second HTML link on the left side
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'left');
+
+        // Open the second HTML link on the left side
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'left');
       });
 
       // Add event listeners to the buttons
