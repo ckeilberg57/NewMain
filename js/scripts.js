@@ -406,14 +406,6 @@
               return;
           }
       }
-      
-          // Calculate the window properties based on the position
-          const windowProperties = {
-              width: 800,
-              height: 600,
-              top: 100,
-              left: position === 'left' ? 100 : 500,
-          };
 
        function open2WinHTML(url, side) {
          // Calculate the width of each window based on the screen width
