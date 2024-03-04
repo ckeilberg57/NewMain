@@ -216,7 +216,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'WebApp2 Plugins');
+      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
        
       // Create right box
@@ -228,7 +228,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Rounding Map');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
   
       // Append box container to the iframe content
