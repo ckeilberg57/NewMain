@@ -218,6 +218,12 @@
       secondLeftBox.className = 'secondBox';
       createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
+
+      // Create third left box underneath
+      var thirdLeftBox = document.createElement('div');
+      thirdLeftBox.className = 'thirdBox';
+      createCustomHCBox(thirdLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Video playback before session');
+      thirdboxContainer.appendChild(thirdLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
@@ -269,6 +275,21 @@
       
         // Open the second HTML link on the left side
         open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+      });
+
+      // Add event listeners to the buttons
+      thirdLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      thirdLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+
+      // Add a new event listener for customButton3
+      thirdLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        openHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient&conference=countdown&role=guest', 'left');
       });
        
       // Add event listeners to the buttons
@@ -372,6 +393,21 @@
           </div>
         `;
       }
+
+      function openHTML(url, position) {
+          // Ensure the position is either 'left' or 'right'
+          if (position !== 'left' && position !== 'right') {
+              console.error('Invalid position specified');
+              return;
+          }
+      
+          // Calculate the window properties based on the position
+          const windowProperties = {
+              width: 800,
+              height: 600,
+              top: 100,
+              left: position === 'left' ? 100 : 500,
+          };
 
        function open2WinHTML(url, side) {
          // Calculate the width of each window based on the screen width
