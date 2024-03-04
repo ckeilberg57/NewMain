@@ -286,10 +286,10 @@
         openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'left');
       
         // Open the second HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'left');
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'right');
 
         // Open the second HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'left');
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'right');
       });
 
       // Add event listeners to the buttons
