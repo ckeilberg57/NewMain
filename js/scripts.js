@@ -282,30 +282,16 @@
 
       // Add a new event listener for customButton3
 
-// Add a new event listener for customButton3
+      // Add a new event listener for customButton3
       rightBox.querySelector('.customButton3').addEventListener('click', function() {
-          // Create an HTML content with three iframes
-          const iframeContent = `
-              <html>
-              <head>
-                  <title>Three Windows</title>
-              </head>
-              <body>
-                  <iframe src="https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023" style="width: 30%; height: 100%; float: left;"></iframe>
-                  <iframe src="https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest" style="width: 30%; height: 100%; float: left;"></iframe>
-                  <iframe src="https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1" style="width: 30%; height: 100%; float: left;"></iframe>
-              </body>
-              </html>
-          `;
+          // Open the first window on the left side
+          const windowLeft = window.open('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', '_blank', 'width=800,height=600,top=100,left=100');
       
-          // Create a Blob with the HTML content
-          const blob = new Blob([iframeContent], { type: 'text/html' });
+          // Open the second window in the middle
+          const windowMiddle = window.open('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', '_blank', 'width=800,height=600,top=100,left=500');
       
-          // Create a URL for the Blob
-          const iframeURL = URL.createObjectURL(blob);
-      
-          // Open the new window with the combined iframes
-          const newWindow = window.open(iframeURL, '_blank', 'width=1920,height=1080,top=100,left=100');
+          // Open the third window on the right side
+          const windowRight = window.open('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', '_blank', 'width=800,height=600,top=100,left=900');
       });
 
       // Add event listeners to the buttons
@@ -397,22 +383,6 @@
          // Open the window with the specified URL, width, height, and position
          window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
        }
-
-        function open3WinHTML(url1, url2, side) {
-          // Calculate the width of each window based on the screen width
-          var windowWidth = Math.floor(screen.width / 2);
-      
-          // Calculate the left position based on the side parameter
-          var leftPosition = (side === 'left') ? 0 : windowWidth;
-      
-          // Open the window with the specified URL, width, height, and position
-          var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
-      
-          // If it's the right window, open the second HTML link in a new tab
-          if (side === 'right') {
-            newWindow.open(url2, '_blank');
-          }
-        }
 
        function closeIframeWindow() {
          var iframeContainer = document.getElementById('customIframeContainer');
