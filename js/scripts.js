@@ -283,10 +283,7 @@
       // Add a new event listener for customButton3
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'left');
-      
-        // Open the second HTML link on the left side
-        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'right');
+        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'left');
 
         // Open the second HTML link on the left side
         open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'right');
