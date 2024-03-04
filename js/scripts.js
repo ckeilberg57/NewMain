@@ -405,6 +405,7 @@
               console.error('Invalid position specified');
               return;
           }
+      }
       
           // Calculate the window properties based on the position
           const windowProperties = {
