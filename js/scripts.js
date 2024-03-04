@@ -265,10 +265,10 @@
       // Add a new event listener for customButton3
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
       
         // Open the second HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
       });
        
       // Add event listeners to the buttons
@@ -283,13 +283,13 @@
       // Add a new event listener for customButton3
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'left');
+        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Clinician%20Demo%20User&conference=genbreakoutrooms&role=host&pin=2023', 'left');
       
         // Open the second HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'right');
+        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient%20One&conference=genbreakoutrooms&role=guest', 'right');
 
         // Open the second HTML link on the left side
-        openHCHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'right');
+        open3WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/?name=Patient%20Two&conference=genbreakoutrooms&role=guest&callType=video&join=1', 'right');
       });
 
       // Add event listeners to the buttons
@@ -304,10 +304,10 @@
       // Add a new event listener for customButton3
       secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        openHCHTML('https://ckeilberg57.github.io/ManuMap/', 'left');
+        open2WinHTML('https://ckeilberg57.github.io/ManuMap/', 'left');
       
         // Open the second HTML link on the right side
-        openHCHTML('https://ckeilberg57.github.io/mockcart', 'right');
+        open2WinHTML('https://ckeilberg57.github.io/mockcart', 'right');
       });
 
       // Display the iframe container
@@ -371,7 +371,7 @@
         `;
       }
 
-       function openHCHTML(url, side) {
+       function open2WinHTML(url, side) {
          // Calculate the width of each window based on the screen width
          var windowWidth = Math.floor(screen.width / 2);
    
@@ -381,6 +381,22 @@
          // Open the window with the specified URL, width, height, and position
          window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
        }
+
+        function open2WinHTML(url1, url2, side) {
+          // Calculate the width of each window based on the screen width
+          var windowWidth = Math.floor(screen.width / 2);
+      
+          // Calculate the left position based on the side parameter
+          var leftPosition = (side === 'left') ? 0 : windowWidth;
+      
+          // Open the window with the specified URL, width, height, and position
+          var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+      
+          // If it's the right window, open the second HTML link in a new tab
+          if (side === 'right') {
+            newWindow.open(url2, '_blank');
+          }
+        }
 
        function closeIframeWindow() {
          var iframeContainer = document.getElementById('customIframeContainer');
