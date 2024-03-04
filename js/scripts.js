@@ -261,6 +261,15 @@
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
+
+      // Add a new event listener for customButton3
+      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
+      
+        // Open the second HTML link on the right side
+        openHCHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+      });
        
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
@@ -339,6 +348,19 @@
             <img src="${pngFile}" alt="QR Code" style="width: 100%; height: auto;">
           </div>
         `;
+      }
+
+      // Function to open HTML link with specified position
+      function openHCHTML(link, position) {
+        // Calculate window width and height (adjust as needed)
+        const width = window.innerWidth / 2;
+        const height = window.innerHeight;
+      
+        // Determine left or right position based on the argument
+        const left = position === 'left' ? 0 : width;
+      
+        // Open the window with the specified link, width, height, and position
+        window.open(link, '_blank', `width=${width},height=${height},left=${left},top=0`);
       }
 
        function closeIframeWindow() {
