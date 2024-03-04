@@ -379,7 +379,7 @@
          window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
        }
 
-        function open2WinHTML(url1, url2, side) {
+        function open3WinHTML(url1, url2, side) {
           // Calculate the width of each window based on the screen width
           var windowWidth = Math.floor(screen.width / 2);
       
