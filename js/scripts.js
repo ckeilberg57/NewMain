@@ -350,18 +350,16 @@
         `;
       }
 
-      // Function to open HTML link with specified position
-      function openHCHTML(link, position) {
-        // Calculate window width and height (adjust as needed)
-        const width = window.innerWidth / 2;
-        const height = window.innerHeight;
-      
-        // Determine left or right position based on the argument
-        const left = position === 'left' ? 0 : width;
-      
-        // Open the window with the specified link, width, height, and position
-        window.open(link, '_blank', `width=${width},height=${height},left=${left},top=0`);
-      }
+       function openHCHTML(url, side) {
+         // Calculate the width of each window based on the screen width
+         var windowWidth = Math.floor(screen.width / 2);
+   
+         // Calculate the left position based on the side parameter
+         var leftPosition = (side === 'left') ? 0 : windowWidth;
+   
+         // Open the window with the specified URL, width, height, and position
+         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+       }
 
        function closeIframeWindow() {
          var iframeContainer = document.getElementById('customIframeContainer');
