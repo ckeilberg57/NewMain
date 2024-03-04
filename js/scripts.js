@@ -226,7 +226,7 @@
       // Create third left box underneath
       var thirdLeftBox = document.createElement('div');
       thirdLeftBox.className = 'thirdBox';
-      createCustomHCBox(thirdLeftBox, 'images/playback.png', 'Play Video', 'Open PDF', 'Video playback before session');
+      createCustomHCBox(thirdLeftBox, 'images/playbackVMR.png', 'Play Video', 'Open PDF', 'Video playback before session');
       thirdboxContainer.appendChild(thirdLeftBox);
        
       // Create right box
