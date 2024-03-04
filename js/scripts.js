@@ -354,11 +354,11 @@
          // Calculate the width of each window based on the screen width
          var windowWidth = Math.floor(screen.width / 2);
    
-         // Open the left window
-         var leftWindow = window.open(urlLeft, 'LeftWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
-         
-         // Open the right window
-         var rightWindow = window.open(urlRight, 'RightWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + windowWidth);
+         // Calculate the left position based on the side parameter
+         var leftPosition = (side === 'left') ? 0 : windowWidth;
+   
+         // Open the window with the specified URL, width, height, and position
+         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
        }
 
        function closeIframeWindow() {
