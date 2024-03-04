@@ -206,6 +206,10 @@
       // Create container for 2nd of two boxes
       var secondboxContainer = document.createElement('div');
       secondboxContainer.className = 'secondBoxContainer';
+
+      // Create container for 3nd of two boxes
+      var thirdboxContainer = document.createElement('div');
+      thirdboxContainer.className = 'thirdBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -242,6 +246,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(secondboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(thirdboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -300,8 +307,6 @@
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/BreakoutRooms.pdf');
       });
-
-      // Add a new event listener for customButton3
 
       // Add a new event listener for customButton3
       rightBox.querySelector('.customButton3').addEventListener('click', function() {
