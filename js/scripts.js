@@ -296,7 +296,7 @@
       // Add a new event listener for customButton3
       thirdLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        openHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient&conference=countdown&role=guest', 'left');
+        open1WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient&conference=countdown&role=guest', 'left');
       });
        
       // Add event listeners to the buttons
@@ -399,12 +399,12 @@
         `;
       }
 
-      function openHTML(url, position) {
-          // Ensure the position is either 'left' or 'right'
-          if (position !== 'left' && position !== 'right') {
-              console.error('Invalid position specified');
-              return;
-          }
+      function open1WinHTML(url) {
+        // Calculate the width of the window based on the screen width
+        var windowWidth = Math.floor(screen.width);
+      
+        // Open the window with the specified URL, width, height, and position
+        window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
 
        function open2WinHTML(url, side) {
