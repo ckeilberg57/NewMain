@@ -289,6 +289,15 @@
         openPDF('PPs/TeamsLikeLayout.pdf');
       });
 
+      // Add a new event listener for customButton3
+      secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        openHCHTML('https://ckeilberg57.github.io/ManuMap/', 'left');
+      
+        // Open the second HTML link on the right side
+        openHCHTML('https://ckeilberg57.github.io/mockcart', 'right');
+      });
+
       // Display the iframe container
       iframeContainer.style.display = 'block';
     }
