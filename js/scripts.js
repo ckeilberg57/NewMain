@@ -304,16 +304,8 @@
           // Create a URL for the Blob
           const iframeURL = URL.createObjectURL(blob);
       
-          // Open the new window or iframe with the combined iframes
-          // For a new window:
-          // window.open(iframeURL, '_blank');
-          
-          // For an iframe within the current page:
-          const iframe = document.createElement('iframe');
-          iframe.src = iframeURL;
-          iframe.style.width = '100%';
-          iframe.style.height = '500px'; // Set the desired height
-          document.body.appendChild(iframe);
+          // Open the new window with the combined iframes
+          const newWindow = window.open(iframeURL, '_blank', 'width=1920,height=1080,top=100,left=100');
       });
 
       // Add event listeners to the buttons
