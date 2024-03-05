@@ -318,8 +318,17 @@
         open1WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient&conference=countdown&role=guest', 'left');
       });
 
-      // Add a new event listener for buttons
+      // Add event listeners to the buttons
       fourthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      fourthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/TeamsLikeLayout.pdf');
+      });
+       
+      // Add a new event listener for customButton3
+      fourthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://app.powerbi.com/groups/me/reports/3b8aa0a8-57c0-4d5f-8349-93cb8071ac78/ReportSectioncd6f5a0baa0a0ceddc59?experience=power-bi', 'left');
       });
