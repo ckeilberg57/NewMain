@@ -210,6 +210,10 @@
       // Create container for 3nd of two boxes
       var thirdboxContainer = document.createElement('div');
       thirdboxContainer.className = 'thirdBoxContainer';
+
+      // Create container for 4th of two boxes
+      var fourthboxContainer = document.createElement('div');
+      fourthboxContainer.className = 'fourthBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -228,6 +232,12 @@
       thirdLeftBox.className = 'thirdBox';
       createCustomHCBox(thirdLeftBox, 'images/playbackVMR.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Video Playback Before Session');
       thirdboxContainer.appendChild(thirdLeftBox);
+
+      // Create fourth left box underneath
+      var fourthLeftBox = document.createElement('div');
+      fourthLeftBox.className = 'fourthBox';
+      createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
+      fourthboxContainer.appendChild(fourthLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
@@ -255,6 +265,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(thirdboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(fourthboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -303,6 +316,12 @@
       thirdLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://cklab-edges.ck-collab-engtest.com/webapp3/step-by-step?name=Patient&conference=countdown&role=guest', 'left');
+      });
+
+      // Add a new event listener for buttons
+      fourthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://app.powerbi.com/groups/me/reports/3b8aa0a8-57c0-4d5f-8349-93cb8071ac78/ReportSectioncd6f5a0baa0a0ceddc59?experience=power-bi', 'left');
       });
        
       // Add event listeners to the buttons
