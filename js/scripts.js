@@ -244,7 +244,7 @@
       // Create third right box underneath
       var thirdRightBox = document.createElement('div');
       thirdRightBox.className = 'thirdBox';
-      createCustomHCBox(thirdRightBox, 'images/captioning.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Captioning');
+      createCustomHCBox(thirdRightBox, 'images/pexCaptioning.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Captioning');
       thirdboxContainer.appendChild(thirdRightBox);
   
       // Append box container to the iframe content
