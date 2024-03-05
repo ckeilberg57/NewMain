@@ -240,6 +240,12 @@
       secondRightBox.className = 'secondBox';
       createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
+
+      // Create third right box underneath
+      var thirdRightBox = document.createElement('div');
+      thirdRightBox.className = 'thirdBox';
+      createCustomHCBox(thirdRightBox, 'images/captioning.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Captioning');
+      thirdboxContainer.appendChild(thirdRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -336,6 +342,12 @@
       
         // Open the second HTML link on the right side
         open2WinHTML('https://ckeilberg57.github.io/mockcart', 'right');
+      });
+
+      // Add a new event listener for customButton3
+      thirdRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://pex-gcc.com/webapp3/express?name=Provider&conference=drdemo&role=host&pin=2023', 'left');
       });
 
       // Display the iframe container
