@@ -291,7 +291,7 @@
       });
 
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/customizingPexip.pdf');
       });
 
       // Add a new event listener for customButton3
