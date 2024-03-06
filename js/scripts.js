@@ -372,6 +372,15 @@
         open2WinHTML('https://ckeilberg57.github.io/mockcart', 'right');
       });
 
+      // Add event listeners to the buttons
+      thirdRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Teams-like_active-speaker.mp4');
+      });
+
+      thirdRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/liveCaptioning.pdf');
+      });
+
       // Add a new event listener for customButton3
       thirdRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
