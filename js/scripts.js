@@ -224,7 +224,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
+      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Under Contruction', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
 
       // Create third left box underneath
@@ -236,13 +236,13 @@
       // Create fourth left box underneath
       var fourthLeftBox = document.createElement('div');
       fourthLeftBox.className = 'fourthBox';
-      createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
+      createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
       fourthboxContainer.appendChild(fourthLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo (3 Windows)', 'Breakout Rooms');
+      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Under Construction', 'Open PDF', 'Interactive Demo (3 Windows)', 'Breakout Rooms');
       boxContainer.appendChild(rightBox);
 
       // Create second right box underneath
@@ -287,7 +287,7 @@
 
       // Add event listeners to the buttons
       secondLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_active-speaker.mp4');
+        openVideo('');
       });
 
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -305,7 +305,7 @@
 
       // Add event listeners to the buttons
       thirdLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_active-speaker.mp4');
+        openVideo('');
       });
 
       thirdLeftBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -320,7 +320,7 @@
 
       // Add event listeners to the buttons
       fourthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_active-speaker.mp4');
+        openVideo('');
       });
 
       fourthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -335,7 +335,7 @@
        
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_raised-hand.mp4');
+        openVideo('');
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -356,7 +356,7 @@
 
       // Add event listeners to the buttons
       secondRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_active-speaker.mp4');
+        openVideo('');
       });
 
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -374,7 +374,7 @@
 
       // Add event listeners to the buttons
       thirdRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_active-speaker.mp4');
+        openVideo('');
       });
 
       thirdRightBox.querySelector('.customButton2').addEventListener('click', function() {
