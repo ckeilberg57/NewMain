@@ -356,7 +356,7 @@
 
       // Add event listeners to the buttons
       secondRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('videos/rounding.mp4');
       });
 
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
