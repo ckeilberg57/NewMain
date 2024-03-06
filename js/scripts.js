@@ -443,13 +443,13 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
+      createSCCustomBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
       boxContainer.appendChild(leftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
+      createSCCustomBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
@@ -464,7 +464,7 @@
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/SecureMeetings.pdf');
       });
 
    function createCustomSCBox(container, imageUrl, button1Text, button2Text, description) {
