@@ -493,6 +493,11 @@
       iframeContainer.style.display = 'block';
     }
 
+     function openIframeWindowEDU() {
+       // Coming Soon, will update once complete
+       window.location.href = 'https://ckeilberg57.github.io/comingsoon/';
+     }
+
       function openVideo(videoSrc) {
       var iframeContent = document.getElementById('customIframeContent');
       iframeContent.innerHTML = `<iframe id="videoFrame" width="100%" height="100%" src="${videoSrc}" frameborder="0" allowfullscreen></iframe>`;
