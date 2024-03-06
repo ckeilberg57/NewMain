@@ -529,10 +529,6 @@
       .customHCBox button:hover {
         background-color: #FF7273; /* Light red background on hover */
       }
-    /* Change background color on hover */
-      .customHCBox button:hover {
-        background-color: #FF7273; /* Light red background on hover */
-      }
 
     .customSCBox {
       width: 48%;
@@ -577,10 +573,6 @@
         border-radius: 10px; /* Adjust the border-radius to control the button's roundness */
       }
 
-    /* Change background color on hover */
-      .customSCBox button:hover {
-        background-color: #FF7273; /* Light red background on hover */
-      }
     /* Change background color on hover */
       .customSCBox button:hover {
         background-color: #FF7273; /* Light red background on hover */
