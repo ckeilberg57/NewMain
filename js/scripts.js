@@ -443,14 +443,8 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomSCBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open PDF', 'Teams Like Layout');
+      createCustomSCBox(leftBox, 'images/secureMeeting.png', 'Play Video', 'Open PDF', 'Secure Meetings');
       boxContainer.appendChild(leftBox);
-  
-      // Create right box
-      var rightBox = document.createElement('div');
-      rightBox.className = 'customBox';
-      createCustomSCBox(rightBox, 'images/TeamsRaisedHand.png', 'Play Video', 'Open PDF', 'Teams Like Layout Raised Hand');
-      boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
