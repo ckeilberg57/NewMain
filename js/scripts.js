@@ -3,7 +3,7 @@
     function openHTMLVideo(videoHTML) {
       var videoHTMLFrameContainer = document.getElementById('videoHTMLFrameContainer');
       var videoHTMLFrame = document.getElementById('videoHTMLFrame');
-      videoHTMLFrame.src = videoHTML;
+      videoHTMLFrame.src = videoSrc;
       videoHTMLFrameContainer.style.display = 'block';
     }
 
