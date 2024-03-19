@@ -1,12 +1,5 @@
 // *scripts.js
 
-    function openHTMLVideo(videoHTML) {
-      var videoHTMLFrameContainer = document.getElementById('videoHTMLFrameContainer');
-      var videoHTMLFrame = document.getElementById('videoHTMLFrame');
-      videoHTMLFrame.src = videoSrc;
-      videoHTMLFrameContainer.style.display = 'block';
-    }
-
     function openMainVideo(videoSrc) {
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       var videoFrame = document.getElementById('videoFrame');
@@ -22,14 +15,11 @@
     }
 
     function closeVideo() {
-      var videoHTMLFrameContainer = document.getElementById('videoHTMLFrameContainer');
       var videoFrameContainer = document.getElementById('videoFrameContainer');
       var mainPDFFrameContainer = document.getElementById('mainPDFFrameContainer');
-      videoHTMLFrameContainer.sytle.display = 'none';
       videoFrameContainer.style.display = 'none';
       mainPDFFrameContainer.style.display = 'none';
       // Clear the src attribute to stop the video
-      document.getElementById('videoHTMLFrame').src = '';
       document.getElementById('videoFrame').src = '';
       document.getElementById('PDFFrame').src = '';
     }
