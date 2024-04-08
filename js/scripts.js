@@ -256,6 +256,12 @@
       thirdRightBox.className = 'thirdBox';
       createCustomHCBox(thirdRightBox, 'images/pexCaptioning.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Captioning');
       thirdboxContainer.appendChild(thirdRightBox);
+
+      // Create fourth left box underneath
+      var fourthRightBox = document.createElement('div');
+      fourthRightBox.className = 'fourthBox';
+      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration);
+      fourthboxContainer.appendChild(fourthRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -385,6 +391,25 @@
       thirdRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://pex-gcc.com/webapp3/express?name=Provider&conference=drdemo&role=host&pin=2023', 'left');
+      });
+
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
+    }
+
+      // Add event listeners to the buttons
+      fourthRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('');
+      });
+
+      fourthRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/pexipEpic.pdf');
+      });
+       
+      // Add a new event listener for customButton3
+      fourthRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/step-by-step?name=Patient&conference=epic72234445411&role=guest', 'left');
       });
 
       // Display the iframe container
