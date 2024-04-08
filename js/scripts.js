@@ -598,3 +598,18 @@
          // Hide the custom iframe container
          iframeContainer.style.display = 'none';
        }
+
+      function openWhoAreWePDF() {
+        // Set the PDF URL
+        var pdfUrl = 'PPs/pexipCompany.pdf';
+        
+        // Get the PDFFrame iframe element
+        var iframe = document.getElementById('PDFFrame');
+        
+        // Set the source of the iframe to the PDF URL
+        iframe.src = pdfUrl;
+        
+        // Show the PDFFrameContainer
+        document.getElementById('mainPDFFrameContainer').style.display = 'block';
+      }
+    </script>
