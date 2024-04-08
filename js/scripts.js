@@ -260,7 +260,7 @@
       // Create fourth left box underneath
       var fourthRightBox = document.createElement('div');
       fourthRightBox.className = 'fourthBox';
-      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration);
+      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
   
       // Append box container to the iframe content
