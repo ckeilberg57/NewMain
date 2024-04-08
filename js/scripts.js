@@ -393,10 +393,6 @@
         open1WinHTML('https://pex-gcc.com/webapp3/express?name=Provider&conference=drdemo&role=host&pin=2023', 'left');
       });
 
-      // Display the iframe container
-      iframeContainer.style.display = 'block';
-    }
-
       // Add event listeners to the buttons
       fourthRightBox.querySelector('.customButton1').addEventListener('click', function() {
         openVideo('');
