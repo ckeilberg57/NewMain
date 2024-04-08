@@ -408,10 +408,6 @@
         open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/step-by-step?name=Patient&conference=epic72234445411&role=guest', 'left');
       });
 
-      // Display the iframe container
-      iframeContainer.style.display = 'block';
-    }
-
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
@@ -446,6 +442,10 @@
       container.appendChild(button1);
       container.appendChild(button2);
       container.appendChild(button3);
+    }
+
+      // Display the iframe container
+      iframeContainer.style.display = 'block';
     }
 
     function openIframeWindowSC() {
