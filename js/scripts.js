@@ -288,7 +288,7 @@
       });
 
       leftBox.querySelector('.customButton3').addEventListener('click', function() {
-        openPNG('images/rwHeadsetScreen.png');
+        openPDF('PPs/RealWear.pdf');
       });
 
       // Add event listeners to the buttons
