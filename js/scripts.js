@@ -214,6 +214,10 @@
       // Create container for 4th of two boxes
       var fourthboxContainer = document.createElement('div');
       fourthboxContainer.className = 'fourthBoxContainer';
+
+      // Create container for 5th of two boxes
+      var fifthboxContainer = document.createElement('div');
+      fifthboxContainer.className = 'fifthBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -238,6 +242,12 @@
       fourthLeftBox.className = 'fourthBox';
       createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
       fourthboxContainer.appendChild(fourthLeftBox);
+
+      // Create fifth left box underneath
+      var fifthLeftBox = document.createElement('div');
+      fifthLeftBox.className = 'fifthBox';
+      createCustomHCBox(fifthLeftBox, 'images/pexCaptioning.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Captioning');
+      fifthboxContainer.appendChild(fifthLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
@@ -274,6 +284,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(fourthboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(fifthboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -337,6 +350,21 @@
       fourthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://app.powerbi.com/groups/me/reports/3b8aa0a8-57c0-4d5f-8349-93cb8071ac78/ReportSectioncd6f5a0baa0a0ceddc59?experience=power-bi', 'left');
+      });
+
+      // Add event listeners to the buttons
+      fifthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('');
+      });
+
+      fifthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      fifthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
       });
        
       // Add event listeners to the buttons
