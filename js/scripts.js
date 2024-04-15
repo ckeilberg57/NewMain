@@ -246,7 +246,7 @@
       // Create fifth left box underneath
       var fifthLeftBox = document.createElement('div');
       fifthLeftBox.className = 'fifthBox';
-      createCustomHCBox(fifthLeftBox, 'images/pexCaptioning.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Captioning');
+      createCustomHCBox(fifthLeftBox, 'images/VPaaS.gif', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Video Innovation - PexRTC');
       fifthboxContainer.appendChild(fifthLeftBox);
        
       // Create right box
