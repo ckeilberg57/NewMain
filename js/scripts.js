@@ -267,11 +267,17 @@
       createCustomHCBox(thirdRightBox, 'images/pexCaptioning.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Captioning');
       thirdboxContainer.appendChild(thirdRightBox);
 
-      // Create fourth left box underneath
+      // Create fourth right box underneath
       var fourthRightBox = document.createElement('div');
       fourthRightBox.className = 'fourthBox';
       createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
+
+      // Create fifth right box underneath
+      var fifthRightBox = document.createElement('div');
+      fifthRightBox.className = 'fifthBox';
+      createCustomHCBox(fifthRightBox, 'images/VPaaS.gif', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Video Stabilization');
+      fifthboxContainer.appendChild(fifthRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -434,6 +440,21 @@
       fourthRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/step-by-step?name=Patient&conference=epic72234445411&role=guest', 'left');
+      });
+
+      // Add event listeners to the buttons
+      fifthRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/Stable.mp4');
+      });
+
+      fifthRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      fifthRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('', 'left');
       });
 
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
