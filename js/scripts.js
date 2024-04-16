@@ -276,7 +276,7 @@
       // Create fourth right box underneath
       var fifthRightBox = document.createElement('div');
       fifthRightBox.className = 'fifthBox';
-      createCustomHCBox(fifthRightBox, 'images/stabilization.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Innovation - Stabilization');
+      createCustomHCBox(fifthRightBox, 'images/stabilization.png', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Innovation - Stabilization');
       fifthboxContainer.appendChild(fifthRightBox);
   
       // Append box container to the iframe content
@@ -444,7 +444,7 @@
 
       // Add event listeners to the buttons
       fifthRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/stabilization.mp4');
+        openVideo('videos/stableVideo.mp4');
       });
 
       fifthRightBox.querySelector('.customButton2').addEventListener('click', function() {
