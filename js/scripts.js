@@ -436,21 +436,6 @@
         open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/step-by-step?name=Patient&conference=epic72234445411&role=guest', 'left');
       });
 
-      // Add event listeners to the buttons
-      fifthRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/videoStable.mp4');
-      });
-
-      fifthRightBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('');
-      });
-       
-      // Add a new event listener for customButton3
-      fifthRightBox.querySelector('.customButton3').addEventListener('click', function() {
-        // Open the first HTML link on the left side
-        open1WinHTML('');
-      });
-
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
