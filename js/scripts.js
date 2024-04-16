@@ -272,12 +272,6 @@
       fourthRightBox.className = 'fourthBox';
       createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
-
-      // Create fifth right box underneath
-      var fifthRightBox = document.createElement('div');
-      fifthRightBox.className = 'fifthBox';
-      createCustomHCBox(fifthRightBox, 'images/stabilization.png', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Stabilization');
-      fifthboxContainer.appendChild(fifthRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
