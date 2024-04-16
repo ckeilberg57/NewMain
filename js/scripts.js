@@ -444,7 +444,7 @@
 
       // Add event listeners to the buttons
       fifthRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/stableVideo.mp4');
+        openVideo('videos/videoStable.mp4');
       });
 
       fifthRightBox.querySelector('.customButton2').addEventListener('click', function() {
