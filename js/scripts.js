@@ -276,7 +276,7 @@
       // Create fifth right box underneath
       var fifthRightBox = document.createElement('div');
       fifthRightBox.className = 'fifthBox';
-      createCustomHCBox(fifthRightBox, 'images/stabilization.gif', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Stabilization');
+      createCustomHCBox(fifthRightBox, 'images/stabilization.png', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Stabilization');
       fifthboxContainer.appendChild(fifthRightBox);
   
       // Append box container to the iframe content
