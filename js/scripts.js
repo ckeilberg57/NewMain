@@ -322,8 +322,10 @@
       // Add a new event listener for customButton3
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open2PluginWinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest');
-          
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
+      
+        // Open the second HTML link on the left side
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
       });
 
       // Add event listeners to the buttons
@@ -605,23 +607,16 @@
         window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
 
-      function open2PluginWinHTML(url1, url2) {
-        // Open the first window with the specified URL
-        var win1 = window.open(url1, '_blank');
-        
-        // Open the second window with the specified URL
-        var win2 = window.open(url2, '_blank');
-    
-        // Focus on the first window
-        if (win1) {
-            win1.focus();
-        }
-    
-        // Focus on the second window
-        if (win2) {
-            win2.focus();
-        }
-      }
+       function open2WinHTML(url, side) {
+         // Calculate the width of each window based on the screen width
+         var windowWidth = Math.floor(screen.width / 2);
+   
+         // Calculate the left position based on the side parameter
+         var leftPosition = (side === 'left') ? 0 : windowWidth;
+   
+         // Open the window with the specified URL, width, height, and position
+         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+       }
 
         function open3WinHTML(url1, url2, side) {
           // Calculate the width of each window based on the screen width
