@@ -619,7 +619,7 @@
             url,
             side + 'Window',
             'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition +
-            ',menubar=no,toolbar=no,location=no,status=no,resizable=yes'
+            ',menubar=no,toolbar=yes,location=no,status=no,resizable=yes'
         );
       }
 
