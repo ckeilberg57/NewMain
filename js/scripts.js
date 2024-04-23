@@ -375,7 +375,7 @@
        
       // Add event listeners to the buttons
       rightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://youtu.be/J6Ag9gXBEEA');
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
