@@ -322,10 +322,10 @@
       // Add a new event listener for customButton3
       secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        window.open('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
       
         // Open the second HTML link on the left side
-        open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
       });
 
       // Add event listeners to the buttons
