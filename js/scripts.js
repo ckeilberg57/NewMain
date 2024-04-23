@@ -607,16 +607,21 @@
         window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
 
-       function open2WinHTML(url, side) {
-         // Calculate the width of each window based on the screen width
-         var windowWidth = Math.floor(screen.width / 2);
-   
-         // Calculate the left position based on the side parameter
-         var leftPosition = (side === 'left') ? 0 : windowWidth;
-   
-         // Open the window with the specified URL, width, height, and position
-         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
-       }
+      function open2WinHTML(url, side) {
+        // Calculate the width of each window based on the screen width
+        var windowWidth = Math.floor(screen.width / 2);
+    
+        // Calculate the left position based on the side parameter
+        var leftPosition = (side === 'left') ? 0 : windowWidth;
+    
+        // Open the window with the specified URL, width, height, and position
+        window.open(
+            url,
+            side + 'Window',
+            'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition +
+            ',menubar=no,toolbar=no,location=no,status=no,resizable=yes'
+        );
+      }
 
         function open3WinHTML(url1, url2, side) {
           // Calculate the width of each window based on the screen width
