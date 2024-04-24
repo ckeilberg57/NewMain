@@ -312,7 +312,7 @@
 
       // Add event listeners to the buttons
       secondLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('https://www.youtube.com/embed/HlaGB-LXmPs?si=b6LrIm93ivaqNuCO');
+        openVideo('https://www.youtube.com/embed/YDlbIE2mKDA?si=Sk-zElktHh085NvQ');
       });
 
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
