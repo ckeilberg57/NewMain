@@ -240,7 +240,7 @@
       // Create fourth left box underneath
       var fourthLeftBox = document.createElement('div');
       fourthLeftBox.className = 'fourthBox';
-      createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
+      createCustomHCBox(fourthLeftBox, 'images/dashboard.png', 'Video - Coming Soon', 'Open PDF', 'Interactive Demo', 'Custom Dashboard - MGT API');
       fourthboxContainer.appendChild(fourthLeftBox);
 
       // Create fifth left box underneath
@@ -270,7 +270,7 @@
       // Create fourth right box underneath
       var fourthRightBox = document.createElement('div');
       fourthRightBox.className = 'fourthBox';
-      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Under Construction', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
+      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Video - Coming Soon', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
 
       // Create fourth right box underneath
