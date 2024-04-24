@@ -264,7 +264,7 @@
       // Create third right box underneath
       var thirdRightBox = document.createElement('div');
       thirdRightBox.className = 'thirdBox';
-      createCustomHCBox(thirdRightBox, 'images/pexCaptioning.png', 'Under Construction', 'Open PDF', 'Interactive Demo', 'Captioning');
+      createCustomHCBox(thirdRightBox, 'images/pexCaptioning.png', 'Play Video', 'Open PDF', 'Interactive Demo', 'Live Captioning');
       thirdboxContainer.appendChild(thirdRightBox);
 
       // Create fourth right box underneath
@@ -414,7 +414,7 @@
 
       // Add event listeners to the buttons
       thirdRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('videos/liveCaptioning.mp4');
       });
 
       thirdRightBox.querySelector('.customButton2').addEventListener('click', function() {
