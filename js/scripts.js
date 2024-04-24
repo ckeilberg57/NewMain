@@ -424,7 +424,7 @@
       // Add a new event listener for customButton3
       thirdRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open1WinHTML('https://pex-gcc.com/webapp3/express?name=Provider&conference=drdemo&role=host&pin=2023', 'left');
+        open1WinHTML('https://pexipdemo.com/webapp3/express?name=Provider&conference=drdemo&role=host&pin=2024', 'left');
       });
 
       // Add event listeners to the buttons
