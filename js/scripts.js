@@ -252,7 +252,7 @@
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Under Construction', 'Open PDF', 'Interactive Demo (3 Windows)', 'Breakout Rooms');
+      createCustomHCBox(rightBox, 'images/breakoutrooms.png', 'Play Video', 'Open PDF', 'Interactive Demo (3 Windows)', 'Breakout Rooms');
       boxContainer.appendChild(rightBox);
 
       // Create second right box underneath
