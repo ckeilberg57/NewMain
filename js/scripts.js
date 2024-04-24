@@ -360,7 +360,7 @@
 
       // Add event listeners to the buttons
       fifthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://www.youtube.com/embed/HytA4akSvZU?si=zJ4Hj4DIvmdDE3Vp');
       });
 
       fifthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
