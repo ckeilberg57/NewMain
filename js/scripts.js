@@ -218,6 +218,10 @@
       // Create container for 5th of two boxes
       var fifthboxContainer = document.createElement('div');
       fifthboxContainer.className = 'fifthBoxContainer';
+
+      // Create container for 5th of two boxes
+      var sixthboxContainer = document.createElement('div');
+      sixthboxContainer.className = 'sixthBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -248,6 +252,12 @@
       fifthLeftBox.className = 'fifthBox';
       createCustomHCBox(fifthLeftBox, 'images/VPaaS.gif', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Innovation - VPaaS');
       fifthboxContainer.appendChild(fifthLeftBox);
+
+      // Create sixth left box underneath
+      var sixthLeftBox = document.createElement('div');
+      sixthLeftBox.className = 'sixthBox';
+      createCustomHCBox(sixthLeftBox, 'images/pexRTC.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Video Innovation - pexRTC APIs');
+      sixthboxContainer.appendChild(sixthLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
@@ -293,6 +303,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(fifthboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(sixthboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -369,6 +382,21 @@
        
       // Add a new event listener for customButton3
       fifthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('', 'left');
+      });
+
+      // Add event listeners to the buttons
+      sixthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('https://www.youtube.com/embed/1aunInKugc0?si=6PTdVd2hOgZfzcaW');
+      });
+
+      sixthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      sixthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
       });
