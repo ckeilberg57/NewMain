@@ -228,7 +228,7 @@
       // Create second left box underneath
       var secondLeftBox = document.createElement('div');
       secondLeftBox.className = 'secondBox';
-      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Under Contruction', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
+      createCustomHCBox(secondLeftBox, 'images/plugins.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'WebApp2 Plugins');
       secondboxContainer.appendChild(secondLeftBox);
 
       // Create third left box underneath
@@ -312,7 +312,7 @@
 
       // Add event listeners to the buttons
       secondLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://www.youtube.com/embed/HlaGB-LXmPs?si=b6LrIm93ivaqNuCO');
       });
 
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
