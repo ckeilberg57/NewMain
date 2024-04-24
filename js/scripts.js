@@ -364,7 +364,7 @@
       });
 
       fifthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('');
+        openPDF('PPs/VPaaS.pdf');
       });
        
       // Add a new event listener for customButton3
