@@ -622,7 +622,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open Pexip Docs', 'How To: Renew Infinity Certs');
+      createCustomHowToBox(leftBox, 'images/TeamsLikeLayout.png', 'Play Video', 'Open Pexip Docs', 'How To: Renew Infinity Certs');
       boxContainer.appendChild(leftBox);
 
       // Append box container to the iframe content
