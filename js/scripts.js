@@ -633,11 +633,11 @@
 
       // Add event listeners to the buttons
       leftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('videos/Teams-like_AI-technology.mp4');
+        openVideo('https://www.youtube.com/embed/uR3vcewvGws?si=kGBMidIQYx0TXQge');
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        open1WinHTML('https://docs.pexip.com/admin/certificate_signing_request.htm#existing', 'left');
       });
 
    function createCustomHowToBox(container, imageUrl, button1Text, button2Text, description) {
