@@ -283,11 +283,17 @@
       createCustomHCBox(fourthRightBox, 'images/epic.png', 'Video - Coming Soon', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
 
-      // Create fourth right box underneath
+      // Create fifth right box underneath
       var fifthRightBox = document.createElement('div');
       fifthRightBox.className = 'fifthBox';
       createCustomHCBox(fifthRightBox, 'images/stabilization.png', 'Play Video', 'Open PDF', 'Interactive Demo - Coming Soon', 'Video Innovation - Stabilization');
       fifthboxContainer.appendChild(fifthRightBox);
+
+      // Create sixth right box underneath
+      var sixthRightBox = document.createElement('div');
+      sixthRightBox.className = 'sixthBox';
+      createCustomHCBox(sixthRightBox, 'images/provisioningEmail.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Infinity Connect App - Auto Provision');
+      sixthboxContainer.appendChild(sixthLeftBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -481,6 +487,21 @@
        
       // Add a new event listener for customButton3
       fifthRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+      });
+
+      // Add event listeners to the buttons
+      sixthRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('https://www.youtube.com/embed/1aunInKugc0?si=6PTdVd2hOgZfzcaW');
+      });
+
+      sixthRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      sixthRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
       });
