@@ -293,7 +293,7 @@
       var sixthRightBox = document.createElement('div');
       sixthRightBox.className = 'sixthBox';
       createCustomHCBox(sixthRightBox, 'images/provisioningEmail.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Infinity Connect App - Auto Provision');
-      sixthboxContainer.appendChild(sixthLeftBox);
+      sixthboxContainer.appendChild(sixthRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
