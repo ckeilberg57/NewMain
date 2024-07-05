@@ -493,7 +493,7 @@
 
       // Add event listeners to the buttons
       sixthRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('https://www.youtube.com/embed/1aunInKugc0?si=6PTdVd2hOgZfzcaW');
+        openVideo('https://www.youtube.com/embed/j7-Xb3Mnt-E?si=gRNrcg3K4r_7YKqG');
       });
 
       sixthRightBox.querySelector('.customButton2').addEventListener('click', function() {
