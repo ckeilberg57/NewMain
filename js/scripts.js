@@ -219,7 +219,7 @@
       var fifthboxContainer = document.createElement('div');
       fifthboxContainer.className = 'fifthBoxContainer';
 
-      // Create container for 5th of two boxes
+      // Create container for 6th of two boxes
       var sixthboxContainer = document.createElement('div');
       sixthboxContainer.className = 'sixthBoxContainer';
   
