@@ -422,7 +422,7 @@
 
       // Add event listeners to the buttons
       seventhLeftBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://www.youtube.com/embed/zqy4gOMwI3E?si=4qD1iBpQDnClJ514');
       });
 
       seventhLeftBox.querySelector('.customButton2').addEventListener('click', function() {
