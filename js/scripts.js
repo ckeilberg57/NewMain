@@ -266,7 +266,7 @@
       // Create seventh left box underneath
       var seventhLeftBox = document.createElement('div');
       seventhLeftBox.className = 'seventhBox';
-      createCustomHCBox(seventhLeftBox, 'images/pexRTC.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'VMR SSO - WebApp2 with plugins');
+      createCustomHCBox(seventhLeftBox, 'images/vmrSSO.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'VMR SSO - WebApp2 with plugins');
       seventhboxContainer.appendChild(seventhLeftBox);
        
       // Create right box
