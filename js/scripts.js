@@ -207,7 +207,7 @@
       var secondboxContainer = document.createElement('div');
       secondboxContainer.className = 'secondBoxContainer';
 
-      // Create container for 3nd of two boxes
+      // Create container for 3rd of two boxes
       var thirdboxContainer = document.createElement('div');
       thirdboxContainer.className = 'thirdBoxContainer';
 
@@ -222,6 +222,10 @@
       // Create container for 6th of two boxes
       var sixthboxContainer = document.createElement('div');
       sixthboxContainer.className = 'sixthBoxContainer';
+
+      // Create container for 7th of two boxes
+      var seventhboxContainer = document.createElement('div');
+      seventhboxContainer.className = 'seventhBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
@@ -258,6 +262,12 @@
       sixthLeftBox.className = 'sixthBox';
       createCustomHCBox(sixthLeftBox, 'images/pexRTC.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Video Innovation - pexRTC APIs');
       sixthboxContainer.appendChild(sixthLeftBox);
+
+      // Create seventh left box underneath
+      var seventhLeftBox = document.createElement('div');
+      seventhLeftBox.className = 'seventhBox';
+      createCustomHCBox(seventhLeftBox, 'images/pexRTC.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'VMR SSO - WebApp2 with plugins');
+      sixthboxContainer.appendChild(seventhLeftBox);
        
       // Create right box
       var rightBox = document.createElement('div');
@@ -312,6 +322,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(sixthboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(seventhboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -405,6 +418,24 @@
       sixthLeftBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
         open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+      });
+
+      // Add event listeners to the buttons
+      seventhLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('');
+      });
+
+      seventhLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      seventhLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open2WinHTML('https://pex-gcc.com/phealth_w2/conference/drdemo?callType=video&muteMicrophone=true&muteCamera=true&role=host&pin=2023', 'left');
+      
+        // Open the second HTML link on the left side
+        open2WinHTML('https://pex-gcc.com/phealth_w2/conference/drdemo?callType=video&muteMicrophone=true&muteCamera=true&name=Patient 1&role=guest', 'right');
       });
        
       // Add event listeners to the buttons
