@@ -593,39 +593,39 @@
             background-color: #FF7273; /* Light red background on hover */
           }
 
-    .seventhBox {
-          width: 48%;
-          margin: 1%;
-          display: inline-block;
-          text-align: center;
-          background-color: #0a2136; /* Background color for each box */
-          border: 2px solid #0ebec7; /* Border color */
-          border-radius: 5px; /* Border radius */
-          padding: 10px; /* Padding inside each box */
-        }
+        .seventhBox {
+            width: 48%;
+            margin: 1%;
+            display: inline-block;
+            text-align: center;
+            background-color: #0a2136; /* Background color for each box */
+            border: 2px solid #0ebec7; /* Border color */
+            border-radius: 5px; /* Border radius */
+            padding: 10px; /* Padding inside each box */
+          }
+        
+          .seventhBox img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            border-radius: 5px;
+          }
+        
+          .seventhBox p {
+            margin: 10px 0;
+          }
     
-        .seventhBox img {
-          width: 100%;
-          height: auto;
-          max-height: 350px;
-          border-radius: 5px;
-        }
+          .seventhBox button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
     
-        .seventhBox p {
-          margin: 10px 0;
-        }
-    
-        .seventhBox button {
-          padding: 10px;
-          margin: 5px;
-          background-color: #4CAF50;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-    
-        .seventhBox button {
+          .seventhBox button {
             background-color: white;
             color: #0a2136;
             border: 2px solid #0EBEC7;
