@@ -228,7 +228,7 @@
         openPDF('PPs/RealWear.pdf');
       });
 
-    function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
+    function createCustomDRBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
   
