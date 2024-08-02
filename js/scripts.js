@@ -206,7 +206,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomDRBox(leftBox, 'images/pexipDRTeams.png', 'Play DR Activation Video', 'Play DR Video', 'Open PDF', 'Disaster Recovery for MS Teams');
+      createCustomDRBox(leftBox, 'images/pexipDRTeams.png', 'Play DR Activation Video', 'Play DR Scenario (Endpoint Workflow)', 'Open PDF', 'Disaster Recovery for MS Teams');
       boxContainer.appendChild(leftBox);
 
       // Append box container to the iframe content
