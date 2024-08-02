@@ -221,11 +221,11 @@
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPNG('images/qr-code.png');
+        openVideo('https://www.youtube.com/embed/tF2L8zLt81Y?si=dxJQwpEm0P9WbUsr');
       });
 
       leftBox.querySelector('.customButton3').addEventListener('click', function() {
-        openPDF('PPs/RealWear.pdf');
+        openPDF('PPs/BCP.pdf');
       });
 
     function createCustomDRBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
