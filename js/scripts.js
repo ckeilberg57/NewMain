@@ -155,7 +155,7 @@
       });
 
       thirdRightBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/SGJ.pdf');
       });
 
    function createCustomBox(container, imageUrl, button1Text, button2Text, description) {
