@@ -129,7 +129,7 @@
       });
 
       thirdLeftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/MTR.pdf');
       });
 
       // Add event listeners to the buttons
