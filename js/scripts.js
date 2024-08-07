@@ -111,7 +111,7 @@
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/CVI_Overview.pdf');
       });
 
       // Add event listeners to the buttons
@@ -120,7 +120,7 @@
       });
 
       secondLeftBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/CVI_Overview.pdf');
       });
 
       // Add event listeners to the buttons
@@ -138,7 +138,7 @@
       });
 
       rightBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/CVI_Overview.pdf');
       });
 
       // Add event listeners to the buttons
@@ -147,7 +147,7 @@
       });
 
       secondRightBox.querySelector('.customButton2').addEventListener('click', function() {
-        openPDF('PPs/TeamsLikeLayout.pdf');
+        openPDF('PPs/CVI_Overview.pdf');
       });
 
       thirdRightBox.querySelector('.customButton1').addEventListener('click', function() {
