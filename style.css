@@ -832,3 +832,33 @@
       .customHowToBox button:hover {
         background-color: #FF7273; /* Light red background on hover */
       }
+
+    .chat-container {
+      width: 300px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #chat-box {
+      height: 400px;
+      overflow-y: scroll;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    #chat-box .message {
+      margin: 5px 0;
+    }
+
+    #user-input {
+      width: calc(100% - 50px);
+      padding: 10px;
+    }
+
+    #send-btn {
+      width: 50px;
+      padding: 10px;
+    }
