@@ -7,6 +7,7 @@
   <title>GEM Demos</title>
 </head>
 <script src="js/scripts.js"></script>
+<script src="js/chatbot.js"></script>
 <body>
 
 <!-- Scrolling Sidebar -->
@@ -113,6 +114,15 @@
       <br>
       <!-- Button to company intro pdf -->
       <button class="white-button" onclick="openLink('PPs/pexipCompany.pdf')">Open Company Overview</button>
+    </div>
+
+    <!-- ChatBot -->
+    <div class="chat-container">
+      <div id="chat-box">
+          <!-- Chat messages will appear here -->
+      </div>
+      <input type="text" id="user-input" placeholder="Type your message here..." autofocus>
+      <button id="send-btn">Send</button>
     </div>
 
     <!-- Container for two side-by-side white-lined boxes -->
