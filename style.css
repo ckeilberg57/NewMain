@@ -846,6 +846,7 @@
       overflow-y: scroll;
       border: 1px solid #ddd;
       margin-bottom: 10px;
+      border-radius: 10px;
     }
 
     #chat-box .message {
@@ -853,14 +854,16 @@
     }
 
     #user-input {
-      width: calc(100% - 70px);
+      width: calc(100% - 20px);
       padding: 10px;
+      border-radius: 10px;
     }
 
     #send-btn {
       width: 70px;
-      padding: 10px;
+      padding: 5px;
       border: 1px solid #ddd;
+      border-radius: 10px;
     }
 
     .hidden {
