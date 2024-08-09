@@ -846,7 +846,6 @@
       overflow-y: scroll;
       border: 1px solid #ddd;
       margin-bottom: 10px;
-      padding: 5px;
     }
 
     #chat-box .message {
@@ -859,7 +858,7 @@
     }
 
     #send-btn {
-      width: 50px;
+      width: 70px;
       padding: 10px;
       border: 1px solid #ddd;
     }
