@@ -34,12 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getBotResponse(userMessage) {
         let botMessage = "I don't understand that.";
+        const lowerCaseMessage = userMessage.toLowerCase();
 
-        if (userMessage.toLowerCase().includes('hello')) {
+        if (lowerCaseMessage.includes('hello')) {
             botMessage = 'Hello! How can I help you today?';
-        } else if (userMessage.toLowerCase().includes('help')) {
+        } else if (lowerCaseMessage.includes('help')) {
             botMessage = 'Sure, what do you need help with?';
-        } else if (userMessage.toLowerCase().includes('schedule')) {
+        } else if (lowerCaseMessage.includes('schedule') || 
+                   lowerCaseMessage.includes('appointment') || 
+                   lowerCaseMessage.includes('appt') || 
+                   lowerCaseMessage.includes('book')) {
             botMessage = 'Great, let me work on scheduling your appointment. Can you please select a date for your appointment?';
             dateSelectionMode = true;
 
