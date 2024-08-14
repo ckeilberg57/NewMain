@@ -88,7 +88,8 @@ END:VCALENDAR`;
                 const blob = new Blob([icsContent], { type: 'text/calendar' });
                 const icsUrl = URL.createObjectURL(blob);
 
-                // Append a download link to the chat
+                // Append a confirmation message before the download link
+                appendMessage('Bot', 'Wonderful, your appointment is now booked.');
                 appendMessage('Bot', `Download your appointment: <a href="${icsUrl}" download="consultation.ics"><button>Download .ics</button></a>`);
                 
                 // Hide the date picker and reset date selection mode
