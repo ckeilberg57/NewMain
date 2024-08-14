@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (lowerCaseMessage.includes('no')) {
             // Generate a random number for the consultation link
             const randomNumbers = Math.floor(100000 + Math.random() * 900000);
-            const consultationLink = `https://example.com/webapp/m/ph${randomNumbers}/role=guest`;
+            const consultationLink = `https://cklab-edges.ck-collab-engtest.com.com/customer/m/ph${randomNumbers}/role=guest`;
 
             // Create the .ics file content
             const selectedDateTime = datePicker.value;
