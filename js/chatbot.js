@@ -114,7 +114,8 @@ END:VCALENDAR`;
             const blob = new Blob([icsContent], { type: 'text/calendar' });
             const icsUrl = URL.createObjectURL(blob);
 
-            appendMessage('Bot', `Your appointment is booked. Please download your appointment here: <a href="${icsUrl}" download="consultation.ics"><button>Download .ics</button></a>`);
+            // Append the message and download link with the calendar icon
+            appendMessage('Bot', `Please download your appointment here: <span style="display: flex; align-items: center;"><a href="${icsUrl}" download="consultation.ics"><img src="path_to_calendar_icon.png" alt="Calendar" style="width: 16px; height: 16px; margin-right: 5px;">Download .ics</a></span>`);
 
             // Reset appointment booking mode
             appointmentBooked = false;
