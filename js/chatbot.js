@@ -42,8 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
             botMessage = 'Hello! How can I help you today?';
         } else if (userMessage.toLowerCase().includes('help')) {
             botMessage = 'Sure, what do you need help with?';
-        }
-
+        } else if (userMessage.toLowerCase().includes('schedule')) {
+            botMessage = 'Great, let me work on scheduling your appointment. Can you please select a date for your appointment?';
+        
         setTimeout(() => appendMessage('Bot', botMessage), 500);
     }
 });
