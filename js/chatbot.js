@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
     const datePicker = document.getElementById('date-picker');
+    const saveBtn = document.getElementById('save-btn');
 
     let chatBoxVisible = false;
     let dateSelectionMode = false;
+    let appointmentBooked = false;
 
     userInput.addEventListener('input', function() {
         if (!chatBoxVisible && userInput.value.trim() !== '') {
@@ -19,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (userMessage !== '') {
             appendMessage('You', userMessage);
-            getBotResponse(userMessage);
+            if (appointmentBooked) {
+                handlePostBookingResponse(userMessage);
+            } else {
+                getBotResponse(userMessage);
+            }
             userInput.value = '';
         }
     });
@@ -47,10 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
             botMessage = 'Great, let me work on scheduling your appointment. Can you please select a date and time for your appointment?';
             dateSelectionMode = true;
 
-            // Show the bot's message and then show the date picker
+            // Show the bot's message and then show the date picker and save button
             appendMessage('Bot', botMessage);
             setTimeout(() => {
                 datePicker.classList.remove('hidden');
+                saveBtn.classList.remove('hidden');
             }, 500); // Slight delay to simulate bot response
             return; // Exit the function to avoid sending the message twice
         }
@@ -58,21 +65,38 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => appendMessage('Bot', botMessage), 500);
     }
 
-    datePicker.addEventListener('change', function() {
+    saveBtn.addEventListener('click', function() {
         if (dateSelectionMode) {
             const selectedDateTime = datePicker.value;
             if (selectedDateTime) {
                 appendMessage('You', `Selected date and time: ${selectedDateTime}`);
-                appendMessage('Bot', 'Great, I have booked your consultation with a provider.');
+                appendMessage('Bot', 'Your appointment is booked. Is there anything else I can assist with?');
+                
+                // Hide the date picker and save button
+                datePicker.classList.add('hidden');
+                saveBtn.classList.add('hidden');
 
-                // Generate a random number for the consultation link
-                const randomNumbers = Math.floor(100000 + Math.random() * 900000);
-                const consultationLink = `https://example.com/webapp/m/ph${randomNumbers}/role=guest`;
+                // Enable post-booking response handling
+                dateSelectionMode = false;
+                appointmentBooked = true;
+            }
+        }
+    });
 
-                // Create the .ics file content
-                const dateTime = new Date(selectedDateTime);
-                const formattedDate = dateTime.toISOString().replace(/-|:|\.\d+/g, '');
-                const icsContent = `BEGIN:VCALENDAR
+    function handlePostBookingResponse(userMessage) {
+        const lowerCaseMessage = userMessage.toLowerCase();
+        if (lowerCaseMessage.includes('yes')) {
+            appendMessage('Bot', 'Learn more about labs.');
+        } else if (lowerCaseMessage.includes('no')) {
+            // Generate a random number for the consultation link
+            const randomNumbers = Math.floor(100000 + Math.random() * 900000);
+            const consultationLink = `https://example.com/webapp/m/ph${randomNumbers}/role=guest`;
+
+            // Create the .ics file content
+            const selectedDateTime = datePicker.value;
+            const dateTime = new Date(selectedDateTime);
+            const formattedDate = dateTime.toISOString().replace(/-|:|\.\d+/g, '');
+            const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Your Company//Your Product//EN
 BEGIN:VEVENT
@@ -86,18 +110,16 @@ URL:${consultationLink}
 END:VEVENT
 END:VCALENDAR`;
 
-                // Create a Blob from the .ics content
-                const blob = new Blob([icsContent], { type: 'text/calendar' });
-                const icsUrl = URL.createObjectURL(blob);
+            // Create a Blob from the .ics content
+            const blob = new Blob([icsContent], { type: 'text/calendar' });
+            const icsUrl = URL.createObjectURL(blob);
 
-                // Append a confirmation message before the download link
-                appendMessage('Bot', 'Wonderful, your appointment is now booked.');
-                appendMessage('Bot', `Download your appointment: <a href="${icsUrl}" download="consultation.ics"><button>Download .ics</button></a>`);
-                
-                // Hide the date picker and reset date selection mode
-                datePicker.classList.add('hidden');
-                dateSelectionMode = false;
-            }
+            appendMessage('Bot', `Your appointment is booked. Please download your appointment here: <a href="${icsUrl}" download="consultation.ics"><button>Download .ics</button></a>`);
+
+            // Reset appointment booking mode
+            appointmentBooked = false;
+        } else {
+            appendMessage('Bot', "I'm sorry, I didn't catch that. Could you please answer 'yes' or 'no'?");
         }
-    });
+    }
 });
