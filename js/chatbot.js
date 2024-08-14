@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                    lowerCaseMessage.includes('appointment') || 
                    lowerCaseMessage.includes('appt') || 
                    lowerCaseMessage.includes('book')) {
-            botMessage = 'Great, let me work on scheduling your appointment. Can you please select a date for your appointment?';
+            botMessage = 'Great, let me work on scheduling your appointment. Can you please select a date and time for your appointment?';
             dateSelectionMode = true;
 
             // Show the bot's message and then show the date picker
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     datePicker.addEventListener('change', function() {
         if (dateSelectionMode) {
-            const selectedDate = datePicker.value;
-            if (selectedDate) {
-                appendMessage('You', `Selected date: ${selectedDate}`);
+            const selectedDateTime = datePicker.value;
+            if (selectedDateTime) {
+                appendMessage('You', `Selected date and time: ${selectedDateTime}`);
                 appendMessage('Bot', 'Great, I have booked your consultation with a provider.');
 
                 // Generate a random number for the consultation link
@@ -70,14 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const consultationLink = `https://example.com/webapp/m/ph${randomNumbers}/role=guest`;
 
                 // Create the .ics file content
+                const dateTime = new Date(selectedDateTime);
+                const formattedDate = dateTime.toISOString().replace(/-|:|\.\d+/g, '');
                 const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Your Company//Your Product//EN
 BEGIN:VEVENT
 UID:${randomNumbers}
 DTSTAMP:${new Date().toISOString().replace(/-|:|\.\d+/g, '')}
-DTSTART:${selectedDate.replace(/-/g, '')}T090000Z
-DTEND:${selectedDate.replace(/-/g, '')}T100000Z
+DTSTART:${formattedDate}
+DTEND:${formattedDate}
 SUMMARY:Consultation with Provider
 DESCRIPTION:Your consultation is booked. Use the following link: ${consultationLink}
 URL:${consultationLink}
