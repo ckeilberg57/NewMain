@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Listen for the "Enter" key press
+    userInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevents the default action (e.g., form submission)
+            sendBtn.click(); // Simulate a click on the "Send" button
+        }
+    });
+
     sendBtn.addEventListener('click', function() {
         const userMessage = userInput.value.trim();
 
