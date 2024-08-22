@@ -633,7 +633,7 @@
       // Add a new event listener for customButton3
       seventhRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+        open1WinHTML('https://ckeilberg57.github.io/providerCal', 'left');
       });
         
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
