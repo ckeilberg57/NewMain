@@ -382,6 +382,12 @@
       sixthRightBox.className = 'sixthBox';
       createCustomHCBox(sixthRightBox, 'images/provisioningEmail.png', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Infinity Connect App - Auto Provision');
       sixthboxContainer.appendChild(sixthRightBox);
+
+      // Create seventh right box underneath
+      var seventhRightBox = document.createElement('div');
+      seventhRightBox.className = 'seventhBox';
+      createCustomHCBox(seventhRightBox, 'images/chatBot.gif', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Patient Portal ChatBot / Provider Calendar');
+      seventhboxContainer.appendChild(seventhRightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -615,6 +621,21 @@
         open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
       });
 
+      // Add event listeners to the buttons
+      seventhRightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('');
+      });
+
+      seventhRightBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+       
+      // Add a new event listener for customButton3
+      seventhRightBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+      });
+        
     function createCustomHCBox(container, imageUrl, button1Text, button2Text, button3Text, description) {
       var image = document.createElement('img');
       image.src = imageUrl;
