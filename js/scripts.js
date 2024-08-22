@@ -386,7 +386,7 @@
       // Create seventh right box underneath
       var seventhRightBox = document.createElement('div');
       seventhRightBox.className = 'seventhBox';
-      createCustomHCBox(seventhRightBox, 'images/chatBot.gif', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Patient Portal ChatBot / Provider Calendar');
+      createCustomHCBox(seventhRightBox, 'images/chatbot.gif', 'Play Video', 'PDF - Coming Soon', 'Interactive Demo', 'Patient Portal ChatBot / Provider Calendar');
       seventhboxContainer.appendChild(seventhRightBox);
   
       // Append box container to the iframe content
