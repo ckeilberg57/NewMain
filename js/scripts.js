@@ -603,7 +603,7 @@
       // Add a new event listener for customButton3
       fifthRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+        open1WinHTML('', 'left');
       });
 
       // Add event listeners to the buttons
@@ -618,7 +618,7 @@
       // Add a new event listener for customButton3
       sixthRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open1WinHTML('https://ckeilberg57.github.io/pexrtc', 'left');
+        open1WinHTML('', 'left');
       });
 
       // Add event listeners to the buttons
