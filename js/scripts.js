@@ -356,7 +356,7 @@
       // Create second right box underneath
       var secondRightBox = document.createElement('div');
       secondRightBox.className = 'secondBox';
-      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 Windows)', 'Rounding Map');
+      createCustomHCBox(secondRightBox, 'images/hospitalmap.png', 'Play Video', 'Open PDF', 'Interactive Demo (Provider Side)', 'Rounding Map');
       secondboxContainer.appendChild(secondRightBox);
 
       // Create third right box underneath
@@ -555,10 +555,7 @@
       // Add a new event listener for customButton3
       secondRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open2WinHTML('https://ckeilberg57.github.io/ManuMap/', 'left');
-      
-        // Open the second HTML link on the right side
-        open2WinHTML('https://ckeilberg57.github.io/mockcart', 'right');
+        open1WinHTML('https://ckeilberg57.github.io/ManuMap/', 'left');
       });
 
       // Add event listeners to the buttons
