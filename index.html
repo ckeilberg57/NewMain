@@ -5,131 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>GEM Demos</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: black;
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
 </head>
 <script src="js/scripts.js"></script>
 <body>
 
-  <!-- Looping Background Video -->
-  <video id="backgroundVideo" autoplay muted loop>
-    <source src="videos/videoStable.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<!-- Scrolling Sidebar -->
+<div id="sidebar">
+  <!-- Sidebar Item 1 -->
+  <div class="sidebar-item" onclick="openIframeWindowIO()">
+    <img src="images/sidebarInterOP.png" alt="InterOP">
+    <p></p>
+    <br>
+    <p>InterOP</p>
+  </div>
 
-  <script>
-    // Redirect to index.html on screen click
-    document.body.addEventListener('click', function() {
-      window.location.href = 'index.html';
-    });
-  </script>
-
-  <!-- Scrolling Sidebar -->
-  <div id="sidebar">
-    <!-- Sidebar Item 1 -->
-    <div class="sidebar-item" onclick="openIframeWindowIO()">
-      <img src="images/sidebarInterOP.png" alt="InterOP">
-      <p></p>
-      <br>
-      <p>InterOP</p>
-    </div>
-
-    <!-- Sidebar Item 2 -->
-    <div class="sidebar-item" onclick="openIframeWindowDR()">
-      <img src="images/sidebarDR.png" alt="DR">
-      <p></p>
-      <br>
-      <p>Disaster Recovery</p>
-    </div>
-
-    <!-- Sidebar Item 3 -->
-    <div class="sidebar-item" onclick="openIframeWindowHC()">
-      <img src="images/sidebarHC.png" alt="Healthcare">
-      <p></p>
-      <br>
-      <p>Healthcare</p>
-    </div>
+  <!-- Sidebar Item 2 -->
+  <div class="sidebar-item" onclick="openIframeWindowDR()">
+    <img src="images/sidebarDR.png" alt="DR">
+    <p></p>
+    <br>
+    <p>Disaster Recovery</p>
+  </div>
+  
+  <!-- Sidebar Item 3 -->
+  <div class="sidebar-item" onclick="openIframeWindowHC()">
+    <img src="images/sidebarHC.png" alt="Healthcare">
+    <p></p>
+    <br>
+    <p>Healthcare</p>
+  </div>
 
     <!-- Sidebar Item 4 -->
-    <div class="sidebar-item" onclick="openIframeWindowSC()">
-      <img src="images/sidebarSecure.png" alt="Secure">
-      <p></p>
-      <br>
-      <p>Secure</p>
-    </div>
-
-    <!-- Sidebar Item 5 -->
-    <div class="sidebar-item" onclick="openIframeWindowEDU()">
-      <img src="images/sidebarEDU.png" alt="Education">
-      <p></p>
-      <br>
-      <p>Education</p>
-    </div>
-
-    <!-- Sidebar Item 6 -->
-    <div class="sidebar-item" onclick="openIframeWindowState()">
-      <img src="images/sidebarState.png" alt="State">
-      <p></p>
-      <br>
-      <p>State</p>
-    </div>
-
-    <!-- Sidebar Item 7 -->
-    <div class="sidebar-item" onclick="openIframeWindowJudical()">
-      <img src="images/sidebarJudicial.png" alt="Judicial">
-      <p></p>
-      <br>
-      <p>Judicial</p>
-    </div>
-
-    <!-- Sidebar Item 8 -->
-    <div class="sidebar-item" onclick="openIframeWindowHowTo()">
-      <img src="images/sidebarHowTo.png" alt="HowTo">
-      <p></p>
-      <br>
-      <p>How To:</p>
-    </div>
+  <div class="sidebar-item" onclick="openIframeWindowSC()">
+    <img src="images/sidebarSecure.png" alt="Secure">
+    <p></p>
+    <br>
+    <p>Secure</p>
+  </div>
+  
+  <!-- Sidebar Item 5 -->
+  <div class="sidebar-item" onclick="openIframeWindowEDU()">
+    <img src="images/sidebarEDU.png" alt="Education">
+    <p></p>
+    <br>
+    <p>Education</p>
   </div>
 
-  <!-- New Iframe Overlay Container -->
-  <div id="iframeOverlay">
-    <div id="iframeContainer"></div>
-    <span id="closeButton" onclick="closeIframeWindow()">×</span>
+  <!-- Sidebar Item 6 -->
+  <div class="sidebar-item" onclick="openIframeWindowState()">
+    <img src="images/sidebarState.png" alt="State">
+    <p></p>
+    <br>
+    <p>State</p>
   </div>
 
-  <div id="customIframeContainer">
-    <div id="customIframeContent"></div>
-    <span id="closeButton" onclick="closeIframeWindow()">×</span>
+  <!-- Sidebar Item 7 -->
+  <div class="sidebar-item" onclick="openIframeWindowJudical()">
+    <img src="images/sidebarJudicial.png" alt="Judicial">
+    <p></p>
+    <br>
+    <p>Judicial</p>
   </div>
 
-  <!-- Iframe Main Video container -->
-  <div id="videoFrameContainer">
-    <span id="closeButton" onclick="closeVideo()">×</span>
+  <!-- Sidebar Item 8 -->
+  <div class="sidebar-item" onclick="openIframeWindowHowTo()">
+    <img src="images/sidebarHowTo.png" alt="HowTo">
+    <p></p>
+    <br>
+    <p>How To:</p>
+  </div>
+  
+</div>
+
+<!-- New Iframe Overlay Container -->
+<div id="iframeOverlay">
+  <div id="iframeContainer"></div>
+  <span id="closeButton" onclick="closeIframeWindow()">×</span>
+</div>
+
+<div id="customIframeContainer">
+  <div id="customIframeContent"></div>
+  <span id="closeButton" onclick="closeIframeWindow()">×</span>
+</div>
+
+<!-- Iframe Main Video container -->
+<div id="videoFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
     <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <!-- Iframe Main PDF container -->
-  <div id="mainPDFFrameContainer">
-    <span id="closeButton" onclick="closeVideo()">×</span>
+<!-- Iframe Main PDF container -->
+<div id="mainPDFFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
     <iframe id="PDFFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
   </div>
-
+  
   <!-- Main Content Container -->
   <div id="mainContent">
     <!-- Large text at the top -->
@@ -195,8 +165,6 @@
         </div>
       </div>
     </div>
-  </div>
 
 </body>
 </html>
-
