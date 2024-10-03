@@ -25,21 +25,36 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      pointer-events: none; /* Prevent interaction with the video */
+    }
+
+    /* Overlay a transparent div on top to capture clicks */
+    #clickOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
   <!-- Looping Fullscreen Background YouTube Video -->
   <iframe id="backgroundVideo" src="https://www.youtube.com/embed/QxQlDBBTyVQ?autoplay=1&mute=1&loop=1&playlist=QxQlDBBTyVQ&controls=0&showinfo=0&modestbranding=1" 
           frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
   </iframe>
 
+  <!-- Transparent div to capture clicks -->
+  <div id="clickOverlay"></div>
+
   <script>
     // Redirect to index2.html on screen click
-    document.body.addEventListener('click', function() {
+    document.getElementById('clickOverlay').addEventListener('click', function() {
       window.location.href = 'index2.html';
     });
   </script>
+  
 </body>
 </html>
