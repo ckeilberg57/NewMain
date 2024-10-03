@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>GEM Demos</title>
+</head>
+<script src="js/scripts.js"></script>
+<body>
+
+<!-- Scrolling Sidebar -->
+<div id="sidebar">
+  <!-- Sidebar Item 1 -->
+  <div class="sidebar-item" onclick="openIframeWindowIO()">
+    <img src="images/sidebarInterOP.png" alt="InterOP">
+    <p></p>
+    <br>
+    <p>InterOP</p>
+  </div>
+
+  <!-- Sidebar Item 2 -->
+  <div class="sidebar-item" onclick="openIframeWindowDR()">
+    <img src="images/sidebarDR.png" alt="DR">
+    <p></p>
+    <br>
+    <p>Disaster Recovery</p>
+  </div>
+  
+  <!-- Sidebar Item 3 -->
+  <div class="sidebar-item" onclick="openIframeWindowHC()">
+    <img src="images/sidebarHC.png" alt="Healthcare">
+    <p></p>
+    <br>
+    <p>Healthcare</p>
+  </div>
+
+    <!-- Sidebar Item 4 -->
+  <div class="sidebar-item" onclick="openIframeWindowSC()">
+    <img src="images/sidebarSecure.png" alt="Secure">
+    <p></p>
+    <br>
+    <p>Secure</p>
+  </div>
+  
+  <!-- Sidebar Item 5 -->
+  <div class="sidebar-item" onclick="openIframeWindowEDU()">
+    <img src="images/sidebarEDU.png" alt="Education">
+    <p></p>
+    <br>
+    <p>Education</p>
+  </div>
+
+  <!-- Sidebar Item 6 -->
+  <div class="sidebar-item" onclick="openIframeWindowState()">
+    <img src="images/sidebarState.png" alt="State">
+    <p></p>
+    <br>
+    <p>State</p>
+  </div>
+
+  <!-- Sidebar Item 7 -->
+  <div class="sidebar-item" onclick="openIframeWindowJudical()">
+    <img src="images/sidebarJudicial.png" alt="Judicial">
+    <p></p>
+    <br>
+    <p>Judicial</p>
+  </div>
+
+  <!-- Sidebar Item 8 -->
+  <div class="sidebar-item" onclick="openIframeWindowHowTo()">
+    <img src="images/sidebarHowTo.png" alt="HowTo">
+    <p></p>
+    <br>
+    <p>How To:</p>
+  </div>
+  
+</div>
+
+<!-- New Iframe Overlay Container -->
+<div id="iframeOverlay">
+  <div id="iframeContainer"></div>
+  <span id="closeButton" onclick="closeIframeWindow()">×</span>
+</div>
+
+<div id="customIframeContainer">
+  <div id="customIframeContent"></div>
+  <span id="closeButton" onclick="closeIframeWindow()">×</span>
+</div>
+
+<!-- Iframe Main Video container -->
+<div id="videoFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
+    <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+<!-- Iframe Main PDF container -->
+<div id="mainPDFFrameContainer">
+  <span id="closeButton" onclick="closeVideo()">×</span>
+    <iframe id="PDFFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <!-- Main Content Container -->
+  <div id="mainContent">
+    <!-- Large text at the top -->
+    <div id="pageHeading">
+      Welcome - DEMO site
+    </div>
+
+    <!-- Main Page Image -->
+    <div id="mainPageImage">
+      <img id="headerImage" src="GEM.png" alt="Header Image">
+      <br>
+      <!-- Button to company intro pdf -->
+      <button class="white-button" onclick="openLink('PPs/pexipCompany.pdf')">Open Company Overview</button>
+    </div>
+
+    <!-- Container for two side-by-side white-lined boxes -->
+    <div id="container">
+      <!-- First set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="images/PolyIntro2.gif" alt="PolyToPexip" onclick="openVideo('video1.mp4')">
+          <p>Infrastructure - Poly Edition</p>
+          <button class="white-button" onclick="openMainVideo('videos1')">Video Coming Soon</button>
+          <button class="white-button" onclick="openLink('PPs/Infra-Poly_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/CiscoIntro.gif" alt="CiscoToPexip" onclick="openVideo('video2.mp4')">
+          <p>Infrastructure - Cisco Edition</p>
+          <button class="white-button" onclick="openMainVideo('video2.mp4')">Video Coming Soon</button>
+          <button class="white-button" onclick="openLink('PPs/Infra-Cisco_ConsumptionModels.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/erm.gif" alt="ERM" onclick="openVideo('video3.mp4')">
+          <p>Enhanced Room Management</p>
+          <button class="white-button" onclick="openMainVideo('https://www.youtube.com/embed/AlsvQtoIM-8?si=WRN4MenfjlLNs4g0')">Play Video</button>
+          <button class="white-button" onclick="openLink('PPs/ERM.pdf')">Open Preso</button>
+        </div>
+      </div>
+
+      <!-- Second set of three columns -->
+      <div class="box">
+        <div class="column">
+          <img src="images/cviTC.gif" alt="Teams Connector" onclick="openVideo('video4.mp4')">
+          <p>Pexip Teams Connector for CVI</p>
+          <button class="white-button" onclick="openMainVideo('video4.mp4')">Video Coming Soon</button>
+          <button class="white-button" onclick="openLink('PPs/TeamsConnector.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/cviService.gif" alt="Service Teams" onclick="openVideo('video5.mp4')">
+          <p>Pexip Service CVI for Teams</p>
+          <button class="white-button" onclick="openMainVideo('https://www.youtube.com/embed/H9RYB7olpJU?si=fTXjHZUfbzEAnak2')">Play Video</button>
+          <button class="white-button" onclick="openLink('PPs/ServiceCVI.pdf')">Open Preso</button>
+        </div>
+
+        <div class="column">
+          <img src="images/pexipInterOP.gif" alt="Service Multiple" onclick="openVideo('video5.mp4')">
+          <p>Pexip Service InterOP for Meeting Platforms</p>
+          <button class="white-button" onclick="openMainVideo('https://www.youtube.com/embed/SWo2ZgfH-nc?si=jQacmV6oUuEMOmt_')">Play Video</button>
+          <button class="white-button" onclick="openLink('PPs/ServiceMultiple.pdf')">Open Preso</button>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
