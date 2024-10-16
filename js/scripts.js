@@ -368,7 +368,7 @@
       // Create fourth right box underneath
       var fourthRightBox = document.createElement('div');
       fourthRightBox.className = 'fourthBox';
-      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Video - Coming Soon', 'Open PDF', 'Interactive Demo - Coming Soon', 'Pexip Epic Integration');
+      createCustomHCBox(fourthRightBox, 'images/epic.png', 'Play Video', 'Open PDF', 'Interactive Demo (2 windows)', 'Pexip Epic Integration');
       fourthboxContainer.appendChild(fourthRightBox);
 
       // Create fifth right box underneath
@@ -575,7 +575,7 @@
 
       // Add event listeners to the buttons
       fourthRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://www.youtube.com/embed/H5Uh8nGBvQA?si=O38F0xaWvBQcFQcm');
       });
 
       fourthRightBox.querySelector('.customButton2').addEventListener('click', function() {
@@ -585,7 +585,10 @@
       // Add a new event listener for customButton3
       fourthRightBox.querySelector('.customButton3').addEventListener('click', function() {
         // Open the first HTML link on the left side
-        open1WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/step-by-step?name=Patient&conference=epic72234445411&role=guest', 'left');
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic/m/?conference=epic23422342111&name=Chris&pin=2024&role=host&callType=video&callTag=epic&join=1', 'left');
+      
+        // Open the second HTML link on the left side
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp3_Custom-Epic-Patient/m/?conference=epic23422342111&name=Thomas%20Smith&role=guest&tag=epic', 'right');
       });
 
       // Add event listeners to the buttons
