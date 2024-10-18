@@ -435,26 +435,29 @@
         openPDF('PPs/customizingPexip.pdf');
       });
 
-        // Add a new event listener for customButton3
-        secondLeftBox.querySelector('.customButton3').addEventListener('click', function () {
-          // Calculate the width of each window (half the screen width)
-          var windowWidth = Math.floor(screen.width / 2);
-          var windowHeight = screen.height;
-        
-          // Open the first HTML link on the left side
-          window.open(
-            'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 
-            'leftWindow', 
-            `width=${windowWidth},height=${windowHeight},top=0,left=0`
-          );
-        
-          // Open the second HTML link on the right side
-          window.open(
-            'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 
-            'rightWindow', 
-            `width=${windowWidth},height=${windowHeight},top=0,left=${windowWidth}`
-          );
-        });
+// Add a new event listener for customButton3
+secondLeftBox.querySelector('.customButton3').addEventListener('click', function () {
+  // Calculate the width of each window (half of the screen)
+  const windowWidth = Math.floor(screen.width / 2);
+  const windowHeight = screen.height;
+
+  // Options for window features
+  const windowFeatures = `width=${windowWidth},height=${windowHeight},top=0`;
+
+  // Open the first HTML link on the left side
+  window.open(
+    'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 
+    'leftWindow', 
+    `${windowFeatures},left=0`
+  );
+
+  // Open the second HTML link on the right side
+  window.open(
+    'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 
+    'rightWindow', 
+    `${windowFeatures},left=${windowWidth}`
+  );
+});
 
       // Add event listeners to the buttons
       thirdLeftBox.querySelector('.customButton1').addEventListener('click', function() {
