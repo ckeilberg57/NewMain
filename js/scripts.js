@@ -851,6 +851,25 @@
         // Open the window with the specified URL, width, height, and position
         window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
+    function open2WinHTML(url1, url2) {
+          // Calculate the width of each window (half of the screen width)
+          var windowWidth = Math.floor(screen.width / 2);
+          var windowHeight = screen.height;
+        
+          // Open the first window on the left side
+          window.open(
+            url1,
+            'leftWindow',
+            `width=${windowWidth},height=${windowHeight},top=0,left=0`
+          );
+        
+          // Open the second window on the right side
+          window.open(
+            url2,
+            'rightWindow',
+            `width=${windowWidth},height=${windowHeight},top=0,left=${windowWidth}`
+          );
+        }
 
       function open3WinHTML(url1, url2, side) {
         // Calculate the width of each window based on the screen width
