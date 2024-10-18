@@ -1,3 +1,4 @@
+
 // *scripts.js
 
     function openMainVideo(videoSrc) {
@@ -435,30 +436,14 @@
         openPDF('PPs/customizingPexip.pdf');
       });
 
-// Add a new event listener for customButton3
-secondLeftBox.querySelector('.customButton3').addEventListener('click', function () {
-  const windowWidth = Math.floor(screen.width / 2);
-  const windowHeight = screen.height;
-
-  const leftWindowFeatures = `width=${windowWidth},height=${windowHeight},top=0,left=0`;
-  const rightWindowFeatures = `width=${windowWidth},height=${windowHeight},top=0,left=${windowWidth}`;
-
-  // Open the first window on the left side
-  window.open(
-    'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023',
-    'leftWindow',
-    leftWindowFeatures
-  );
-
-  // Open the second window on the right side after a small delay
-  setTimeout(() => {
-    window.open(
-      'https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest',
-      'rightWindow',
-      rightWindowFeatures
-    );
-  }, 100); // Small delay of 100ms
-});
+      // Add a new event listener for customButton3
+      secondLeftBox.querySelector('.customButton3').addEventListener('click', function() {
+        // Open the first HTML link on the left side
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&muteMicrophone=true&muteCamera=true&name=Provider&role=host&pin=2023', 'left');
+      
+        // Open the second HTML link on the left side
+        open2WinHTML('https://cklab-edges.ck-collab-engtest.com/Webapp2_Custom-pHealth/conference/ph1029?callType=video&name=Patient&role=guest', 'right');
+      });
 
       // Add event listeners to the buttons
       thirdLeftBox.querySelector('.customButton1').addEventListener('click', function() {
@@ -867,41 +852,33 @@ secondLeftBox.querySelector('.customButton3').addEventListener('click', function
         // Open the window with the specified URL, width, height, and position
         window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
-    function open2WinHTML(url1, url2) {
-          // Calculate the width of each window (half of the screen width)
-          var windowWidth = Math.floor(screen.width / 2);
-          var windowHeight = screen.height;
-        
-          // Open the first window on the left side
-          window.open(
-            url1,
-            'leftWindow',
-            `width=${windowWidth},height=${windowHeight},top=0,left=0`
-          );
-        
-          // Open the second window on the right side
-          window.open(
-            url2,
-            'rightWindow',
-            `width=${windowWidth},height=${windowHeight},top=0,left=${windowWidth}`
-          );
-        }
 
-      function open3WinHTML(url1, url2, side) {
-        // Calculate the width of each window based on the screen width
-        var windowWidth = Math.floor(screen.width / 2);
+       function open2WinHTML(url, side) {
+         // Calculate the width of each window based on the screen width
+         var windowWidth = Math.floor(screen.width / 2);
+   
+         // Calculate the left position based on the side parameter
+         var leftPosition = (side === 'left') ? 0 : windowWidth;
+   
+         // Open the window with the specified URL, width, height, and position
+         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+       }
+
+        function open3WinHTML(url1, url2, side) {
+          // Calculate the width of each window based on the screen width
+          var windowWidth = Math.floor(screen.width / 2);
       
-        // Calculate the left position based on the side parameter
-        var leftPosition = (side === 'left') ? 0 : windowWidth;
+          // Calculate the left position based on the side parameter
+          var leftPosition = (side === 'left') ? 0 : windowWidth;
       
-        // Open the window with the specified URL, width, height, and position
-        var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+          // Open the window with the specified URL, width, height, and position
+          var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
       
-        // If it's the right window, open the second HTML link in a new tab
-        if (side === 'right') {
+          // If it's the right window, open the second HTML link in a new tab
+          if (side === 'right') {
             newWindow.open(url2, '_blank');
           }
-      }
+        }
 
        function closeIframeWindow() {
          var iframeContainer = document.getElementById('customIframeContainer');
