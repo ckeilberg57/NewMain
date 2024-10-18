@@ -852,32 +852,21 @@
         window.open(url, 'singleWindow', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=0');
       }
 
-       function open2WinHTML(url, side) {
-         // Calculate the width of each window based on the screen width
-         var windowWidth = Math.floor(screen.width / 2);
-   
-         // Calculate the left position based on the side parameter
-         var leftPosition = (side === 'left') ? 0 : windowWidth;
-   
-         // Open the window with the specified URL, width, height, and position
-         window.open(url, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
-       }
-
-        function open3WinHTML(url1, url2, side) {
-          // Calculate the width of each window based on the screen width
-          var windowWidth = Math.floor(screen.width / 2);
+      function open3WinHTML(url1, url2, side) {
+        // Calculate the width of each window based on the screen width
+        var windowWidth = Math.floor(screen.width / 2);
       
-          // Calculate the left position based on the side parameter
-          var leftPosition = (side === 'left') ? 0 : windowWidth;
+        // Calculate the left position based on the side parameter
+        var leftPosition = (side === 'left') ? 0 : windowWidth;
       
-          // Open the window with the specified URL, width, height, and position
-          var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
+        // Open the window with the specified URL, width, height, and position
+        var newWindow = window.open(url1, side + 'Window', 'width=' + windowWidth + ',height=' + screen.height + ',top=0,left=' + leftPosition);
       
-          // If it's the right window, open the second HTML link in a new tab
-          if (side === 'right') {
+        // If it's the right window, open the second HTML link in a new tab
+        if (side === 'right') {
             newWindow.open(url2, '_blank');
           }
-        }
+      }
 
        function closeIframeWindow() {
          var iframeContainer = document.getElementById('customIframeContainer');
