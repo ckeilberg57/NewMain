@@ -624,7 +624,7 @@
 
       // Add event listeners to the buttons
       seventhRightBox.querySelector('.customButton1').addEventListener('click', function() {
-        openVideo('');
+        openVideo('https://www.youtube.com/embed/GvF2S66XZQc?si=yOLkiRFv7estzDyi');
       });
 
       seventhRightBox.querySelector('.customButton2').addEventListener('click', function() {
