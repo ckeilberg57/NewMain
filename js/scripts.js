@@ -57,6 +57,10 @@
       // Create container for 3rd of two boxes
       var thirdboxContainer = document.createElement('div');
       thirdboxContainer.className = 'thirdBoxContainer';
+
+      // Create container for 4th of two boxes
+      var fourthboxContainer = document.createElement('div');
+      fourthboxContainer.className = 'fourthBoxContainer';
   
       // Create left box
       var leftBox = document.createElement('div');
