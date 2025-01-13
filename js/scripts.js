@@ -75,6 +75,12 @@
       thirdLeftBox.className = 'thirdBox';
       createCustomBox(thirdLeftBox, 'images/MS_P2P.png', 'Play Video', 'Open PDF', 'Microsoft Direct 1:1 calling (MTR)');
       thirdboxContainer.appendChild(thirdLeftBox);
+
+      // Create fourth left box underneath
+      var fourthLeftBox = document.createElement('div');
+      fourthLeftBox.className = 'fourthBox';
+      createCustomBox(fourthLeftBox, 'images/zmConnect.png', 'Video Coming Soon', 'Open PDF', 'Connect for Zoom');
+      fourthboxContainer.appendChild(fourthLeftBox);
   
       // Create right box
       var rightBox = document.createElement('div');
@@ -102,6 +108,9 @@
 
       // Append box container to the iframe content
       iframeContent.appendChild(thirdboxContainer);
+
+      // Append box container to the iframe content
+      iframeContent.appendChild(fourthboxContainer);
 
       // Set overflow property for iframeContent to make it scrollable
       iframeContent.style.overflow = 'auto';
@@ -131,6 +140,15 @@
 
       thirdLeftBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('PPs/MTR.pdf');
+      });
+
+      // Add event listeners to the buttons
+      fourthLeftBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('videos/example.mp4');
+      });
+
+      fourthLeftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('PPs/zmConnect.pdf');
       });
 
       // Add event listeners to the buttons
