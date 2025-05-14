@@ -785,6 +785,54 @@
         background-color: #FF7273; /* Light red background on hover */
       }
 
+    .customSCBox {
+      width: 48%;
+      margin: 1%;
+      display: inline-block;
+      text-align: center;
+      background-color: #0a2136; /* Background color for each box */
+      border: 2px solid #0ebec7; /* Border color */
+      border-radius: 5px; /* Border radius */
+      padding: 10px; /* Padding inside each box */
+    }
+
+    .customJudicialBox img {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      border-radius: 5px;
+    }
+
+    .customJudicialBox p {
+      margin: 10px 0;
+    }
+
+    .customJudicialBox button {
+      padding: 10px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .customJudicialBox button {
+        background-color: white;
+        color: #0a2136;
+        border: 2px solid #0EBEC7;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 10px; /* Adjust the border-radius to control the button's roundness */
+      }
+
+    /* Change background color on hover */
+      .customJudicialBox button:hover {
+        background-color: #FF7273; /* Light red background on hover */
+      }
+
    .customHowToBox {
       width: 48%;
       margin: 1%;
