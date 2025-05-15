@@ -793,6 +793,12 @@
       leftBox.className = 'customBox';
       createCustomJudicialBox(leftBox, 'images/judicialVirtualCourt.png', 'Play Video', 'PDF Coming Soon', 'Judicial Workflow');
       boxContainer.appendChild(leftBox);
+
+      // Create right box
+      var rightBox = document.createElement('div');
+      rightBox.className = 'customBox';
+      createCustomBox(rightBox, 'images/judicialScheduler.png', 'Play Video', 'PDF Coming Soon', 'Pexip Scheduler for Web');
+      boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
       iframeContent.appendChild(boxContainer);
@@ -806,6 +812,15 @@
       });
 
       leftBox.querySelector('.customButton2').addEventListener('click', function() {
+        openPDF('');
+      });
+
+      // Add event listeners to the buttons
+      rightBox.querySelector('.customButton1').addEventListener('click', function() {
+        openVideo('https://www.youtube.com/embed/r-wjj0JrycY?si=9FDwO76SKGqz-Eq3');
+      });
+
+      rightBox.querySelector('.customButton2').addEventListener('click', function() {
         openPDF('');
       });
 
