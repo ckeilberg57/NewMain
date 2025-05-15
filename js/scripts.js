@@ -791,7 +791,7 @@
       // Create left box
       var leftBox = document.createElement('div');
       leftBox.className = 'customBox';
-      createCustomJudicialBox(leftBox, 'images/secureMeeting.png', 'Play Video', 'PDF Coming Soon', 'Judicial Workflow');
+      createCustomJudicialBox(leftBox, 'images/judicialVirtualCourt.png', 'Play Video', 'PDF Coming Soon', 'Judicial Workflow');
       boxContainer.appendChild(leftBox);
   
       // Append box container to the iframe content
