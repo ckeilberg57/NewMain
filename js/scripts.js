@@ -797,7 +797,7 @@
       // Create right box
       var rightBox = document.createElement('div');
       rightBox.className = 'customBox';
-      createCustomBox(rightBox, 'images/judicialScheduler.png', 'Play Video', 'PDF Coming Soon', 'Pexip Scheduler for Web');
+      createCustomJudicialBox(rightBox, 'images/judicialScheduler.png', 'Play Video', 'PDF Coming Soon', 'Pexip Scheduler for Web');
       boxContainer.appendChild(rightBox);
   
       // Append box container to the iframe content
